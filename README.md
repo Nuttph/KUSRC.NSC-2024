@@ -1,2 +1,1 @@
-# NSC-2024-Model
-NSC 2024
+# KUSRC NSC 2024
