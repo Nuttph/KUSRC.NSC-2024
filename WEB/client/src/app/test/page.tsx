@@ -1,16 +1,7 @@
-"use client";
-import Header from "@/components/Body-Components/ComponentInBodyPage/Header";
-import TeachableMachinePoseModel from "@/components/TeachableMachinePose";
 import React from "react";
 
 const page = () => {
-  return (
-    <>
-      <div>
-        <Header />
-      </div>
-    </>
-  );
+  return <div>page</div>;
 };
 
 export default page;

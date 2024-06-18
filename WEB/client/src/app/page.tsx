@@ -1,13 +1,11 @@
 "use client";
 import React from "react";
-import TeachableMachinePose from "../components/TeachableMachinePose";
-import MuiText from "../components/MuiText";
 import Main from "@/components/Main";
+import Navbar from "@/components/Nav/Navbar";
 
 const page = () => {
   return (
     <>
-      <TeachableMachinePose />
       <Main />
     </>
   );

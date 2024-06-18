@@ -1,32 +1,47 @@
-import {create} from 'zustand'
+import { StaticImageData } from "next/image";
+import {create} from "zustand"
 
-const contentList = [
-    { name: "Text1", content: "Test1" },
-    { name: "Text2", content: "Test2" },
-    { name: "Text3", content: "Test3" },
-    { name: "Text4", content: "Test4" },
-    { name: "Text5", content: "Test5" },
-    { name: "Text6", content: "Test6" },
-    { name: "Text1", content: "Test1" },
-    { name: "Text2", content: "Test2" },
-    { name: "Text3", content: "Test3" },
-    { name: "Text4", content: "Test4" },
-    { name: "Text5", content: "Test5" },
-    { name: "Text6", content: "Test6" },
-    { name: "Text123", content: "Text456" },
+const contentData = [
+    { content: "หน้าแรก", path: "/" },
+    { content: "ท่าการทำกายภาพบำบัด", path: "/" },
+    { content: "ข้อควรปฏิบัติ", path: "#warning" },
+    { content: "ประเมินการใช้งานเว็บไซต์", path: "/evaluate" },
   ];
-export interface ContentListProps{
-    name:string;
+  const openData = [
+    { content: "เพิ่มการทรงตัวในผู้สูงอายุ", path: "/body" },
+    { content: "เพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อของผู้สูงอายุ", path: "/body" },
+    { content: "เพิ่มกำลังกล้ามเนื้อของผู้สูงอายุ", path: "/body" },
+    { content: "บริหารกล้ามเนื้อสำหรับข้อเข่าเสื่อม", path: "/body" },
+    { content: "กายภาพบำบัดสำหรับผู้ป่วยอ่อนแรง-อัมพฤกษ์", path: "/body" },
+    { content: "แก้ปวดหลัง", path: "/body" },
+  ];
+  interface NavbarProps{
     content:string;
-}
-interface CTentProps {
-    content:ContentListProps[];
-    focusContent:string;
-    selectContent:(value:string)=>void
-}
-const useCTent = create<CTentProps>((set)=>({
-    content:contentList,
-    focusContent:"Text1",
-    selectContent:(value:string)=>set({focusContent:value})
+    path:string
+  }
+
+  const topicData = [
+    {head:"เพิ่มการทรงตัวในผู้สูงอายุ",img:""},
+    {head:"เพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อของผู้สูงอายุ",img:""},
+    {head:"เพิ่มกำลังกล้ามเนื้อของผู้สูงอายุ",img:""},
+    {head:"บริหารกล้ามเนื้อสำหรับข้อเข่าเสื่อม",img:""},
+    {head:"กายภาพบำบัดสำหรับผู้ป่วยอ่อนแรง",img:""},
+    {head:"แก้ปวดหลัง",img:""},
+  ]
+
+  interface TopicProps{
+    head:string;
+    img:string;
+    // img:StaticImageData
+  }
+
+  interface ZusProps{
+    Nav:NavbarProps[];
+    Dropdown:NavbarProps[];
+    TopicText:TopicProps[]
+  }
+export const useCTent = create<ZusProps>((set)=>({
+    Nav:contentData,
+    Dropdown:openData,
+    TopicText:topicData
 }))
-export default useCTent
