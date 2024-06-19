@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    webpack(config) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'node-fetch': 'isomorphic-fetch',
+      };
+      return config;
+    },
+  };
+  
+  export default nextConfig;
+  
