@@ -1,32 +1,14 @@
 "use client";
 import { useCTent } from "@/store/contentStore";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
   const { Dropdown, Nav } = useCTent();
   const [isOpen, setOpen] = useState(false);
 
-  const [data, setData] = useState();
-  useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(
-        "https://raw.githubusercontent.com/kongvut/thai-province-data/master/api_province_with_amphure_tambon.json"
-      );
-      const raw = await res.json();
-      setData(raw);
-    }
-    fetchData();
-  });
   return (
     <>
-      <button
-        onClick={() => {
-          console.log(data);
-        }}
-      >
-        Check
-      </button>
       <div
         className="flex flex-row justify-between px-[140px] py-[20px] shadow-lg
       bg-white

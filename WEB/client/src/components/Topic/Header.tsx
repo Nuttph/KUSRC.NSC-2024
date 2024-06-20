@@ -1,4 +1,5 @@
 import { useCTent } from "@/store/contentStore";
+import Link from "next/link";
 import React from "react";
 
 const Header = () => {
@@ -14,7 +15,7 @@ const Header = () => {
               className="flex flex-col gap-[50px] text-[30px] items-center justify-center"
             >
               <div>{item.head}</div>
-              <div className="w-[546px] h-[350px] bg-gray-700"></div>
+              <Link href="/test-pose" className="w-[546px] h-[350px] bg-gray-700"></Link>
             </div>
           ))}
         </div>
