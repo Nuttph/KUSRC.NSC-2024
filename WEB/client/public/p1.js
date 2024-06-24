@@ -1,4 +1,4 @@
-const URL = "https://teachablemachine.withgoogle.com/models/C_bzoZRMg/";
+const URL = "https://teachablemachine.withgoogle.com/models/zoUP07Qdy/";
     let model, webcam, ctx, labelContainer, maxPredictions;
 
     async function init() {
@@ -44,23 +44,23 @@ const URL = "https://teachablemachine.withgoogle.com/models/C_bzoZRMg/";
 
         for (let i = 0; i < maxPredictions; i++) {
             const classPrediction =
-                prediction[0].className + ": " + (prediction[0].probability.toFixed(2) * 100);
+                prediction[i].className + ": " + (prediction[i].probability.toFixed(2) * 100);
             const valueOfDPose = (prediction[0].probability.toFixed(2) * 100).toFixed(2)
             
-            setInterval(() => {
-                if (valueOfDPose > 50) {
-                    labelContainer.childNodes[0].innerHTML = "Good"
-                } else {
-                    labelContainer.childNodes[0].innerHTML = "ขยับอีกหน่อย"
-                    
-                }
-                if (valueOfDPose < 20) {
-                    labelContainer.style.color = 'black'
-                    // console.log( prediction[i].className+"PASS");
-                } else {
-                    labelContainer.style.color = 'green'
-                }
-            },5000)
+            labelContainer.childNodes[i].innerHTML = classPrediction
+            // setInterval(() => {
+            //     if (valueOfDPose > 90) {
+            //         labelContainer.childNodes[0].innerHTML = "Good"
+            //     } else {
+            //         labelContainer.childNodes[0].innerHTML = "ขยับอีกหน่อย"
+            //     }
+            //     if (valueOfDPose < 20) {
+            //         labelContainer.style.color = 'black'
+            //         // console.log( prediction[i].className+"PASS");
+            //     } else {
+            //         labelContainer.style.color = 'green'
+            //     }
+            // },5000)
         }
 
         // finally draw the poses
