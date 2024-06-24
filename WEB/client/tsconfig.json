@@ -1,26 +1,48 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+    "target": "es6" /* กำหนดว่าให้แปลงเป็น js version อะไร */,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // เลือกไลบรารีที่ใช้ในโปรเจกต์
+    "allowJs": true, // อนุญาตให้คอมไพล์ไฟล์ JavaScript
+    "skipLibCheck": true, // ข้ามการตรวจสอบไลบรารีภายนอก
+    "strict": true, // เปิดโหมด strict ใน TypeScript
+    "esModuleInterop": true, // เปิดใช้งาน Interoperability ระหว่าง ES Modules และ CommonJS
+    "module": "esnext", // ระบุรูปแบบโมดูลเป็น ESNext
+    "moduleResolution": "node", // ใช้วิธีการแก้ไขโมดูลจาก Node.js
+    "resolveJsonModule": true, // อนุญาตให้โหลดไฟล์ JSON เป็นโมดูล
+    "isolatedModules": true, // แยกโมดูลอย่างเดียวในการคอมไพล์
+    "jsx": "preserve", // ใช้ JSX โดยการบันทึกแบบต้นฉบับ
+    "incremental": true, // เปิดใช้งานโหมดการคอมไพล์แบบเพิ่มเติม
+    "strictNullChecks": true, // การตรวจสอบ Null แบบเคร่งครัด
+    "baseUrl": ".", // ตั้งค่า baseUrl เป็นไดเรกทอรีปัจจุบัน
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ] // กำหนด paths alias สำหรับโมดูลในโปรเจกต์
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+    ], // ระบุที่ตั้งไฟล์นิยามชนิดข้อมูล
     "plugins": [
+
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "noEmit": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/**/*.ts",
+    "public/**/*.ts"
+  ], // ระบุไฟล์ที่รวมในการคอมไพล์
+  "exclude": [
+    "node_modules"
+  ] // ไม่รวมไฟล์ใน node_modules
 }
