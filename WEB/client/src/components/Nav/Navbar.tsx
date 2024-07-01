@@ -11,7 +11,7 @@ const Navbar = () => {
     <>
       <div
         className="flex flex-row justify-between px-[140px] py-[20px] shadow-lg
-      bg-white
+      bg-[#1E6FBB]
       "
       >
         <div id="Logo">Logo</div>
@@ -22,7 +22,7 @@ const Navbar = () => {
         text-[15px]"
         >
           {Nav.map((item, index) => (
-            <div key={index}>
+            <div key={index} className="text-[#EFF396]">
               {index != 1 && <Link href={item.path}>{item.content}</Link>}
               {index == 1 && (
                 <div className="relative">
