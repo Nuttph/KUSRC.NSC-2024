@@ -6,6 +6,7 @@ import Link from "next/link";
 import Navbar from "./Nav/Navbar";
 import Header from "./Topic/Header";
 import FContact from "./fixed/FContact";
+import Warning from "./Topic/Warning";
 const Main = () => {
   return (
     <>
@@ -29,7 +30,10 @@ const Main = () => {
         <div>
           <Header />
         </div>
-        <div id="warning">Test</div>
+
+        <div>
+          <Warning />
+        </div>
       </div>
     </>
   );

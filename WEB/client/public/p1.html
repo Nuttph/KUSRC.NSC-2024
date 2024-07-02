@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view21port" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,7 +22,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
     <script>
         //model demo
-        const URL = "https://teachablemachine.withgoogle.com/models/NUOIafEBs/";
+        //model left hand and right hand
+        const URL = "https://teachablemachine.withgoogle.com/models/R7UM-X_hD/";
         let model, webcam, ctx, labelContainer, maxPredictions;
 
         async function init() {
@@ -52,7 +53,6 @@
                 labelContainer.appendChild(document.createElement("div"));
             }
         }
-
         async function loop(timestamp) {
             webcam.update(); // update the webcam frame
             await predict();
@@ -70,6 +70,7 @@
                 const classPrediction =
                     prediction[i].className + ": " + (prediction[i].probability.toFixed(2) * 100);
 
+                    //0.00 - 1.00 * 100 = 100% 100.00%
                 const valueOfDPose = (prediction[0].probability.toFixed(2) * 100).toFixed(2)
                 labelContainer.childNodes[0].innerHTML = valueOfDPose
                 if (valueOfDPose > 70) {
@@ -86,8 +87,9 @@
 
         function drawPose(pose) {
             if (webcam.canvas) {
-                ctx.drawImage(webcam.canvas, 0, 0);
-                // draw the keypoints and skeleton
+                ctx.drawImage(webcam.canvas,
+                 0, 0);
+                // draw the keypoints and skeletonk
                 if (pose) {
                     const minPartConfidence = 0.5;
                     tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);

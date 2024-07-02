@@ -13,7 +13,7 @@ const FContact = () => {
 
   return (
     <>
-      <div className={`relative ${isOpen ? "open-animation" : ""}`}>
+      <button className={`relative ${isOpen ? "open-animation" : ""}`}>
         <div
           className={`z-50 right-[2%] bottom-[8%] fixed flex flex-col items-center justify-center gap-[17px]`}
         >
@@ -22,7 +22,9 @@ const FContact = () => {
               <Link
                 target="_blank"
                 href="https://line.me/en/"
-                className={`duration-[0.5s] ${isOpen ? "flex" : "hidden"}`}
+                className={`duration-[0.5s] ${
+                  isOpen ? "" : "fill-transparent"
+                }`}
               >
                 <Image src={lineIcon} alt="line" height={55} />
               </Link>
@@ -37,7 +39,7 @@ const FContact = () => {
             <IoCloseOutline />
           </div>
         </div>
-      </div>
+      </button>
     </>
   );
 };
