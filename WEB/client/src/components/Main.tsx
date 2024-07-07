@@ -13,12 +13,14 @@ const Main = () => {
       <FContact />
       <div className="w-full items-center justify-center flex flex-col">
         <div
-          className="h-[791px] w-full bg-[#E4FFF6]"
+          className="flex items-center justify-center h-[791px] w-full bg-[#E4FFF6]"
           // style={{
           //   backgroundImage:
           //     "linear-gradient(180deg, rgba(179, 231, 206, 1) 0%, rgba(203, 237, 215, 1) 46%, rgba(208, 239, 224, 1) 100%)",
           // }}
-        ></div>
+        >
+          <h1 className="text-[50px] font-bold">Demo Title!</h1>
+        </div>
 
         <div className="flex w-full items-center justify-center gap-[40px] flex-col px-[140px] py-[40px] bg-[#90CCD6] border-[10px] border-[#fff]">
           <div className="font-bold text-[30px]">วัตถุประสงค์</div>
@@ -27,11 +29,11 @@ const Main = () => {
           </div>
         </div>
 
-        <div>
+        <div className="w-full px-[10px]">
           <Header />
         </div>
 
-        <div>
+        <div className="w-full">
           <Warning />
         </div>
       </div>

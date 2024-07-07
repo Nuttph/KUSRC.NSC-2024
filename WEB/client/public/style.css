@@ -18,3 +18,19 @@
     padding: 25px;
     
 }
+
+/* width */
+.cs-card{
+    overflow-x: hidden;
+}
+.cs-card::-webkit-scrollbar-track {
+    background-color: red;
+  }
+.cs-card::-webkit-scrollbar {
+    width: 10px;
+  }
+
+.setCenter{
+    justify-content: center;
+    align-items: center;
+}

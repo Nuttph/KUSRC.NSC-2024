@@ -1,12 +1,16 @@
 "use client";
 import { useCTent } from "@/store/contentStore";
 import Link from "next/link";
-import React, { useState } from "react";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const { Dropdown, Nav } = useCTent();
   const [isOpen, setOpen] = useState(false);
-
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   return (
     <>
       <div
@@ -17,12 +21,12 @@ const Navbar = () => {
         <div id="Logo">Logo</div>
         <div
           id="Content"
-          className="flex flex-row gap-[40px]
+          className="flex flex-row gap-[100px]
         min-[1500px]:text-[22px]
         text-[15px]"
         >
           {Nav.map((item, index) => (
-            <div key={index} className="text-[#EFF396]">
+            <div key={index} className="text-black">
               {index != 1 && <Link href={item.path}>{item.content}</Link>}
               {index == 1 && (
                 <div className="relative">
@@ -35,11 +39,9 @@ const Navbar = () => {
                   </button>
 
                   <div
-                    className={`${
-                      isOpen
-                        ? "block duration-[0.5s]"
-                        : "hidden duration-[0.5s]"
-                    } absolute top-[55px] w-[240%] bg-[#fff] px-4 py-2 rounded-xl shadow-xl duration-[0.5s] transition-all`}
+                    className={`right-[-120%] ${
+                      isOpen ? "top-0" : "top-[-100px]"
+                    } absolute top-[55px] w-[240%] bg-[#fff] px-4 py-2 rounded-xl shadow-xl z-[-1] duration-[0.5s] transition-all`}
                   >
                     {isOpen &&
                       Dropdown.map((item, index) => (

@@ -3,19 +3,22 @@ import Link from "next/link";
 import React from "react";
 
 const Header = () => {
+  // /test-pose
   const { TopicText } = useCTent();
   return (
     <>
-      <div className="flex flex-col items-center justify-center mt-[50px]">
+      <div className="mt-[50px] pb-[50px] w-full h-[1000px]">
         <div className="font-bold text-[30px]">ท่าการทำกายภาพบำบัด</div>
-        <div className="flex flex-col gap-[100px] mt-[50px]">
+        <div className="flex flex-row gap-[50px] mt-[50px] max-w-full h-[600px] cs-card overflow-x-auto">
           {TopicText.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col gap-[50px] text-[30px] items-center justify-center"
-            >
-              <div>{item.head}</div>
-              <Link href="/test-pose" className="w-[546px] h-[350px] bg-gray-700"></Link>
+            <div key={index}>
+              <div
+                style={{ backgroundColor: item.color }}
+                className={`w-[400px] h-[500px] flex flex-col items-center p-[20px] rounded-[15px] shadow-xl`}
+              >
+                <div className="bg-white w-full h-[200px] rounded-[5px]"></div>
+                <div className="text-[25px]">{item.head}</div>
+              </div>
             </div>
           ))}
         </div>

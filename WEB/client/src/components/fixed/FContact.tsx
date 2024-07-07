@@ -32,8 +32,8 @@ const FContact = () => {
           )}
           <div
             className={`rounded-full w-[60px] h-[60px] border-[5px] border-gray-700 flex justify-center items-center text-[50px] font-bold text-gray-700 cursor-pointer duration-[0.5s] ${
-              isOpen ? "rotate-90" : "rotate-45"
-            }`}
+              isOpen ? "rotate-90 bg-red-100" : "rotate-45 bg-green-100"
+            } `}
             onClick={toggleContact}
           >
             <IoCloseOutline />
