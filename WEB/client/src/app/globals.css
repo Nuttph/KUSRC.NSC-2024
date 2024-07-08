@@ -10,3 +10,54 @@
 .text{
     background-color: #123;
 }
+ 
+/* .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  */
+  /* 
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+      /* 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+*/
+
+.swiper {
+    width: 100%;
+    height: 600px;
+  }
+  
+  .swiper-slide {
+    min-width: 400px;
+    text-align: center;
+    font-size: 18px;
+    background: #ffffff8c;
+    border-radius: 17px;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

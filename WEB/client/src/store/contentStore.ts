@@ -1,5 +1,7 @@
 import { StaticImageData } from "next/image";
 import {create} from "zustand"
+import preposeImg from '../asset/prepose/Lovepik_com-401265802-yoga-exercise.png'
+
 
 const contentData = [
     { content: "หน้าแรก", path: "/" },
@@ -21,17 +23,17 @@ const contentData = [
   }
 
   const topicData = [
-    {head:"เพิ่มการทรงตัวในผู้สูงอายุ",img:"",color:"#123"},
-    {head:"เพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อของผู้สูงอายุ",img:"",color:"#789"},
-    {head:"เพิ่มกำลังกล้ามเนื้อของผู้สูงอายุ",img:"",color:"#ee6"},
-    {head:"บริหารกล้ามเนื้อสำหรับข้อเข่าเสื่อม",img:"",color:"#123"},
-    {head:"กายภาพบำบัดสำหรับผู้ป่วยอ่อนแรง",img:"",color:"#123"},
-    {head:"แก้ปวดหลัง",img:"",color:"#123"},
+    {head:"เพิ่มการทรงตัวในผู้สูงอายุ",img:preposeImg,color:"#123"},
+    {head:"เพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อของผู้สูงอายุ",img:preposeImg,color:"#789"},
+    {head:"เพิ่มกำลังกล้ามเนื้อของผู้สูงอายุ",img:preposeImg,color:"#ee6"},
+    {head:"บริหารกล้ามเนื้อสำหรับข้อเข่าเสื่อม",img:preposeImg,color:"#123"},
+    {head:"กายภาพบำบัดสำหรับผู้ป่วยอ่อนแรง",img:preposeImg,color:"#123"},
+    {head:"แก้ปวดหลัง",img:preposeImg,color:"#123"},
   ]
 
   interface TopicProps{
     head:string;
-    img: string;
+    img: StaticImageData;
     color: string;
     // img:StaticImageData
   }

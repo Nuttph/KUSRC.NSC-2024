@@ -40,7 +40,7 @@ const Navbar = () => {
 
                   <div
                     className={`right-[-120%] ${
-                      isOpen ? "top-0" : "top-[-100px]"
+                      isOpen ? "top-0" : "top-[-1rem]"
                     } absolute top-[55px] w-[240%] bg-[#fff] px-4 py-2 rounded-xl shadow-xl z-[-1] duration-[0.5s] transition-all`}
                   >
                     {isOpen &&
