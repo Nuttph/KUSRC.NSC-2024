@@ -139,3 +139,20 @@
   display: block;
   opacity: 1;
 }
+
+.animated-icon {
+  font-size: 40px;
+  animation: expand-contract 2s infinite;
+}
+
+@keyframes expand-contract {
+
+  0%,
+  100% {
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}

@@ -5,17 +5,17 @@ import mockImg2 from '../asset/prepose/pose1.png'
 import { mountStoreDevtool } from 'simple-zustand-devtools';
 
 const dataimg = [
-    {name:'text1',img:[mockImg,mockImg2,mockImg,mockImg2,mockImg],linkML:"p1.html"},
-    {name:'text2',img:[mockImg,mockImg2,mockImg,mockImg2,mockImg],linkML:"p2.html"},
-    {name:'text3',img:[mockImg,mockImg2,mockImg,mockImg2,mockImg],linkML:"p1.html"},
-    {name:'text4',img:[mockImg,mockImg2,mockImg,mockImg2,mockImg],linkML:"p2.html"},
+    {name:'text1',img:[mockImg,mockImg2,mockImg,mockImg2,mockImg],linkML:"a1.html"},
+    {name:'text2',img:[mockImg,mockImg2,mockImg,mockImg2,mockImg],linkML:"a2.html"},/*  */
+    {name:'text3',img:[mockImg,mockImg2,mockImg,mockImg2,mockImg],linkML:"a1.html"},
+    {name:'text4',img:[mockImg,mockImg2,mockImg,mockImg2,mockImg],linkML:"a2.html"},
 ]
 export interface dataimgProps {
     name: string;
     img: StaticImageData[];
     linkML: string;
 }
-const dataML = { name: 'text1', img: [mockImg, mockImg2, mockImg, mockImg2, mockImg], linkML: "p1.html" }
+const dataML = { name: 'text1', img: [mockImg, mockImg2, mockImg, mockImg2, mockImg], linkML: "a1.html" }
 interface dataMLProps{
     name: string;
     img: StaticImageData[];
@@ -36,5 +36,5 @@ export const usePicContent = create<zusProps>((set) => ({
 }))
 
 if (process.env.NODE_ENV === 'development') {
-    mountStoreDevtool('Store', usePicContent);
+    mountStoreDevtool('Store', usePicContent); 
   }
