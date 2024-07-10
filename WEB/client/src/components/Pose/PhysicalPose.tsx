@@ -15,7 +15,7 @@ const PhysicalPose = () => {
               {zDataML.name}
             </div>
           </div>
-          <div className="bg-black w-[50%]">
+          <div className="bg-gray-200 w-[50%]">
             <iframe src={zDataML.linkML} className="w-full h-[100vh]"></iframe>
           </div>
         </div>

@@ -1,4 +1,4 @@
-.text{
+.text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,21 +12,54 @@
     transition: 0.5s all ease-in-out;
 }
 
-.currentColor{
-    background-color: yellow !important;
-    width: 200px;
-    padding: 25px;
-    
+.currentColor {
+    border: 10px solid green !important;
+    border-radius: 15px;
+}
+
+.canvasu {
+    background-color: rgb(180, 180, 180);
+    border: 10px solid red;
+    border-radius: 15px;
+    width: 500px;
 }
 
 /* width */
-.cs-card{
+.cs-card {
     overflow-x: hidden;
 }
+
 .cs-card::-webkit-scrollbar-track {
     background-color: red;
-  }
+}
+
 .cs-card::-webkit-scrollbar {
     width: 10px;
-  }
+}
 
+.setCenter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countsPose {
+    font-size: 35px;
+}
+
+.btnd {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 146, 0.569);
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.btnd:hover {
+    background-color: rgb(255, 255, 146);
+}
