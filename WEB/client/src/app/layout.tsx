@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Nav/Navbar";
+import Ccookie from "@/components/fixed/Ccookie";
+import Footer from "@/components/Nav/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +24,12 @@ export default function RootLayout({
           <Navbar />
         </div>
         {children}
+        <div className="fixed bottom-[41px] w-full flex justify-center z-[50]">
+          <Ccookie />
+        </div>
+        <div className="">
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -7,7 +7,6 @@ import Navbar from "./Nav/Navbar";
 import Header from "./Topic/Header";
 import FContact from "./fixed/FContact";
 import Warning from "./Topic/Warning";
-import SlidePopup from "./swiper/SlidePopup";
 import SlideCard from "./swiper/SlideCard";
 const Main = () => {
   return (
@@ -23,23 +22,29 @@ const Main = () => {
         >
           <h1 className="text-[50px] font-bold">Demo Title!</h1>
         </div>
-        s
-        <div className="flex w-full items-center justify-center gap-[40px] flex-col px-[140px] py-[40px] bg-[#90CCD6] border-[10px] border-[#fff]">
-          <div className="font-bold text-[30px]">วัตถุประสงค์</div>
-          <div className="text-[#603F1C] text-[25px] flex items-center justify-center text-center w-[67%]">
+        <div
+          id="slide-card"
+          className="flex w-full items-center justify-center gap-[40px] flex-col px-[140px] py-[40px] bg-gray-800 border-[10px] border-[#fff] text-white"
+        >
+          <div className="font-bold text-[30px] bg-sky-100 text-black px-[25px] py-[10px] rounded-xl">
+            วัตถุประสงค์
+          </div>
+          <div className="text-[25px] flex items-center justify-center text-center w-[67%]">
             เว็บไซต์นี้สร้างขึ้นเพื่อ้ผู้ที่ต้องการบริหารร่างกายทำท่าทางที่ถูกต้องโดยเราจะมีท่าทางให้ผู้ใช้งานเลือกจากนั้นจะมีโปรแกรมสแกนท่าทางเพื่อตรวจจับท่าทางให้ท่านทำท่าที่ถูกต้อง
           </div>
         </div>
         {/* <div className="w-full px-[10px]">
           <Header />
         </div> */}
-        <div className="relative w-[100%] h-[700px] bg-blue-200 flex items-center">
-          {/* <SlidePopup /> */}
+        <div
+          className="relative w-[100%] h-[700px] bg-gray-200 flex items-center"
+          id=""
+        >
           <SlideCard />
         </div>
-        <div className="w-full">
+        {/* <div className="w-full" id="warning">
           <Warning />
-        </div>
+        </div> */}
       </div>
     </>
   );

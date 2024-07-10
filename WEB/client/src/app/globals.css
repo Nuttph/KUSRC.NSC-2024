@@ -2,62 +2,140 @@
 @tailwind components;
 @tailwind utilities;
 
-.myBox:hover > .rotaArrow {
-    background-color: white;
-    --tw-rotate: 180deg;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.myBox:hover>.rotaArrow {
+  background-color: white;
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.text{
-    background-color: #123;
+
+.text {
+  background-color: #123;
 }
- 
-/* .swiper {
-    width: 100%;
-    height: 100%;
-  }
-  */
-  /* 
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-      /* 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-*/
 
 .swiper {
-    width: 100%;
-    height: 600px;
+  width: 100%;
+  height: 600px;
+}
+
+.swiper-slide {
+  min-width: 400px;
+  text-align: center;
+  font-size: 18px;
+  background: #ffffff8c;
+  border-radius: 17px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#fli {
+  display: block;
+  opacity: 1;
+}
+
+@keyframes rotateZ {
+  0% {
+    opacity: 0;
+    transform: translateZ(290px);
   }
-  
-  .swiper-slide {
-    min-width: 400px;
-    text-align: center;
-    font-size: 18px;
-    background: #ffffff8c;
-    border-radius: 17px;
-  
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  80% {
+    transform: translateZ(10px);
   }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
   }
-  
+}
+
+.dropdown_menu-3 .dropdown_item-1 {
+  transform-origin: top center;
+  animation: rotateZ 300ms 60ms ease-in-out forwards;
+}
+
+.dropdown_menu-3 .dropdown_item-2 {
+  transform-origin: top center;
+  animation: rotateZ 300ms 120ms ease-in-out forwards;
+}
+
+.dropdown_menu-3 .dropdown_item-3 {
+  transform-origin: top center;
+  animation: rotateZ 300ms 180ms ease-in-out forwards;
+}
+
+.dropdown_menu-3 .dropdown_item-4 {
+  transform-origin: top center;
+  animation: rotateZ 300ms 240ms ease-in-out forwards;
+}
+
+.dropdown_menu-3 .dropdown_item-5 {
+  transform-origin: top center;
+  animation: rotateZ 300ms 300ms ease-in-out forwards;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: 500;
+  position: relative;
+  font-size: 18px;
+  perspective: 1000px;
+  z-index: 100;
+}
+
+.dropdown:hover {
+  background: #1E6FBB;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown_menu #fli {
+  display: block;
+}
+
+.dropdown_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  perspective: 1000px;
+  z-index: -1;
+}
+
+.dropdown_menu #fli {
+  display: none;
+  color: black;
+  box-shadow: black 10px;
+  background-color: #baddff;
+  padding: 10px 20px;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.dropdown_menu #fli:hover {
+  background-color: #1E6FBB;
+}
+
+.dropdown:hover .dropdown_menu--animated {
+  display: block;
+}
+
+.dropdown_menu--animated {
+  display: none;
+}
+
+.dropdown_menu--animated #fli {
+  display: block;
+  opacity: 1;
+}
