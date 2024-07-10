@@ -30,9 +30,6 @@ interface detailContent {
     img: StaticImageData;
   }
   
-  const MLmodel = [{
-    name:"test",link:"p1.html"
-}]
 interface MLmodelProps{
   name: string;
   link: string;
@@ -41,13 +38,11 @@ interface MLmodelProps{
   interface ZusProps{
     Nav:NavbarProps[];
     TopicText: TopicProps[]
-    MLmodel: MLmodelProps[]
     detailContent: detailContent[]
   }
 export const useCTent = create<ZusProps>((set)=>({
     Nav:contentData,
     TopicText: topicData,
-    MLmodel: MLmodel,
     detailContent: detailPose,
 }))
 

@@ -13,7 +13,7 @@ const PhyPre = ({ item }: { item: dataimgProps }) => {
             <PreviewPic imgO={item} />
           </>
         </div>
-        <div className="flex setCenter w-[800px] bg-[#123] text-white h-[550px]">
+        <div className="flex setCenter w-[800px] text-black h-[550px]">
           {/*content and pose button */}
           <ContentBut item={item} />
         </div>
