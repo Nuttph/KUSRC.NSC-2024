@@ -20,16 +20,6 @@ const contentData = [
     {head:"บริหารกล้ามเนื้อสำหรับข้อเข่าเสื่อม",img:preposeImg},
   ]
 
-const imageposeData = [
-    {color:'#123'},
-    {color:'#e66'},
-    {color:'#ee6'},
-    {color:'#15f'},
-    {color:'#f8c'},
-  ]
-interface imgposeDataProps {
-  color: string;
-}
 const detailPose:detailContent[] = []
 interface detailContent {
   content: string;
@@ -53,13 +43,11 @@ interface MLmodelProps{
     TopicText: TopicProps[]
     MLmodel: MLmodelProps[]
     detailContent: detailContent[]
-    imgDatapose:imgposeDataProps[]
   }
 export const useCTent = create<ZusProps>((set)=>({
     Nav:contentData,
     TopicText: topicData,
     MLmodel: MLmodel,
     detailContent: detailPose,
-    imgDatapose:imageposeData
 }))
 

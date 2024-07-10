@@ -4,8 +4,8 @@ import { cookies } from "next/headers";
 
 export async function createCookie() {
   cookies().set({
-    name: "n",
-    value: "l",
+    name: "cookie",
+    value: "vOF_cookie",
     httpOnly: true,
     path: "/",
   });
