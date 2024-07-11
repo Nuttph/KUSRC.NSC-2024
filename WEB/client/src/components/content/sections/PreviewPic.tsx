@@ -1,20 +1,19 @@
 "use client";
 import { useCTent } from "@/store/contentStore";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import { dataimgProps } from "@/store/datapicture";
 
-const PreviewPic = ({ imgO }: { imgO: dataimgProps }) => {
-  const dataImg = [1, 2, 3, 4, 5];
+const PreviewPic = ({ valueImg }: { valueImg: StaticImageData[] }) => {
   const [selectImage, setImage] = useState<number>(0);
   return (
     <>
       <div className="flex items-center flex-row gap-[10px]">
         <div className="flex flex-col setCenter gap-[10px]">
-          {dataImg.map((item, index) => (
+          {valueImg.map((item, index) => (
             <div key={index} className="shadow-xl rounded-md">
               <Image
-                src={imgO.img[index]}
+                src={item}
                 alt="img"
                 onClick={() => {
                   setImage(index);
@@ -27,7 +26,7 @@ const PreviewPic = ({ imgO }: { imgO: dataimgProps }) => {
         <div className="w-full h-full flex items-center justify-center">
           <div className="shadow-2xl rounded-xl border-[2px]">
             <Image
-              src={imgO.img[selectImage]}
+              src={valueImg[selectImage]}
               alt="img"
               className="w-[550px] h-[550px] flex items-center justify-center text-[#fff] text-[50px] duration-[0.5s]"
             />

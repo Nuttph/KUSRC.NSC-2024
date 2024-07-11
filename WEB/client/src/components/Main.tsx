@@ -8,6 +8,7 @@ import Header from "./Topic/Header";
 import FContact from "./fixed/FContact";
 import Warning from "./Topic/Warning";
 import SlideCard from "./swiper/SlideCard";
+import BMI from "./BMIBMR/BMI";
 const Main = () => {
   return (
     <>
@@ -41,6 +42,10 @@ const Main = () => {
           id=""
         >
           <SlideCard />
+        </div>
+        {/*ทดสอบค่า BMI BMR */}
+        <div className="w-full px-[140px]">
+          <BMI />
         </div>
         {/* <div className="w-full" id="warning">
           <Warning />

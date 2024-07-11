@@ -4,8 +4,7 @@ import PhyPre from "./sections/PhyPre";
 import { usePicContent } from "@/store/datapicture";
 
 const Maincontent = () => {
-  const l = [1, 2, 3, 4];
-  const { zDataImg } = usePicContent();
+  const { zDataML } = usePicContent();
   return (
     <>
       <div className="w-full p-[40px]">
@@ -23,9 +22,9 @@ const Maincontent = () => {
           </ol>
         </div>
         <div className="mt-[50px] flex flex-col gap-[100px]">
-          {zDataImg.map((item, index) => (
+          {zDataML.data_real.map((item, index) => (
             <div key={index}>
-              <PhyPre item={item} />
+              <PhyPre value={item} index={index} />
             </div>
           ))}
         </div>

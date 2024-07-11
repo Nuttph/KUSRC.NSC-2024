@@ -52,7 +52,9 @@ const Navbar = () => {
             ))}
           </div>
           <div
-            className="min-[1000px]:hidden flex flex-col text-[50px] cursor-pointer"
+            className={`min-[1000px]:hidden flex flex-col text-[50px] cursor-pointer ${
+              openNav ? "rotate-180" : "rotate-0"
+            } duration-[0.5s]`}
             onClick={() => {
               setOpenNav(!openNav);
             }}
@@ -68,7 +70,7 @@ const Navbar = () => {
                   <Link
                     href={item.path}
                     onClick={handleColse}
-                    className="px-[50px] py-[10px] hover:bg-sky-800 cursor-pointer"
+                    className="px-[50px] py-[10px] hover:bg-sky-500 cursor-pointer"
                   >
                     <div key={index} className="">
                       {item.content}
