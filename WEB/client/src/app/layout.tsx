@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_Thai_Looped } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Nav/Navbar";
 import Ccookie from "@/components/fixed/Ccookie";
 import Footer from "@/components/Nav/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSansThaiLooped = Noto_Sans_Thai_Looped({
+  weight: "400",
+  subsets: ["thai"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={notoSansThaiLooped.className}>
         <div className="sticky top-0 z-[50]">
           <Navbar />
         </div>

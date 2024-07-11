@@ -6,7 +6,9 @@ import { mountStoreDevtool } from "simple-zustand-devtools";
 
 const dataimg = [
   {
-    content: "ml_1",
+    content: "เพิ่มการทรงตัว",
+    description:
+      "ช่วยเรื่องการทรงตัวของร่างกาย เป็นการทำกายภาพบำบัดเพื่อเสริมการทรงตัวจะช่วยให้ร่างกายมีการทรงตัวได้ดีขึ้น กล้ามเนื้อและข้อต่อ แข็งแรงขึ้น อีกทั้งยังป้องกันการหกล้มของผู้สูงอายุได้",
     data_real: [
       {
         name: "ml_1",
@@ -46,7 +48,9 @@ const dataimg = [
     ],
   },
   {
-    content: "ml_2",
+    content: "เพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อของผู้สูงอายุ",
+    description:
+      "การเพิ่มความยืดหยุ่นช่วยให้กล้ามเนื้อและข้อต่อมีความคล่องตัวและยืดหยุ่นมากขึ้น ทำให้ลดโอกาสเกิดการบาดเจ็บจากการเคลื่อนไหวในชีวิตประจำวัน เคลื่อนไหวได้คล่องแคล่วขึ้น ทำกิจกรรมประจำวันได้สะดวกขึ้น",
     data_real: [
       {
         name: "text1",
@@ -86,7 +90,9 @@ const dataimg = [
     ],
   },
   {
-    content: "ml_3",
+    content: "เพิ่มกำลังกล้ามเนื้อของผู้สูงอายุ",
+    description:
+      "ช่วยเสริมสร้างความแข็งแรงของกล้ามเนื้อ  ลดความเสี่ยงต่อการเกิดโรคกระดูกพรุน",
     data_real: [
       {
         name: "text1",
@@ -126,7 +132,9 @@ const dataimg = [
     ],
   },
   {
-    content: "ml_4",
+    content: "บริหารกล้ามเนื้อสำหรับข้อเข่าเสื่อม",
+    description:
+      "ช่วยเพิ่มการไหลเวียนของเลือด ทำให้สารอาหารและออกซิเจนไปยังบริเวณข้อเข่า ซึ่งสามารถลดอาการปวดและอักเสบได้ ทำให้ข้อเข่ามีความมั่นคงและรับน้ำหนักได้ดีขึ้น",
     data_real: [
       {
         name: "text1",
@@ -176,43 +184,46 @@ export interface dataimgMockProps {
 }
 export interface dataimgProps {
   content: string;
+  description: string;
   data_real: dataimgMockProps[];
 }
 
 const dataML = {
-  content: "ml_1",
+  content: "เพิ่มการทรงตัว",
+  description:
+    "ช่วยเรื่องการทรงตัวของร่างกาย เป็นการทำกายภาพบำบัดเพื่อเสริมการทรงตัวจะช่วยให้ร่างกายมีการทรงตัวได้ดีขึ้น กล้ามเนื้อและข้อต่อ แข็งแรงขึ้น อีกทั้งยังป้องกันการหกล้มของผู้สูงอายุได้",
   data_real: [
     {
-      name: "text1",
-      des: "",
+      name: "ml_1",
+      des: "text_1",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a1.html",
       imgML: "",
     },
     {
-      name: "text2",
-      des: "",
+      name: "ml_1",
+      des: "text_2",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a2.html",
       imgML: "",
     },
     {
-      name: "text3",
-      des: "",
+      name: "ml_1",
+      des: "text_3",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a1.html",
       imgML: "",
     },
     {
-      name: "text4",
-      des: "",
+      name: "ml_1",
+      des: "text_4",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a2.html",
       imgML: "",
     },
     {
-      name: "text5",
-      des: "",
+      name: "ml_1",
+      des: "text_5",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a2.html",
       imgML: "",
@@ -229,6 +240,7 @@ export interface dataMLinterProps {
 }
 export interface dataMLProps {
   content: string;
+  description: string;
   data_real: dataMLinterProps[];
 }
 

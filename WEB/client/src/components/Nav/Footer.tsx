@@ -1,13 +1,23 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+
+//image
+import logoImg from "../../asset/logofoot.png";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <>
       <div className="h-[500px] bg-gray-800 py-[50px] px-[140px] text-white">
         <div className="flex flex-row justify-between">
-          <div className="w-[30%]">
-            <h1 className="text-[30px] font-semibold">Company name</h1>
+          <div className="w-[20%]">
+            <h1 className=" cursor-pointer text-[30px] font-semibold relative w-[150px] h-[150px]">
+              <Image src={logoImg} alt="logoImg" fill />
+            </h1>
+          </div>
+          <div className="w-[20%]">
+            <div>Test</div>
           </div>
           <div className="w-[20%]">
             <h1 className="text-[30px] font-semibold">Products</h1>
@@ -28,7 +38,7 @@ const Footer = () => {
               </li>
             </ol>
           </div>
-          <div className="flex flex-col gap-[50px] items-end">
+          <div className="flex flex-col gap-[50px] items-end w-[20%]">
             <div className="w-[150px] h-[150px] bg-green-400 shadow-xl flex items-center justify-center text-[25px] text-black font-semibold">
               QR CODE
             </div>

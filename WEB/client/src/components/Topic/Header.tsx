@@ -1,48 +1,45 @@
-import { useCTent } from "@/store/contentStore";
-import Link from "next/link";
-import React from "react";
-
-//image
-import preposeImg from "../../asset/prepose/Lovepik_com-401265802-yoga-exercise.png";
+"use client";
 import Image from "next/image";
 
+//svg
+import human1 from "../../asset/svg/demo/human1.svg";
+import human2 from "../../asset/svg/demo/human2.svg";
+
 const Header = () => {
-  // /test-pose
-  const { TopicText } = useCTent();
   return (
     <>
-      <div className="mt-[50px] pb-[50px] w-full h-[1000px]">
-        <div className="font-bold text-[30px]">ท่าการทำกายภาพบำบัด</div>
-        <div className="flex flex-row gap-[50px] mt-[50px] max-w-full h-[600px] cs-card overflow-x-auto">
-          {TopicText.map((item, index) => (
-            <Link href="/content" key={index}>
-              <div
-                className={`w-[400px] h-[500px] flex flex-col items-center p-[20px] rounded-[15px] shadow-xl relative bg-[#98c1eb]`}
-              >
-                <div className="bg-white w-full h-[200px] rounded-[5px] flex items-center justify-center">
-                  <Image
-                    src={preposeImg}
-                    alt="preposeImg"
-                    className="w-[190px]"
-                  />
-                </div>
-                <div className="">
-                  <div className="text-[25px] mt-[5px] font-medium">
-                    {item.head}
-                  </div>
-                  <p className="line-clamp-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repellat aliquam, officiis aspernatur eaque provident nemo
-                    placeat dolores odit illo beatae asperiores distinctio dicta
-                    architecto commodi, nihil quis id! Repellendus aperiam,
-                    alias suscipit explicabo amet veritatis fuga sequi quasi
-                    totam molestias vel doloremque, iste officiis maiores in qui
-                    pariatur quae earum.
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ))}
+      <div className="w-full h-[1000px] flex justify-between px-[140px] relative">
+        <div className="w-[1500px] h-[700px] bg-[#423390] absolute bottom-[-400px] right-[90px] -rotate-[25deg] z-[-1] rounded-full"></div>
+
+        <div className="flex flex-col mt-[100px]">
+          <h1 className="text-[#5743bc] font-bold text-[90px] drop-shadow-xl">
+            <div className="typewriter text-left text-[90px]">
+              <h1>กายภาพบำบัด</h1>
+            </div>
+          </h1>
+          <div className="bg-[#7358FD] px-[20px] py-[10px] rounded-xl font-semibold text-white text-[30px] w-fit h-fit">
+            PHYSICAL THERAPY
+          </div>
+          <div className="w-[590px] mt-[20px]">
+            <p className="text-[25px]">
+              <span className="text-[30px]">สำหรับผู้สูงอายุหรือคนชรา</span>,
+              การฝึกซ้อมกายภาพบำบัดมีประโยชน์หลายด้านที่สำคัญ เช่น
+              ช่วยเพิ่มความแข็งแรงของกล้ามเนื้อและกระดูก
+              ทำให้สามารถทำกิจวัตรประจำวันได้ง่ายขึ้น
+              ลดความเสี่ยงในการหกล้มและบาดเจ็บ
+              ช่วยฟื้นฟูหลังจากการผ่าตัดหรือโรคที่เกี่ยวกับเครียด
+              และเสริมคุณภาพชีวิตโดยรวมด้วยการเพิ่มพลังงานและความสมดุลในชีวิตประจำวัน
+            </p>
+          </div>
+        </div>
+
+        <div className="relative w-full mt-[250px] overflow-hidden">
+          <div className="absolute right-[360px] w-[500px] h-[500px] z-[1] slide-in-right">
+            <Image src={human1} alt="human1" fill />
+          </div>
+          <div className="absolute right-[60px] w-[500px] h-[500px] slide-in-right">
+            <Image src={human2} alt="human2" fill />
+          </div>
         </div>
       </div>
     </>

@@ -4,24 +4,18 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Link from "next/link";
 import Navbar from "./Nav/Navbar";
-import Header from "./Topic/Header";
 import FContact from "./fixed/FContact";
 import Warning from "./Topic/Warning";
 import SlideCard from "./swiper/SlideCard";
 import BMI from "./BMIBMR/BMI";
+import Header from "./Topic/Header";
 const Main = () => {
   return (
     <>
       <FContact />
       <div className="w-full items-center justify-center flex flex-col">
-        <div
-          className="flex items-center justify-center h-[791px] w-full bg-[#E4FFF6]"
-          // style={{
-          //   backgroundImage:
-          //     "linear-gradient(180deg, rgba(179, 231, 206, 1) 0%, rgba(203, 237, 215, 1) 46%, rgba(208, 239, 224, 1) 100%)",
-          // }}
-        >
-          <h1 className="text-[50px] font-bold">Demo Title!</h1>
+        <div className="w-full">
+          <Header />
         </div>
         <div
           id="slide-card"
@@ -34,9 +28,6 @@ const Main = () => {
             เว็บไซต์นี้สร้างขึ้นเพื่อ้ผู้ที่ต้องการบริหารร่างกายทำท่าทางที่ถูกต้องโดยเราจะมีท่าทางให้ผู้ใช้งานเลือกจากนั้นจะมีโปรแกรมสแกนท่าทางเพื่อตรวจจับท่าทางให้ท่านทำท่าที่ถูกต้อง
           </div>
         </div>
-        {/* <div className="w-full px-[10px]">
-          <Header />
-        </div> */}
         <div
           className="relative w-[100%] h-[700px] bg-gray-200 flex items-center"
           id=""

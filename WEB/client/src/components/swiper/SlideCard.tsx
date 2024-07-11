@@ -36,7 +36,7 @@ export default function SlideCard() {
         {zDataImg.map((item, index) => (
           <div key={index}>
             <SwiperSlide>
-              <div className="flex flex-col py-[25px] px-[20px] gap-2 justify-between h-full">
+              <div className="flex flex-col py-[25px] px-[40px] gap-2 justify-between h-full">
                 <div className="flex items-center justify-center gap-[20px] flex-col">
                   <div className="w-full flex items-center justify-center">
                     <Link
@@ -51,17 +51,8 @@ export default function SlideCard() {
                     </Link>
                   </div>
                   <div>{item.content}</div>
-                  <div className="line-clamp-4">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Suscipit eos ex qui, unde id, at, ad accusantium aliquam
-                    odit non molestias temporibus voluptatum fugiat animi! Lorem
-                    ipsum dolor, sit amet consectetur adipisicing elit. Autem
-                    exercitationem et error aspernatur est natus porro ipsum
-                    iusto sit eos impedit officia id sequi nulla repellendus
-                    asperiores nesciunt soluta, ea temporibus dolores eum.
-                    Aliquid voluptates eaque asperiores nihil. Laudantium
-                    sapiente deleniti illum distinctio sit molestiae quam natus
-                    suscipit aliquam ab!
+                  <div className="line-clamp-4 text-left">
+                    {item.description}
                   </div>
                 </div>
                 <div className="w-full flex items-center justify-center">

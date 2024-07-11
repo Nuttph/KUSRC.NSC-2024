@@ -4,10 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { MdMenuOpen } from "react-icons/md";
+import { IoIosArrowDown } from "react-icons/io";
+//img
+import logoImg from "../../asset/PHYSIO.png";
+import Image from "next/image";
+
 const Navbar = () => {
   const pathname = usePathname();
   const { Nav } = useCTent();
-
   const [openNav, setOpenNav] = useState(false);
   useEffect(() => {
     setOpenNav(false);
@@ -37,7 +41,9 @@ const Navbar = () => {
         min-[1000px]:px-[100px]
         px-[50px]"
         >
-          <div id="Logo">Logo</div>
+          <Link href="/" id="Logo" className="relative w-[200px] h-full">
+            <Image src={logoImg} alt="logoImg" fill />
+          </Link>
           <div
             id="Content"
             className="hidden flex-row gap-[100px]
@@ -46,7 +52,7 @@ const Navbar = () => {
           min-[1000px]:flex"
           >
             {Nav.map((item, index) => (
-              <div key={index} className="text-black">
+              <div key={index} className="text-black hover:font-semibold">
                 <Link href={item.path}>{item.content}</Link>
               </div>
             ))}
@@ -59,13 +65,13 @@ const Navbar = () => {
               setOpenNav(!openNav);
             }}
           >
-            <MdMenuOpen />
+            <IoIosArrowDown />
           </div>
         </div>
         <div className="top-[70px] fixed w-full bg-sky-100">
           {openNav && (
             <>
-              <div className="flex flex-col gap-[20px] text-[20px] ">
+              <div className="flex flex-col gap-[20px] text-[20px]">
                 {Nav.map((item, index) => (
                   <Link
                     href={item.path}
