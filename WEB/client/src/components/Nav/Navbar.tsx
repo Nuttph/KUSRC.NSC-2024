@@ -37,18 +37,23 @@ const Navbar = () => {
       <div className="flex flex-col">
         <div
           className="flex flex-row justify-between h-[70px] shadow-lg items-center
-        bg-[#c6e4ff] min-[1500px]:px-[140px]
+        bg-[#c6e4ff] min-[1500px]:px-[140px] duration-[0.5s]
         min-[1000px]:px-[100px]
         px-[50px]"
         >
-          <Link href="/" id="Logo" className="relative w-[200px] h-full">
+          <Link
+            href="/"
+            id="Logo"
+            className="relative min-[1000px]:w-[200px] min-[1000px]:h-full h-[50px] w-[100px]"
+          >
             <Image src={logoImg} alt="logoImg" fill />
           </Link>
           <div
             id="Content"
-            className="hidden flex-row gap-[100px]
-          min-[1500px]:text-[22px]
-          text-[15px]
+            className="hidden flex-row duration-[0.5s]
+          min-[1500px]:text-[24px] min-[1500px]:gap-[100px]
+          min-[1200px]:text-[20px] gap-[28px]
+          text-[17px]
           min-[1000px]:flex"
           >
             {Nav.map((item, index) => (
@@ -58,9 +63,9 @@ const Navbar = () => {
             ))}
           </div>
           <div
-            className={`min-[1000px]:hidden flex flex-col text-[50px] cursor-pointer ${
+            className={`min-[1000px]:hidden flex flex-col cursor-pointer ${
               openNav ? "rotate-180" : "rotate-0"
-            } duration-[0.5s]`}
+            } duration-[0.5s] min-[1000px]:text-[50px] text-[25px]`}
             onClick={() => {
               setOpenNav(!openNav);
             }}
@@ -71,12 +76,12 @@ const Navbar = () => {
         <div className="top-[70px] fixed w-full bg-sky-100">
           {openNav && (
             <>
-              <div className="flex flex-col gap-[20px] text-[20px]">
+              <div className="flex flex-col text-[15px]">
                 {Nav.map((item, index) => (
                   <Link
                     href={item.path}
                     onClick={handleColse}
-                    className="px-[50px] py-[10px] hover:bg-sky-500 cursor-pointer"
+                    className="px-[25px] py-[10px] hover:bg-sky-500 cursor-pointer border-b-[2px] border-gray-500"
                   >
                     <div key={index} className="">
                       {item.content}

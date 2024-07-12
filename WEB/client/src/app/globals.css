@@ -27,6 +27,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
+}
+
+@media only screen and (max-width:1300px) {
+  .swiper-slide {
+    min-width: 250px;
+  }
+
+  .swiper {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .swiper-slide {
+    min-width: 200px;
+  }
+
+  .swiper {
+    height: 250px;
+  }
 }
 
 .swiper-slide:hover {

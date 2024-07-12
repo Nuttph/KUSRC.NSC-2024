@@ -9,6 +9,7 @@ import Warning from "./Topic/Warning";
 import SlideCard from "./swiper/SlideCard";
 import BMI from "./BMIBMR/BMI";
 import Header from "./Topic/Header";
+import CateMode from "./swiper/CateMode";
 const Main = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const Main = () => {
         <div className="w-full">
           <Header />
         </div>
+
         <div
           id="slide-card"
           className="flex w-full items-center justify-center gap-[40px] flex-col px-[140px] py-[40px] bg-gray-800 border-[10px] border-[#fff] text-white"
@@ -28,18 +30,20 @@ const Main = () => {
             เว็บไซต์นี้สร้างขึ้นเพื่อ้ผู้ที่ต้องการบริหารร่างกายทำท่าทางที่ถูกต้องโดยเราจะมีท่าทางให้ผู้ใช้งานเลือกจากนั้นจะมีโปรแกรมสแกนท่าทางเพื่อตรวจจับท่าทางให้ท่านทำท่าที่ถูกต้อง
           </div>
         </div>
+
         <div
-          className="relative w-[100%] h-[700px] bg-gray-200 flex items-center"
+          className="relative w-[100%] h-[700px] bg-gray-200 hidden items-center min-[650px]:flex"
           id=""
         >
           <SlideCard />
         </div>
-        {/*ทดสอบค่า BMI BMR */}
-        <div className="w-full px-[140px]">
-          <BMI />
+        <div className="flex min-[650px]:hidden w-full">
+          <CateMode />
         </div>
-        {/* <div className="w-full" id="warning">
-          <Warning />
+
+        {/*ทดสอบค่า BMI BMR */}
+        {/* <div className="w-full px-[140px]">
+          <BMI />
         </div> */}
       </div>
     </>

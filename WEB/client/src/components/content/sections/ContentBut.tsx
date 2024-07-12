@@ -13,7 +13,7 @@ interface Props {
 }
 
 const ContentBut = ({ valueC, index }: Props) => {
-  const { zSelectDataML, selectNumber } = usePicContent();
+  const { zSelectDataML, selectNumber, selectID } = usePicContent();
   const handleTest = () => {
     console.log("Test button");
   };
@@ -37,6 +37,7 @@ const ContentBut = ({ valueC, index }: Props) => {
           onClick={() => {
             handleTest();
             selectNumber(index);
+            selectID(index);
           }}
           className="bg-[#58ff9b] px-[40px] py-[10px] w-fit rounded-xl text-[20px]"
         >

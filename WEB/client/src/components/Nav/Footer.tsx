@@ -5,6 +5,7 @@ import React from "react";
 //image
 import logoImg from "../../asset/logofoot.png";
 import Image from "next/image";
+import physicImg from "../../asset/lineoa.png";
 
 const Footer = () => {
   return (
@@ -22,7 +23,7 @@ const Footer = () => {
           <div className="w-[20%]">
             <h1 className="text-[30px] font-semibold">Products</h1>
             <ol className="list-disc ml-[25px] text-[20px]">
-              <li>1</li>
+              ฟ<li>1</li>
               <li>1</li>
               <li>1</li>
               <li>1</li>
@@ -39,10 +40,12 @@ const Footer = () => {
             </ol>
           </div>
           <div className="flex flex-col gap-[50px] items-end w-[20%]">
-            <div className="w-[150px] h-[150px] bg-green-400 shadow-xl flex items-center justify-center text-[25px] text-black font-semibold">
-              QR CODE
-            </div>
-            <div className="w-[150px] h-[150px] bg-green-400 shadow-xl"></div>
+            <Link
+              href="https://lin.ee/KGGdaVo"
+              className="w-[150px] h-[150px] bg-green-400 shadow-xl flex items-center justify-center text-[25px] text-black font-semibold rounded-xl"
+            >
+              <Image src={physicImg} alt="physicImg" className="rounded-xl" />
+            </Link>
           </div>
         </div>
       </div>

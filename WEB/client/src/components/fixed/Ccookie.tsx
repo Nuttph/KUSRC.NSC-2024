@@ -21,22 +21,28 @@ const Ccookie = () => {
   if (!showBanner) return null;
 
   return (
-    <div className="w-[85%] h-[70px] bg-[#00000095] rounded-xl flex items-center justify-center text-white">
-      <div className="flex items-center justify-between px-[70px] w-full">
+    <div
+      className="bg-[#00000095]  flex items-center justify-center text-white duration-[0.5s] 
+     min-[1000px]:h-[70px] min-[1500px]:text-[17px] min-[1000px]:text-[15px]
+    h-[50px] min-[650px]:text-[14px] min-[650px]:w-[85%] min-[650px]:rounded-xl
+    text-[13px] w-full"
+    >
+      <div
+        className="flex items-center justify-between w-full
+      min-[1000px]:px-[70px]
+      px-[20px]"
+      >
         <div className="line-clamp-1 w-[80%]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          deleniti assumenda facere fuga nulla doloribus consequatur odio
-          tempore. Quia expedita mollitia repellat repudiandae reiciendis
-          dolorum, molestiae nam explicabo minima, velit totam dolores! Fugit
-          fuga perferendis earum itaque delectus quos nisi molestias eveniet
-          labore nam, dolorum soluta quo quasi, unde recusandae.
+          คุณชอบคุกกี้ไหม🍪
+          เราใช้คุกกี้เพื่อให้แน่ใจว่าคุณได้รับประสบการณ์ที่ดีที่สุดบนเว็บไซต์ของเรา
         </div>
-        <Link href="/pdpa" className="underline">
-          ... อ่านเพิ่มเติม
+        <Link href="/pdpa" className="underline w-[120px]">
+          อ่านเพิ่มเติม
         </Link>
         <button
           onClick={handleAcceptCookie}
-          className="w-[200px] bg-red-500 hover:bg-red-800 duration-[0.3s] rounded-xl px-[20px] py-[10px] flex items-center justify-center font-bold text-[#fff]"
+          className="w-[200px] bg-red-500 hover:bg-red-800 duration-[0.3s] rounded-xl flex items-center justify-center font-bold text-[#fff]
+          min-[1000px]:px-[20px] min-[1000px]:py-[10px] min-[650px]:px-[10px] py-[5px]"
         >
           Accept Cookie
         </button>

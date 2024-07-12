@@ -11,35 +11,40 @@ const dataimg = [
       "ช่วยเรื่องการทรงตัวของร่างกาย เป็นการทำกายภาพบำบัดเพื่อเสริมการทรงตัวจะช่วยให้ร่างกายมีการทรงตัวได้ดีขึ้น กล้ามเนื้อและข้อต่อ แข็งแรงขึ้น อีกทั้งยังป้องกันการหกล้มของผู้สูงอายุได้",
     data_real: [
       {
-        name: "ml_1",
+        id: 0,
+        name: "ท่ายืนกางขา",
         des: "text_1",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
         imgML: "",
       },
       {
-        name: "ml_1",
+        id: 1,
+        name: "ท่ายืนขาเดียวมือประสานไว้บนหัว",
         des: "text_2",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
         imgML: "",
       },
       {
-        name: "ml_1",
+        id: 2,
+        name: "ท่ายืนงอเข่ากวาดเท้าไปข้างหลัง",
         des: "text_3",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
         imgML: "",
       },
       {
-        name: "ml_1",
+        id: 3,
+        name: "ย่อเข่า บิดลำตัว",
         des: "text_4",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
         imgML: "",
       },
       {
-        name: "ml_1",
+        id: 4,
+        name: "ย่ำเท้า ยกเข่าสูง",
         des: "text_5",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
@@ -48,124 +53,107 @@ const dataimg = [
     ],
   },
   {
-    content: "เพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อของผู้สูงอายุ",
+    content: "เพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อ",
     description:
       "การเพิ่มความยืดหยุ่นช่วยให้กล้ามเนื้อและข้อต่อมีความคล่องตัวและยืดหยุ่นมากขึ้น ทำให้ลดโอกาสเกิดการบาดเจ็บจากการเคลื่อนไหวในชีวิตประจำวัน เคลื่อนไหวได้คล่องแคล่วขึ้น ทำกิจกรรมประจำวันได้สะดวกขึ้น",
     data_real: [
       {
-        name: "text1",
+        id: 0,
+        name: "ท่ายืดกล้ามเนื้อขาด้านหลัง",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
         imgML: "",
       },
       {
-        name: "text2",
+        id: 1,
+        name: "เหยียดน่อง",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
         imgML: "",
       },
       {
-        name: "text3",
+        id: 2,
+        name: "ย่อเข่า",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
-        imgML: "",
-      },
-      {
-        name: "text4",
-        des: "",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a2.html",
-        imgML: "",
-      },
-      {
-        name: "text5",
-        des: "",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a2.html",
         imgML: "",
       },
     ],
   },
   {
-    content: "เพิ่มกำลังกล้ามเนื้อของผู้สูงอายุ",
+    content: "เพิ่มกำลังกล้ามเนื้อ",
     description:
       "ช่วยเสริมสร้างความแข็งแรงของกล้ามเนื้อ  ลดความเสี่ยงต่อการเกิดโรคกระดูกพรุน",
     data_real: [
       {
-        name: "text1",
+        id: 0,
+        name: "ยกแขนขึ้น-เหยียดแขนลง",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
         imgML: "",
       },
       {
-        name: "text2",
+        id: 1,
+        name: "กางแขน-หุบแขน",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
         imgML: "",
       },
       {
-        name: "text3",
+        id: 2,
+        name: "งอศอก-เหยียดศอก",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
-        imgML: "",
-      },
-      {
-        name: "text4",
-        des: "",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a2.html",
-        imgML: "",
-      },
-      {
-        name: "text5",
-        des: "",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a2.html",
         imgML: "",
       },
     ],
   },
   {
-    content: "บริหารกล้ามเนื้อสำหรับข้อเข่าเสื่อม",
+    content: "บริหารกล้ามเนื้อ",
     description:
       "ช่วยเพิ่มการไหลเวียนของเลือด ทำให้สารอาหารและออกซิเจนไปยังบริเวณข้อเข่า ซึ่งสามารถลดอาการปวดและอักเสบได้ ทำให้ข้อเข่ามีความมั่นคงและรับน้ำหนักได้ดีขึ้น",
     data_real: [
       {
-        name: "text1",
+        id: 0,
+        name: "ท่าบริหารกล้ามเนื้อเหยียดเข่า",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
         imgML: "",
       },
       {
-        name: "text2",
+        id: 1,
+        name: "เหวี่ยงแขน บิดลำตัว",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
         imgML: "",
       },
       {
-        name: "text3",
+        id: 2,
+        name: "แกว่งแขนสูงกำมือ แบมือ",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
         imgML: "",
       },
       {
-        name: "text4",
+        id: 3,
+        name: "กำหมัดชูแขน",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
         imgML: "",
       },
       {
-        name: "text5",
+        id: 4,
+        name: "หุบศอก",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
@@ -176,6 +164,7 @@ const dataimg = [
 ];
 
 export interface dataimgMockProps {
+  id: number;
   name: string;
   des: string;
   img: StaticImageData[];
@@ -194,35 +183,40 @@ const dataML = {
     "ช่วยเรื่องการทรงตัวของร่างกาย เป็นการทำกายภาพบำบัดเพื่อเสริมการทรงตัวจะช่วยให้ร่างกายมีการทรงตัวได้ดีขึ้น กล้ามเนื้อและข้อต่อ แข็งแรงขึ้น อีกทั้งยังป้องกันการหกล้มของผู้สูงอายุได้",
   data_real: [
     {
-      name: "ml_1",
+      id: 0,
+      name: "ท่ายืนกางขา",
       des: "text_1",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a1.html",
       imgML: "",
     },
     {
-      name: "ml_1",
+      id: 1,
+      name: "ท่ายืนขาเดียวมือประสานไว้บนหัว",
       des: "text_2",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a2.html",
       imgML: "",
     },
     {
-      name: "ml_1",
+      id: 2,
+      name: "ท่ายืนงอเข่ากวาดเท้าไปข้างหลัง",
       des: "text_3",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a1.html",
       imgML: "",
     },
     {
-      name: "ml_1",
+      id: 3,
+      name: "ย่อเข่า บิดลำตัว",
       des: "text_4",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a2.html",
       imgML: "",
     },
     {
-      name: "ml_1",
+      id: 4,
+      name: "ย่ำเท้า ยกเข่าสูง",
       des: "text_5",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a2.html",
@@ -232,6 +226,7 @@ const dataML = {
 };
 
 export interface dataMLinterProps {
+  id: number;
   name: string;
   des: string;
   img: StaticImageData[];
@@ -257,6 +252,9 @@ interface zusProps {
 
   useNumber: number;
   selectNumber: (value: number) => void;
+
+  useID: number;
+  selectID: (value: number) => void;
 }
 export const usePicContent = create<zusProps>((set) => ({
   zDataImg: dataimg,
@@ -266,6 +264,9 @@ export const usePicContent = create<zusProps>((set) => ({
 
   useNumber: usingNumber,
   selectNumber: (value) => set({ useNumber: value }),
+
+  useID: 0,
+  selectID: (value) => set({ useID: value }),
 }));
 
 if (process.env.NODE_ENV === "development") {

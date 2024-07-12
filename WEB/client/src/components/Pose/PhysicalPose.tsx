@@ -2,12 +2,12 @@
 import { usePicContent } from "@/store/datapicture";
 import React from "react";
 const PhysicalPose = () => {
-  const { zDataML, useNumber } = usePicContent();
+  const { zDataML, useNumber, useID } = usePicContent();
   return (
     <>
       <div className="flex flex-col w-full text-center">
         <div className="flex font-bold underline items-center justify-center">
-          {zDataML.data_real[useNumber].linkML}
+          {zDataML.data_real[useID].name}
         </div>
         <div className="flex flex-row justify-between">
           <div className="w-[50%] flex flex-col items-center mt-[80px]">
