@@ -41,6 +41,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-[50px] items-end w-[20%]">
             <Link
+              target="_blank"
               href="https://lin.ee/KGGdaVo"
               className="w-[150px] h-[150px] bg-green-400 shadow-xl flex items-center justify-center text-[25px] text-black font-semibold rounded-xl"
             >
@@ -50,7 +51,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full h-[70px] bg-gray-100 flex items-center justify-center text-[25px]">
-        © 2024 Copyright : {"  "}
+        © 2024 Copyright :
         <Link
           href="https://physio-power.vercel.app/"
           className="ml-[5px] font-semibold"

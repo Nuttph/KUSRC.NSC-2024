@@ -3,6 +3,9 @@ import { create } from "zustand";
 import mockImg from "../asset/prepose/Lovepik_com-401265802-yoga-exercise.png";
 import mockImg2 from "../asset/prepose/pose1.png";
 import { mountStoreDevtool } from "simple-zustand-devtools";
+import { persist, createJSONStorage } from "zustand/middleware";
+//image
+import a1_1 from "../asset/pose/a1/a1_1.jpg";
 
 const dataimg = [
   {
@@ -13,10 +16,10 @@ const dataimg = [
       {
         id: 0,
         name: "ท่ายืนกางขา",
-        des: "text_1",
+        des: "ยืนกางขาออกเยอะๆๆๆๆๆๆๆๆๆๆๆๆ",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 1,
@@ -24,7 +27,7 @@ const dataimg = [
         des: "text_2",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 2,
@@ -32,7 +35,7 @@ const dataimg = [
         des: "text_3",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 3,
@@ -40,7 +43,7 @@ const dataimg = [
         des: "text_4",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 4,
@@ -48,7 +51,7 @@ const dataimg = [
         des: "text_5",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
-        imgML: "",
+        imgML: a1_1,
       },
     ],
   },
@@ -63,7 +66,7 @@ const dataimg = [
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 1,
@@ -71,7 +74,7 @@ const dataimg = [
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 2,
@@ -79,7 +82,7 @@ const dataimg = [
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
-        imgML: "",
+        imgML: a1_1,
       },
     ],
   },
@@ -94,7 +97,7 @@ const dataimg = [
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 1,
@@ -102,7 +105,7 @@ const dataimg = [
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 2,
@@ -110,7 +113,7 @@ const dataimg = [
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
-        imgML: "",
+        imgML: a1_1,
       },
     ],
   },
@@ -125,7 +128,7 @@ const dataimg = [
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 1,
@@ -133,7 +136,7 @@ const dataimg = [
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 2,
@@ -141,7 +144,7 @@ const dataimg = [
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a1.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 3,
@@ -149,7 +152,7 @@ const dataimg = [
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
-        imgML: "",
+        imgML: a1_1,
       },
       {
         id: 4,
@@ -157,7 +160,7 @@ const dataimg = [
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a2.html",
-        imgML: "",
+        imgML: a1_1,
       },
     ],
   },
@@ -169,7 +172,7 @@ export interface dataimgMockProps {
   des: string;
   img: StaticImageData[];
   linkML: string;
-  imgML: string;
+  imgML: StaticImageData;
 }
 export interface dataimgProps {
   content: string;
@@ -185,10 +188,10 @@ const dataML = {
     {
       id: 0,
       name: "ท่ายืนกางขา",
-      des: "text_1",
+      des: "ยืนกางขาออกเยอะๆๆๆๆๆๆๆๆๆๆๆๆ",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a1.html",
-      imgML: "",
+      imgML: a1_1,
     },
     {
       id: 1,
@@ -196,7 +199,7 @@ const dataML = {
       des: "text_2",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a2.html",
-      imgML: "",
+      imgML: a1_1,
     },
     {
       id: 2,
@@ -204,7 +207,7 @@ const dataML = {
       des: "text_3",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a1.html",
-      imgML: "",
+      imgML: a1_1,
     },
     {
       id: 3,
@@ -212,7 +215,7 @@ const dataML = {
       des: "text_4",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a2.html",
-      imgML: "",
+      imgML: a1_1,
     },
     {
       id: 4,
@@ -220,7 +223,7 @@ const dataML = {
       des: "text_5",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a2.html",
-      imgML: "",
+      imgML: a1_1,
     },
   ],
 };
@@ -231,7 +234,7 @@ export interface dataMLinterProps {
   des: string;
   img: StaticImageData[];
   linkML: string;
-  imgML: string;
+  imgML: StaticImageData;
 }
 export interface dataMLProps {
   content: string;
@@ -256,17 +259,18 @@ interface zusProps {
   useID: number;
   selectID: (value: number) => void;
 }
-export const usePicContent = create<zusProps>((set) => ({
+
+export const usePicContent = create<zusProps>()((set, get) => ({
   zDataImg: dataimg,
   zText: "test",
   zDataML: dataML,
-  zSelectDataML: (value) => set({ zDataML: value }),
+  zSelectDataML: (value: dataMLProps) => set({ zDataML: value }),
 
   useNumber: usingNumber,
-  selectNumber: (value) => set({ useNumber: value }),
+  selectNumber: (value: number) => set({ useNumber: value }),
 
   useID: 0,
-  selectID: (value) => set({ useID: value }),
+  selectID: (value: number) => set({ useID: value }),
 }));
 
 if (process.env.NODE_ENV === "development") {
