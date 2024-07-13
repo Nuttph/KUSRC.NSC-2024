@@ -17,6 +17,7 @@
         </div>
         <div id="label-container" class="text"></div>
         <div id="setTime" class="countsPose"></div>
+        <div id="status" class="countsPose"></div>
     </div>
 
     <!-- Add audio element -->
@@ -50,13 +51,12 @@
                 labelContainer.appendChild(document.createElement("div"));
             }
         }
+
         async function loop(timestamp) {
             webcam.update();
             await predict();
             window.requestAnimationFrame(loop);
         }
-
-        const canvasu = document.querySelector('.canvasu')
 
         async function predict() {
             const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
@@ -67,7 +67,7 @@
                 const valueOfDPose = (prediction[0].probability.toFixed(2) * 100).toFixed(2);
                 labelContainer.childNodes[0].innerHTML = `ความแม่นยำในการทำท่า : ${valueOfDPose}`;
                 if (valueOfDPose > 70) {
-                    canvasu.classList.add('currentColor');
+                    canvas.classList.add('currentColor');
                     labelContainer.childNodes[0].classList.add("currentColor");
                     if (!counting) {
                         counting = true;
@@ -75,7 +75,7 @@
                         timerInterval = setInterval(updateTime, 1000);
                     }
                 } else {
-                    canvasu.classList.remove('currentColor');
+                    canvas.classList.remove('currentColor');
                     labelContainer.childNodes[0].classList.remove("currentColor");
                     if (counting) {
                         counting = false;
@@ -102,12 +102,11 @@
         let timerInterval;
 
         function updateTime() {
-            const currentPose = document.getElementById('currentTime');
             const currentTime = new Date().getTime();
             const elapsedTime = Math.floor((currentTime - startTime) / 1000);
             document.getElementById('setTime').innerHTML = `ทำไปแล้ว ${elapsedTime} วินาที`;
             if (elapsedTime >= 5) {
-                currentPose.innerHTML = `ครบ 5 วิแล้ว`;
+                document.getElementById('status').innerHTML = `ครบ 5 วิแล้ว`;
                 playAlertSound();
             }
         }
