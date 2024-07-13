@@ -2,15 +2,25 @@
 import { useCTent } from "@/store/contentStore";
 import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
-import { dataimgProps } from "@/store/datapicture";
+import {
+  dataimgProps,
+  dataMLinterProps,
+  usePicContent,
+} from "@/store/datapicture";
 
-const PreviewPic = ({ valueImg }: { valueImg: StaticImageData[] }) => {
-  const [selectImage, setImage] = useState<number>(0);
+interface Props {
+  indexs: number;
+  valueImg: dataMLinterProps;
+}
+const PreviewPic = ({ indexs, valueImg }: Props) => {
+  const [selectImage, setImage] = useState(0);
+  const { zDataImg } = usePicContent();
+
   return (
     <>
       <div className="flex items-center flex-row gap-[10px]">
         <div className="flex flex-col setCenter gap-[10px]">
-          {valueImg.map((item, index) => (
+          {valueImg.img.map((item, index) => (
             <div key={index} className="shadow-xl rounded-md">
               <Image
                 src={item}
@@ -26,9 +36,9 @@ const PreviewPic = ({ valueImg }: { valueImg: StaticImageData[] }) => {
         <div className="w-full h-full flex items-center justify-center">
           <div className="shadow-2xl rounded-xl border-[2px]">
             <Image
-              src={valueImg[selectImage]}
+              src={valueImg.img[selectImage]}
               alt="img"
-              className="w-[550px] h-[550px] flex items-center justify-center text-[#fff] text-[50px] duration-[0.5s]"
+              className="max-w-[550px] h-[550px] flex items-center justify-center text-[#fff] text-[50px] duration-[0.5s]"
             />
           </div>
         </div>

@@ -2,10 +2,13 @@ import { StaticImageData } from "next/image";
 import { create } from "zustand";
 import mockImg from "../asset/prepose/Lovepik_com-401265802-yoga-exercise.png";
 import mockImg2 from "../asset/prepose/pose1.png";
-import { mountStoreDevtool } from "simple-zustand-devtools";
 import { persist, createJSONStorage } from "zustand/middleware";
-//image
+
+//image a1
 import a1_1 from "../asset/pose/a1/a1_1.jpg";
+import a1_2 from "../asset/pose/a1/a1_2.png";
+import a1_3 from "../asset/pose/a1/a1_3.png";
+import a1_4 from "../asset/pose/a1/a1_4.png";
 
 const dataimg = [
   {
@@ -16,8 +19,8 @@ const dataimg = [
       {
         id: 0,
         name: "ท่ายืนกางขา",
-        des: "ยืนกางขาออกเยอะๆๆๆๆๆๆๆๆๆๆๆๆ",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        des: `ยืนตัวตรงหลังเก้าอี้ ศีรษะตรง ไม่แอ่นหลัง มือทั้งสองข้างจับพนักพิงเก้าอี้ กางเท้าขวาไปด้านข้างช้าๆ ค้างไว้ 5 วินาที แล้วกลับมายืนเท้าชิด จากนั้นทำสลับซ้าย-ขวา 10 รอบ (ซ้าย-ขวา นับเป็น 2 รอบ)`,
+        img: [a1_1, a1_2, a1_3, a1_4],
         linkML: "a1.html",
         imgML: a1_1,
       },
@@ -25,16 +28,16 @@ const dataimg = [
         id: 1,
         name: "ท่ายืนขาเดียวมือประสานไว้บนหัว",
         des: "text_2",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [a1_1, a1_2, a1_3, a1_4, mockImg],
         linkML: "a2.html",
         imgML: a1_1,
       },
       {
         id: 2,
         name: "ท่ายืนงอเข่ากวาดเท้าไปข้างหลัง",
-        des: "text_3",
+        des: "ยืนตัวตรงหลังเก้าอี้ ศีรษะตรง ไม่แอ่นหลัง มือทั้งสองข้างจับพนักพิงเก้าอี้ งอเข่าขวาช้าๆ ปลายเท้าชี้ลงพื้น ค้างไว้ 3 วินาที แล้วเอาเท้าขวาลงแนบพื้น จากนั้นทำทีละข้าง ข้างละ 10 ครั้ง",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a1.html",
+        linkML: "a3.html",
         imgML: a1_1,
       },
       {
@@ -42,7 +45,7 @@ const dataimg = [
         name: "ย่อเข่า บิดลำตัว",
         des: "text_4",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a2.html",
+        linkML: "a4.html",
         imgML: a1_1,
       },
       {
@@ -50,7 +53,7 @@ const dataimg = [
         name: "ย่ำเท้า ยกเข่าสูง",
         des: "text_5",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a2.html",
+        linkML: "a5.html",
         imgML: a1_1,
       },
     ],
@@ -63,9 +66,9 @@ const dataimg = [
       {
         id: 0,
         name: "ท่ายืดกล้ามเนื้อขาด้านหลัง",
-        des: "",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a1.html",
+        des: "ท่ายืดกล้ามเนื้อขาด้านหลัง ท่ายืดกล้ามเนื้อขาด้านหลัง",
+        img: [a1_1, a1_2, a1_3, a1_4, mockImg],
+        linkML: "b1.html",
         imgML: a1_1,
       },
       {
@@ -73,7 +76,7 @@ const dataimg = [
         name: "เหยียดน่อง",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a2.html",
+        linkML: "b2.html",
         imgML: a1_1,
       },
       {
@@ -81,7 +84,7 @@ const dataimg = [
         name: "ย่อเข่า",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a1.html",
+        linkML: "b3.html",
         imgML: a1_1,
       },
     ],
@@ -95,8 +98,8 @@ const dataimg = [
         id: 0,
         name: "ยกแขนขึ้น-เหยียดแขนลง",
         des: "",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a1.html",
+        img: [a1_1, a1_2, a1_3, a1_4, mockImg],
+        linkML: "c1.html",
         imgML: a1_1,
       },
       {
@@ -104,7 +107,7 @@ const dataimg = [
         name: "กางแขน-หุบแขน",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a2.html",
+        linkML: "c2.html",
         imgML: a1_1,
       },
       {
@@ -112,7 +115,7 @@ const dataimg = [
         name: "งอศอก-เหยียดศอก",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a1.html",
+        linkML: "c3.html",
         imgML: a1_1,
       },
     ],
@@ -126,8 +129,8 @@ const dataimg = [
         id: 0,
         name: "ท่าบริหารกล้ามเนื้อเหยียดเข่า",
         des: "",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a1.html",
+        img: [a1_1, a1_2, a1_3, a1_4],
+        linkML: "d1.html",
         imgML: a1_1,
       },
       {
@@ -135,7 +138,7 @@ const dataimg = [
         name: "เหวี่ยงแขน บิดลำตัว",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a2.html",
+        linkML: "d2.html",
         imgML: a1_1,
       },
       {
@@ -143,7 +146,7 @@ const dataimg = [
         name: "แกว่งแขนสูงกำมือ แบมือ",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a1.html",
+        linkML: "d3.html",
         imgML: a1_1,
       },
       {
@@ -151,7 +154,7 @@ const dataimg = [
         name: "กำหมัดชูแขน",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a2.html",
+        linkML: "d4.html",
         imgML: a1_1,
       },
       {
@@ -159,7 +162,7 @@ const dataimg = [
         name: "หุบศอก",
         des: "",
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-        linkML: "a2.html",
+        linkML: "d5.html",
         imgML: a1_1,
       },
     ],
@@ -180,7 +183,7 @@ export interface dataimgProps {
   data_real: dataimgMockProps[];
 }
 
-const dataML = {
+export const dataML = {
   content: "เพิ่มการทรงตัว",
   description:
     "ช่วยเรื่องการทรงตัวของร่างกาย เป็นการทำกายภาพบำบัดเพื่อเสริมการทรงตัวจะช่วยให้ร่างกายมีการทรงตัวได้ดีขึ้น กล้ามเนื้อและข้อต่อ แข็งแรงขึ้น อีกทั้งยังป้องกันการหกล้มของผู้สูงอายุได้",
@@ -188,8 +191,8 @@ const dataML = {
     {
       id: 0,
       name: "ท่ายืนกางขา",
-      des: "ยืนกางขาออกเยอะๆๆๆๆๆๆๆๆๆๆๆๆ",
-      img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+      des: "ยืนตัวตรงหลังเก้าอี้ ศีรษะตรง ไม่แอ่นหลัง มือทั้งสองข้างจับพนักพิงเก้าอี้ งอเข่าขวาช้าๆ ปลายเท้าชี้ลงพื้น ค้างไว้ 3 วินาที แล้วเอาเท้าขวาลงแนบพื้น จากนั้นทำทีละข้าง ข้างละ 10 ครั้ง",
+      img: [a1_1, a1_2, a1_3, a1_4, mockImg],
       linkML: "a1.html",
       imgML: a1_1,
     },
@@ -197,7 +200,7 @@ const dataML = {
       id: 1,
       name: "ท่ายืนขาเดียวมือประสานไว้บนหัว",
       des: "text_2",
-      img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+      img: [a1_1, a1_2, a1_3, a1_4, mockImg],
       linkML: "a2.html",
       imgML: a1_1,
     },
@@ -205,8 +208,8 @@ const dataML = {
       id: 2,
       name: "ท่ายืนงอเข่ากวาดเท้าไปข้างหลัง",
       des: "text_3",
-      img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-      linkML: "a1.html",
+      img: [a1_1, a1_2, a1_3, a1_4, mockImg],
+      linkML: "a3.html",
       imgML: a1_1,
     },
     {
@@ -214,7 +217,7 @@ const dataML = {
       name: "ย่อเข่า บิดลำตัว",
       des: "text_4",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-      linkML: "a2.html",
+      linkML: "a4.html",
       imgML: a1_1,
     },
     {
@@ -222,7 +225,7 @@ const dataML = {
       name: "ย่ำเท้า ยกเข่าสูง",
       des: "text_5",
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
-      linkML: "a2.html",
+      linkML: "a5.html",
       imgML: a1_1,
     },
   ],
@@ -260,19 +263,21 @@ interface zusProps {
   selectID: (value: number) => void;
 }
 
-export const usePicContent = create<zusProps>()((set, get) => ({
-  zDataImg: dataimg,
-  zText: "test",
-  zDataML: dataML,
-  zSelectDataML: (value: dataMLProps) => set({ zDataML: value }),
-
-  useNumber: usingNumber,
-  selectNumber: (value: number) => set({ useNumber: value }),
-
-  useID: 0,
-  selectID: (value: number) => set({ useID: value }),
-}));
-
-if (process.env.NODE_ENV === "development") {
-  mountStoreDevtool("Store", usePicContent);
-}
+export const usePicContent = create<zusProps>()(
+  persist(
+    (set, get) => ({
+      zDataImg: dataimg,
+      zText: "test",
+      zDataML: dataML,
+      useNumber: usingNumber,
+      useID: 0,
+      zSelectDataML: (value) => set({ zDataML: value }),
+      selectNumber: (value) => set({ useNumber: value }),
+      selectID: (value) => set({ useID: value }),
+    }),
+    {
+      name: "pic-content-storage", // name of the item in storage
+      getStorage: () => localStorage, // (optional) by default, 'localStorage' is used
+    }
+  )
+);

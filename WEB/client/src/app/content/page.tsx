@@ -1,12 +1,15 @@
-import Maincontent from "@/components/content/Maincontent";
-import React from "react";
+"use client";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const page = () => {
-  return (
-    <div>
-      <Maincontent />
-    </div>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/content/pose1");
+  }, [router]);
+
+  return <div></div>;
 };
 
 export default page;

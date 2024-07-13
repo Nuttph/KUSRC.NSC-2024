@@ -14,7 +14,7 @@ const Warning = () => {
   return (
     <>
       <div className="w-full bg-gray-200 px-[140px] py-[100px]">
-        <div className="bg-white w-full h-[1000px] rounded-xl p-[100px]">
+        <div className="bg-white w-full h-fit rounded-xl p-[100px]">
           <div className="flex flex-col items-center justify-center">
             <div className="text-[25px] font-semibold">
               ข้อควรปฏิบัติในการทำกายภาพบำบัด

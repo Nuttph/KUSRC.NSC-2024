@@ -13,7 +13,7 @@ const PhyPre = ({ value, index }: Props) => {
         <div className="flex setCenter">
           {/* preview picture */}
           <>
-            <PreviewPic valueImg={value.img} />
+            <PreviewPic valueImg={value} indexs={index} />
           </>
         </div>
         <div className="flex setCenter w-[800px] text-black h-[550px]">

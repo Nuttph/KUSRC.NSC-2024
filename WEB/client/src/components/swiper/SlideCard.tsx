@@ -16,7 +16,7 @@ import { dataMLProps } from "@/store/datapicture";
 
 export default function SlideCard() {
   const { TopicText } = useCTent();
-  const { zSelectDataML, zDataImg, zDataML } = usePicContent();
+  const { zSelectDataML, zDataImg, zDataML, selectNumber } = usePicContent();
   const handleClick = () => {
     console.log("click");
   };
@@ -40,7 +40,7 @@ export default function SlideCard() {
                 <div className="flex items-center justify-center gap-[20px] flex-col">
                   <div className="w-full flex items-center justify-center">
                     <Link
-                      href="/content"
+                      href={`/content/pose${index + 1}`}
                       className="relative h-[250px] w-[350px] flex items-center justify-center shadow-2xl rounded-xl bg-white"
                     >
                       <Image
@@ -59,8 +59,9 @@ export default function SlideCard() {
                   <Link
                     onClick={() => {
                       zSelectDataML(item);
+                      selectNumber(index);
                     }}
-                    href="/content"
+                    href={`/content/pose${index + 1}`}
                     className="flex items-center justify-center bg-purple-300 w-fit px-[25px] py-[10px] rounded-xl text-white font-medium hover:bg-purple-500 duration-[0.5s]"
                   >
                     ดูรายละเอียด
