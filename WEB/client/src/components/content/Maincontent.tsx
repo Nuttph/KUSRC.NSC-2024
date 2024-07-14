@@ -20,6 +20,21 @@ const Maincontent = () => {
     }
   }, []);
 
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  if (!isClient) {
+    return (
+      <>
+        <div className="w-full h-[100vh]">
+          <div className="text-[25px] flex items-center justify-center text-red-500 font-bold">
+            Loading...
+          </div>
+        </div>
+      </>
+    );
+  }
   return (
     <>
       <div className="w-full p-[40px]">

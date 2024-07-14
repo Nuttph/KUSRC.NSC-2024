@@ -44,7 +44,7 @@ export default function SlideCard() {
                       className="relative h-[250px] w-[350px] flex items-center justify-center shadow-2xl rounded-xl bg-white"
                     >
                       <Image
-                        src={item.data_real[index].img[index]}
+                        src={item.data_real[index].img[index + 1]}
                         alt="img"
                         fill
                       />
