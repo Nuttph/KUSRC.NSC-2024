@@ -17,26 +17,13 @@ const Footer = () => {
               <Image src={logoImg} alt="logoImg" fill />
             </h1>
           </div>
-          <div className="w-[20%]">
-            <div>Test</div>
-          </div>
-          <div className="w-[20%]">
-            <h1 className="text-[30px] font-semibold">Products</h1>
-            <ol className="list-disc ml-[25px] text-[20px]">
-              ฟ<li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-            </ol>
-          </div>
-          <div className="w-[20%]">
-            <h1 className="text-[30px] font-semibold">Credit</h1>
-            <ol className="list-disc ml-[25px] text-[20px]">
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                omnis rem tempora perferendis beatae voluptas atque voluptatem,
-                autem natus. Omnis aut facere perferendis totam sapiente?
-              </li>
+          <div>
+            <div className="text-[30px] font-semibold">Tech Stack</div>
+            <ol className="list-disc text-[20px]">
+              <li>Next.js</li>
+              <li>TailwindCSS</li>
+              <li>MUI</li>
+              <li>Tensorflow</li>
             </ol>
           </div>
           <div className="flex flex-col gap-[50px] items-end w-[20%]">

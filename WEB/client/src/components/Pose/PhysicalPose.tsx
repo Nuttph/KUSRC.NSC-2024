@@ -12,7 +12,7 @@ const PhysicalPose = () => {
     setIsClient(true);
   }, []);
 
-  const [showV, setShowV] = useState(false);
+  const [showV, setShowV] = useState(true);
 
   if (!isClient) {
     return (
@@ -48,7 +48,7 @@ const PhysicalPose = () => {
                     </div>
                   </>
                 )}
-                {showV ? (
+                {showV && zDataImg[useNumber].data_real[useID].videoML != "" ? (
                   <>
                     <div className="flex items-center justify-center w-full pb-[150px]">
                       {zDataImg[useNumber].data_real[useID].videoML != "" ? (
