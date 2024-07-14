@@ -10,6 +10,10 @@ import a1_2 from "../asset/pose/a1/a1_2.png";
 import a1_3 from "../asset/pose/a1/a1_3.png";
 import a1_4 from "../asset/pose/a1/a1_4.png";
 //image a2
+
+//image a3
+import a3_1 from "../asset/pose/a3/a3_1.png";
+import a3_2 from "../asset/pose/a3/a3_2.png";
 const dataimg = [
   {
     content: "เพิ่มการทรงตัว",
@@ -38,10 +42,10 @@ const dataimg = [
         id: 2,
         name: "ท่ายืนงอเข่ากวาดเท้าไปข้างหลัง",
         des: "ยืนตัวตรงหลังเก้าอี้ ศีรษะตรง ไม่แอ่นหลัง มือทั้งสองข้างจับพนักพิงเก้าอี้ งอเข่าขวาช้าๆ ปลายเท้าชี้ลงพื้น ค้างไว้ 3 วินาที แล้วเอาเท้าขวาลงแนบพื้น จากนั้นทำทีละข้าง ข้างละ 10 ครั้ง",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [a3_1, a3_2],
         linkML: "a3.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/aa3_1.mp4",
       },
       {
         id: 3,
@@ -218,7 +222,7 @@ export const dataML = {
       id: 1,
       name: "ท่ายืนขาเดียวมือประสานไว้บนหัว",
       des: "text_2",
-      img: [a1_1, a1_2, a1_3, a1_4, mockImg],
+      img: [mockImg, mockImg, mockImg, mockImg, mockImg],
       linkML: "a2.html",
       imgML: a1_1,
       videoML: "/video/aa1_1.mp4",
@@ -227,7 +231,7 @@ export const dataML = {
       id: 2,
       name: "ท่ายืนงอเข่ากวาดเท้าไปข้างหลัง",
       des: "text_3",
-      img: [a1_1, a1_2, a1_3, a1_4, mockImg],
+      img: [mockImg, mockImg, mockImg, mockImg, mockImg],
       linkML: "a3.html",
       imgML: a1_1,
       videoML: "/video/aa1_1.mp4",
