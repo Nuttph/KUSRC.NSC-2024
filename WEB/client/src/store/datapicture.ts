@@ -9,11 +9,20 @@ import a1_1 from "../asset/pose/a1/a1_1.jpg";
 import a1_2 from "../asset/pose/a1/a1_2.png";
 import a1_3 from "../asset/pose/a1/a1_3.png";
 import a1_4 from "../asset/pose/a1/a1_4.png";
+
 //image a2
 
 //image a3
 import a3_1 from "../asset/pose/a3/a3_1.png";
 import a3_2 from "../asset/pose/a3/a3_2.png";
+
+//image a4
+import a4_1 from "../asset/pose/a4/a4_1.png";
+import a4_2 from "../asset/pose/a4/a4_2.png";
+
+//image a5
+import a5_1 from "../asset/pose/a5/a5_1.png";
+import a5_2 from "../asset/pose/a5/a5_2.png";
 const dataimg = [
   {
     content: "เพิ่มการทรงตัว",
@@ -51,19 +60,19 @@ const dataimg = [
         id: 3,
         name: "ยกเข่า บิดลำตัว",
         des: "ยกแขนกางศอกทั้ง 2 ข้าง ยกขาซ้ายขึ้นสลับขาขวาไปมา บิดลำตัวตามขาที่ยก",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [a4_1, a4_2],
         linkML: "a4.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/aa4_1.mp4",
       },
       {
         id: 4,
         name: "ย่ำเท้า ยกเข่าสูง",
         des: "ย่ำเท้าอยู่กับที่ ยกเข่าสูงระดับสะโพก สลับกัน ซ้าย-ขวา พร้อมแกว่งแขน",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [a5_1, a5_2],
         linkML: "a5.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/aa5_1.mp4",
       },
     ],
   },
@@ -79,7 +88,7 @@ const dataimg = [
         img: [a1_1, a1_2, a1_3, a1_4, mockImg],
         linkML: "b1.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/bb1_1.mp4", //ถึงตรงนี้ ณ เวลา 00:12 -> 15/7/2567
       },
       {
         id: 1,
