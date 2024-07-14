@@ -23,6 +23,7 @@ const dataimg = [
         img: [a1_1, a1_2, a1_3, a1_4],
         linkML: "a1.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
       {
         id: 1,
@@ -31,6 +32,7 @@ const dataimg = [
         img: [a1_1, a1_2, a1_3, a1_4, mockImg],
         linkML: "a2.html",
         imgML: a1_1,
+        videoML: "",
       },
       {
         id: 2,
@@ -39,6 +41,7 @@ const dataimg = [
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a3.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
       {
         id: 3,
@@ -47,6 +50,7 @@ const dataimg = [
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a4.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
       {
         id: 4,
@@ -55,6 +59,7 @@ const dataimg = [
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "a5.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
     ],
   },
@@ -70,6 +75,7 @@ const dataimg = [
         img: [a1_1, a1_2, a1_3, a1_4, mockImg],
         linkML: "b1.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
       {
         id: 1,
@@ -78,6 +84,7 @@ const dataimg = [
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "b2.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
       {
         id: 2,
@@ -86,6 +93,7 @@ const dataimg = [
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "b3.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
     ],
   },
@@ -101,6 +109,7 @@ const dataimg = [
         img: [a1_1, a1_2, a1_3, a1_4, mockImg],
         linkML: "c1.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
       {
         id: 1,
@@ -109,6 +118,7 @@ const dataimg = [
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "c2.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
       {
         id: 2,
@@ -117,6 +127,7 @@ const dataimg = [
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "c3.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
     ],
   },
@@ -132,6 +143,7 @@ const dataimg = [
         img: [a1_1, a1_2, a1_3, a1_4],
         linkML: "d1.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
       {
         id: 1,
@@ -140,6 +152,7 @@ const dataimg = [
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "d2.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
       {
         id: 2,
@@ -148,6 +161,7 @@ const dataimg = [
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "d3.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
       {
         id: 3,
@@ -156,6 +170,7 @@ const dataimg = [
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "d4.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
       {
         id: 4,
@@ -164,6 +179,7 @@ const dataimg = [
         img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
         linkML: "d5.html",
         imgML: a1_1,
+        videoML: "/video/aa1_1.mp4",
       },
     ],
   },
@@ -176,6 +192,7 @@ export interface dataimgMockProps {
   img: StaticImageData[];
   linkML: string;
   imgML: StaticImageData;
+  videoML: string;
 }
 export interface dataimgProps {
   content: string;
@@ -195,6 +212,7 @@ export const dataML = {
       img: [a1_1, a1_2, a1_3, a1_4, mockImg],
       linkML: "a1.html",
       imgML: a1_1,
+      videoML: "/video/aa1_1.mp4",
     },
     {
       id: 1,
@@ -203,6 +221,7 @@ export const dataML = {
       img: [a1_1, a1_2, a1_3, a1_4, mockImg],
       linkML: "a2.html",
       imgML: a1_1,
+      videoML: "/video/aa1_1.mp4",
     },
     {
       id: 2,
@@ -211,6 +230,7 @@ export const dataML = {
       img: [a1_1, a1_2, a1_3, a1_4, mockImg],
       linkML: "a3.html",
       imgML: a1_1,
+      videoML: "/video/aa1_1.mp4",
     },
     {
       id: 3,
@@ -219,6 +239,7 @@ export const dataML = {
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a4.html",
       imgML: a1_1,
+      videoML: "/video/aa1_1.mp4",
     },
     {
       id: 4,
@@ -227,6 +248,7 @@ export const dataML = {
       img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
       linkML: "a5.html",
       imgML: a1_1,
+      videoML: "/video/aa1_1.mp4",
     },
   ],
 };
@@ -238,6 +260,7 @@ export interface dataMLinterProps {
   img: StaticImageData[];
   linkML: string;
   imgML: StaticImageData;
+  videoML: string;
 }
 export interface dataMLProps {
   content: string;

@@ -36,7 +36,7 @@ const Navbar = () => {
     <>
       <div className="flex flex-col">
         <div
-          className="flex flex-row justify-between h-[70px] shadow-lg items-center
+          className="flex flex-row justify-between h-[60px] shadow-lg items-center
         bg-[#c6e4ff] min-[1500px]:px-[140px] duration-[0.5s]
         min-[1000px]:px-[100px]
         px-[50px]"

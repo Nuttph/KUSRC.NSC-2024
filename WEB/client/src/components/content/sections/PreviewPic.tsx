@@ -34,11 +34,11 @@ const PreviewPic = ({ indexs, valueImg }: Props) => {
           ))}
         </div>
         <div className="w-full h-full flex items-center justify-center">
-          <div className="shadow-2xl rounded-xl border-[2px]">
+          <div className="w-[550px] h-[550px] shadow-2xl rounded-xl border-[2px] relative flex items-center justify-center">
             <Image
               src={valueImg.img[selectImage]}
               alt="img"
-              className="max-w-[550px] h-[550px] flex items-center justify-center text-[#fff] text-[50px] duration-[0.5s]"
+              className="w-[350px] flex items-center justify-center text-[#fff] text-[50px] duration-[0.5s]"
             />
           </div>
         </div>

@@ -34,10 +34,10 @@ const Header = () => {
         </div>
 
         <div className="relative w-full mt-[250px] overflow-hidden">
-          <div className="absolute right-[360px] w-[500px] h-[500px] z-[1] slide-in-right">
+          <div className="absolute right-[360px] w-[500px] h-[500px] z-[100] slide-in-right">
             <Image src={human1} alt="human1" fill />
           </div>
-          <div className="absolute right-[60px] w-[500px] h-[500px] slide-in-right">
+          <div className="absolute right-[60px] w-[500px] h-[500px] slide-in-right z-[99]">
             <Image src={human2} alt="human2" fill />
           </div>
         </div>
