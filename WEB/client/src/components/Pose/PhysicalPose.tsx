@@ -3,8 +3,12 @@ import { usePicContent } from "@/store/datapicture";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
+//icon
+import { FaRegStar } from "react-icons/fa";
+
 const PhysicalPose = () => {
-  const { zDataImg, useNumber, useID } = usePicContent();
+  const { zDataImg, useNumber, useID, selectID, selectNumber } =
+    usePicContent();
   const [isClient, setIsClient] = useState(false);
   const [uui, setUui] = useState<number>(0);
 
@@ -28,9 +32,15 @@ const PhysicalPose = () => {
 
   return (
     <>
-      <div className="flex flex-col w-full text-center">
+      <div className="flex flex-col w-full text-center relative">
         <div className="flex font-bold underline items-center justify-center text-[30px] my-[25px]">
+          <span className="spin text-yellow-400 mx-[15px] text-[45px]">
+            <FaRegStar />
+          </span>
           {zDataImg[useNumber].data_real[useID].name}
+          <span className="spin text-yellow-400 mx-[15px] text-[45px]">
+            <FaRegStar />
+          </span>
         </div>
         <div className="flex flex-row justify-between">
           <div className="w-[50%] flex flex-col items-start bg-red-100 rounded-xl shadow-lg">
@@ -51,20 +61,14 @@ const PhysicalPose = () => {
                 {showV && zDataImg[useNumber].data_real[useID].videoML != "" ? (
                   <>
                     <div className="flex items-center justify-center w-full pb-[150px]">
-                      {zDataImg[useNumber].data_real[useID].videoML != "" ? (
-                        <>
-                          <div>
-                            <video className="w-[500px] h-[500px]" controls>
-                              <source
-                                src={`${zDataImg[useNumber].data_real[useID].videoML}`}
-                                type="video/mp4"
-                              />
-                            </video>
-                          </div>
-                        </>
-                      ) : (
-                        <></>
-                      )}
+                      <div>
+                        <video className="w-[500px] h-[500px]" autoPlay loop>
+                          <source
+                            src={`${zDataImg[useNumber].data_real[useID].videoML}`}
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
                     </div>
                   </>
                 ) : (
@@ -106,12 +110,46 @@ const PhysicalPose = () => {
             </div>
           </div>
 
-          <div className="bg-gray-200 w-[50%]">
+          <div className="bg-gray-200 w-[50%] relative">
             <iframe
               src={zDataImg[useNumber].data_real[useNumber].linkML}
               className="w-full h-[100vh]"
             ></iframe>
           </div>
+          {zDataImg[useNumber].data_real.length > useID + 1 && (
+            <>
+              <div className="">
+                <button
+                  onClick={() => {
+                    if (true) {
+                      selectID(useID + 1);
+                    }
+                  }}
+                  className="bg-[#91c8ff] px-[20px] py-[10px] rounded-xl text-[22px] absolute right-[20px] top-[100px]
+            hover:bg-[#e1a6ff] duration-[0.2s]"
+                >
+                  ถัดไป
+                </button>
+              </div>
+            </>
+          )}
+          {0 < useID && (
+            <>
+              <div className="">
+                <button
+                  onClick={() => {
+                    if (true) {
+                      selectID(useID - 1);
+                    }
+                  }}
+                  className="bg-[#91c8ff] px-[20px] py-[10px] rounded-xl text-[22px] absolute left-[20px] top-[100px]
+            hover:bg-[#e1a6ff] duration-[0.2s]"
+                >
+                  ก่อนหน้า
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>

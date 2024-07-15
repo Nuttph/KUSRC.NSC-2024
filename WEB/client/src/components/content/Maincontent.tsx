@@ -5,18 +5,22 @@ import { dataMLProps, usePicContent } from "@/store/datapicture";
 import { usePathname } from "next/navigation";
 
 const Maincontent = () => {
-  const { zDataML, zDataImg, selectID } = usePicContent();
+  const { zDataML, zDataImg, selectID, selectNumber } = usePicContent();
   const pathname = usePathname();
   const [data, setData] = useState<number>(0);
   useEffect(() => {
     if (pathname == "/content/pose1") {
       setData(1 - 1);
+      selectNumber(0);
     } else if (pathname == "/content/pose2") {
       setData(2 - 1);
+      selectNumber(1);
     } else if (pathname == "/content/pose3") {
       setData(3 - 1);
+      selectNumber(2);
     } else if (pathname == "/content/pose4") {
       setData(4 - 1);
+      selectNumber(3);
     }
   }, []);
 
@@ -35,6 +39,7 @@ const Maincontent = () => {
       </>
     );
   }
+
   return (
     <>
       <div className="w-full p-[40px]">

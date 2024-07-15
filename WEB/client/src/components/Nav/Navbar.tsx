@@ -79,13 +79,12 @@ const Navbar = () => {
               <div className="flex flex-col text-[15px]">
                 {Nav.map((item, index) => (
                   <Link
+                    key={index}
                     href={item.path}
                     onClick={handleColse}
                     className="px-[25px] py-[10px] hover:bg-sky-500 cursor-pointer border-b-[2px] border-gray-500"
                   >
-                    <div key={index} className="">
-                      {item.content}
-                    </div>
+                    <div className="">{item.content}</div>
                   </Link>
                 ))}
               </div>
