@@ -371,7 +371,7 @@ export const usePicContent = create<zusProps>()(
       selectID: (value) => set({ useID: value }),
     }),
     {
-      name: "pic-content-storage", // name of the item in storage
+      name: "Data Physio-Power", // name of the item in storage
       getStorage: () => localStorage, // (optional) by default, 'localStorage' is used
     }
   )
