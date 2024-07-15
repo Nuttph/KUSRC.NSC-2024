@@ -14,10 +14,12 @@ const PhysicalPose = () => {
 
   useEffect(() => {
     setIsClient(true);
-  }, []);
+  }, [useID]);
 
-  const [showV, setShowV] = useState(true);
-
+  const [showV, setShowV] = useState(false);
+  useEffect(() => {
+    setShowV(false);
+  }, [zDataImg]);
   if (!isClient) {
     return (
       <>
@@ -73,11 +75,11 @@ const PhysicalPose = () => {
                   </>
                 ) : (
                   <>
-                    <div>
+                    <div className="flex items-center justify-center">
                       <Image
                         src={zDataImg[useNumber].data_real[useID].img[uui]}
                         alt="img"
-                        className="w-[500px] h-auto duration-[0.5s]"
+                        className="w-[500px] h-[500px] duration-[0.5s] object-cover"
                       />
                     </div>
 

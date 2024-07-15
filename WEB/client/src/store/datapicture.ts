@@ -11,6 +11,8 @@ import a1_3 from "../asset/pose/a1/a1_3.png";
 import a1_4 from "../asset/pose/a1/a1_4.png";
 
 //image a2
+import a2_1 from "../asset/pose/a2/a2_1.png";
+import a2_2 from "../asset/pose/a2/a2_2.png";
 
 //image a3
 import a3_1 from "../asset/pose/a3/a3_1.png";
@@ -28,11 +30,58 @@ import a5_2 from "../asset/pose/a5/a5_2.png";
 import b1_1 from "../asset/pose/b1/b1_1.png";
 import b1_2 from "../asset/pose/b1/b1_2.png";
 
+//import b2
+import b2_1 from "../asset/pose/b2/b2_1.png";
+import b2_2 from "../asset/pose/b2/b2_2.png";
+import b2_3 from "../asset/pose/b2/b2_3.png";
+import b2_4 from "../asset/pose/b2/b2_4.png";
+
+//import b3
+import b3_1 from "../asset/pose/b3/b3_1.png";
+import b3_2 from "../asset/pose/b3/b3_2.png";
+import b3_3 from "../asset/pose/b3/b3_3.png";
+
 //image c1
 import c1_1 from "../asset/pose/c1/c1_1.png";
+import c1_2 from "../asset/pose/c1/c1_2.png";
+import c1_3 from "../asset/pose/c1/c1_3.png";
+
+//image c2
+import c2_1 from "../asset/pose/c2/c2_1.png";
+import c2_2 from "../asset/pose/c2/c2_2.png";
+import c2_3 from "../asset/pose/c2/c2_3.png";
+import c2_4 from "../asset/pose/c2/c2_4.png";
+
+//image c3
+import c3_1 from "../asset/pose/c3/c3_1.png";
+import c3_2 from "../asset/pose/c3/c3_2.png";
+import c3_3 from "../asset/pose/c3/c3_3.png";
 
 //image d1
 import d1_1 from "../asset/pose/d1/d1_1.png";
+
+//image d2
+import d2_1 from "../asset/pose/d2/d2_1.png";
+import d2_2 from "../asset/pose/d2/d2_2.png";
+import d2_3 from "../asset/pose/d2/d2_3.png";
+import d2_4 from "../asset/pose/d2/d2_4.png";
+
+//image d3
+import d3_1 from "../asset/pose/d3/d3_1.png";
+import d3_2 from "../asset/pose/d3/d3_2.png";
+import d3_3 from "../asset/pose/d3/d3_3.png";
+import d3_4 from "../asset/pose/d3/d3_4.png";
+
+//image d4
+import d4_1 from "../asset/pose/d4/d4_1.png";
+import d4_2 from "../asset/pose/d4/d4_2.png";
+import d4_3 from "../asset/pose/d4/d4_3.png";
+import d4_4 from "../asset/pose/d4/d4_4.png";
+
+//image d5
+import d5_1 from "../asset/pose/d5/d5_1.png";
+import d5_2 from "../asset/pose/d5/d5_2.png";
+
 const dataimg = [
   {
     content: "เพิ่มการทรงตัว",
@@ -51,11 +100,11 @@ const dataimg = [
       {
         id: 1,
         name: "ท่ายืนขาเดียวมือประสานไว้บนหัว",
-        des: "text_2",
-        img: [mockImg, mockImg, mockImg, mockImg, mockImg],
+        des: "ยืนขาเดียว มือทั้งสองยกขึ้นเหนือศรีษะ ประสานมือไว้ด้วยกัน",
+        img: [a2_1, a2_2],
         linkML: "a2.html",
         imgML: a1_1,
-        videoML: "",
+        videoML: "/video/aa2_1.mp4",
       },
       {
         id: 2,
@@ -104,19 +153,19 @@ const dataimg = [
         id: 1,
         name: "เหยียดน่อง",
         des: "มือสองข้างจับขอบโต๊ะหรือพนักเก้าอี้ ก้าวเท้าซ้ายหรือเท้าขวาถอยออกไปข้างหลัง 1 ก้าวยาว ให้เข่าซ้ายเหยียดตรง ปลายเท้าตรงไปข้างหน้า ค่อยๆโน้มตัวไปข้างหน้า งอเข่าขวา พยายามให้ส้นเท้าติดพื้นตลอดเวลาห",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [b2_1, b2_2, b2_3, b2_4],
         linkML: "b2.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/bb2_1.mp4",
       },
       {
         id: 2,
         name: "ย่อเข่า",
         des: "ยืนจับพนักเก้าอี้ งอ(ย่อ) เข่าทั้งสองข้างลงในท่าสบายให้หลังและศรีษะตั้งตรง โดยอยู่หลังปลายเท้า เหยียดเข่ายืนขึ้นสู่ท่าเริ่มต้น ทำซ้ำ 10 ครั้ง",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [b3_1, b3_2, b3_3],
         linkML: "b3.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/bb3_1.mp4",
       },
     ],
   },
@@ -129,28 +178,28 @@ const dataimg = [
         id: 0,
         name: "ยกแขนขึ้น-เหยียดแขนลง",
         des: "นั่งตัวตรง แขนสองข้างเหยียดตรง ยกแขนขึ้นและลงช้าๆ 10-20 ครั้ง",
-        img: [c1_1, c1_1, c1_1, c1_1, c1_1],
+        img: [c1_1, c1_2, c1_3],
         linkML: "c1.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/cc1_1.mp4",
       },
       {
         id: 1,
         name: "กางแขน-หุบแขน",
         des: "กางและหุบแขนทั้งสองข้างขึ้นลงช้าๆ แขนทั้งสองข้างเหยียดตรง 10-20 ครั้ง",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [c2_1, c2_2, c2_3, c2_4],
         linkML: "c2.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/cc2_1.mp4",
       },
       {
         id: 2,
         name: "งอศอก-เหยียดศอก",
         des: "งอและเหยียดศอกทั้งสองข้างขึ้นลงช้า 10-20 ครั้ง",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [c3_1, c3_2, c3_3],
         linkML: "c3.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/cc3_1.mp4",
       },
     ],
   },
@@ -163,46 +212,46 @@ const dataimg = [
         id: 0,
         name: "ท่าบริหารกล้ามเนื้อเหยียดเข่า",
         des: "ยืนตรง กางขาสองข้างระดับหัวไหล่ ย่อขาทั้งสองข้างลงแล้วยกแขนทั้งสองข้างไปด้านหน้า พยายามดันสะโพกไปด้านหลัง ค้างไว้ 3 วินาที แล้วกลับมาสู่ท่าเริ่มต้น จำนวน 20 ครั้ง",
-        img: [d1_1, d1_1, d1_1, d1_1],
+        img: [d1_1],
         linkML: "d1.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/dd1_1.mp4",
       },
       {
         id: 1,
         name: "เหวี่ยงแขน บิดลำตัว",
         des: "เหวียงแขนทั้ง 2 ข้างเฉียงขึ้น บิดลำตัวไปทางด้านหลัง ชูแขนขึ้นเหนือศรีษะ กำมือ -> ลดแขนลงบิดลำตัวกลับ แบบมือ -> เหวี่ยงแขนทั้ง 2 ข้างเฉียงขึ้นสลับด้านบิดลำตัวไปด้านหลัง ชูแขนขึ้นเหนือศรีษะ กำมือ",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [d2_1, d2_2, d2_3, d2_4],
         linkML: "d2.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/dd2_1.mp4",
       },
       {
         id: 2,
-        name: "แกว่งแขนสูงกำมือ แบมือ",
+        name: "แกว่งแขนสูง แบมือ",
         des: "ยืนตรง ยกมือขึ้นเหนือศรีษะและเหวี่ยงแขนไปทางด้านหลัง -> กำมือ เมื่อแกว่งแขนขึ้น-ลง จนสุดการเคลื่อนไหว -> คลายมือ ในช่วงลดแขนลงและยกแขนขึ้นขณะสลับข้าง",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [d3_1, d3_2, d3_3, d3_4],
         linkML: "d3.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/dd3_1.mp4",
       },
       {
         id: 3,
         name: "กำหมัดชูแขน",
         des: "ยกแขนกางศอกขึ้นระดับหน้าอกแบบมือ มืออีกข้างท้าวเอว -> เอียงลำตัวไปทางด้านข้าง พร้อมกับชูแขนกำมือเหนือศรีษะ -> ลดแขนลงระดับหน้าอก แบมือนับเป็น 1 ครั้ง",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [d4_1, d4_2, d4_3, d4_4],
         linkML: "d4.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/dd4_1.mp4",
       },
       {
         id: 4,
         name: "หุบศอก",
         des: "ยกแขนขึ้น กำมือกางศอก ให้อยู่ในระดับหน้าอก -> แบมือหุบศอกทั้งสองข้างเข้าหากัน จนฝ่ามือและศอกประกบชิดกันออกแรงดันแขนและศอก ค้างไว้ 2 วินาที กางศอกไปด้านหลัง กำมือนับเป็น 1 ครั้ง",
-        img: [mockImg, mockImg2, mockImg, mockImg2, mockImg],
+        img: [d5_1, d5_2],
         linkML: "d5.html",
         imgML: a1_1,
-        videoML: "/video/aa1_1.mp4",
+        videoML: "/video/dd5_1.mp4",
       },
     ],
   },

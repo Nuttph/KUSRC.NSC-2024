@@ -28,11 +28,12 @@ const PreviewPic = ({ indexs, valueImg }: Props) => {
                 onClick={() => {
                   setImage(index);
                 }}
-                className={`w-[100px] h-[100px]  text-[#fff] flex items-center justify-center cursor-pointer select-none`}
+                className={`w-[100px] h-[100px] text-[#fff] flex items-center justify-center cursor-pointer select-none object-cover`}
               />
             </div>
           ))}
         </div>
+
         <div className="w-full h-full flex items-center justify-center">
           <div className="w-[550px] h-[550px] shadow-2xl rounded-xl border-[2px] relative flex items-center justify-center">
             <Image
