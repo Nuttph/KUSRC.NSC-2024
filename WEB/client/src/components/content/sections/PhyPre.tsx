@@ -9,7 +9,10 @@ interface Props {
 const PhyPre = ({ value, index }: Props) => {
   return (
     <>
-      <div className="flex items-center justify-center gap-[200px] flex-row">
+      <div
+        id={`go${index}`}
+        className="flex items-center justify-center gap-[200px] flex-row"
+      >
         <div className="flex setCenter">
           {/* preview picture */}
           <>

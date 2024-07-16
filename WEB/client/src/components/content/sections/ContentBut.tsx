@@ -24,16 +24,23 @@ const ContentBut = ({ valueC, index }: Props) => {
           <div className="text-[35px] font-bold">{valueC.name}</div>
           <div className="text-[20px] line-clamp-4">{valueC.des}</div>
         </div>
-        <Link
-          href={"/test-pose"}
-          onClick={() => {
-            handleTest();
-            selectID(index);
-          }}
-          className="bg-[#58ff9b] px-[40px] py-[10px] w-fit rounded-xl text-[20px]"
-        >
-          เริ่มการทดสอบ
-        </Link>
+        <div className="flex flex-col gap-[70px]">
+          <div className="flex flex-col">
+            <p className="px-[25px] py-[10px] bg-pink-300 rounded-xl">
+              {valueC.for}
+            </p>
+          </div>
+          <Link
+            href={"/test-pose"}
+            onClick={() => {
+              handleTest();
+              selectID(index);
+            }}
+            className="bg-[#58ff9b] px-[40px] py-[10px] w-fit rounded-xl text-[20px]"
+          >
+            เริ่มการทดสอบ
+          </Link>
+        </div>
       </div>
     </>
   );

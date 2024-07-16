@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import PhyPre from "./sections/PhyPre";
 import { dataMLProps, usePicContent } from "@/store/datapicture";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Maincontent = () => {
   const { zDataML, zDataImg, selectID, selectNumber } = usePicContent();
@@ -49,7 +50,9 @@ const Maincontent = () => {
         <div className="flex flex-col justify-start text-[30px]">
           <ol className="list-disc text-[20px] ml-[30px]">
             {zDataImg[data].data_real.map((item, index) => (
-              <li key={index}>{item.name}</li>
+              <li key={index}>
+                <Link href={`#goto${index}`}>{item.name}</Link>
+              </li>
             ))}
           </ol>
         </div>
