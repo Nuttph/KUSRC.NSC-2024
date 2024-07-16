@@ -96,6 +96,7 @@ const dataimg = [
         linkML: "a1.html",
         imgML: a1_1,
         videoML: "/video/aa1_1.mp4",
+        for: "ท่ายืนกางขาช่วยเสริมสร้างกล้ามเนื้อขาและสะโพก พัฒนาสมดุลและเสถียรภาพ และเพิ่มความยืดหยุ่น",
       },
       {
         id: 1,
@@ -105,6 +106,7 @@ const dataimg = [
         linkML: "a2.html",
         imgML: a1_1,
         videoML: "/video/aa2_1.mp4",
+        for: "ช่วยเสริมสร้างความแข็งแรงของกล้ามเนื้อขาและลำตัว, พัฒนาสมดุลและการทรงตัว, และเพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อ",
       },
       {
         id: 2,
@@ -114,6 +116,7 @@ const dataimg = [
         linkML: "a3.html",
         imgML: a1_1,
         videoML: "/video/aa3_1.mp4",
+        for: "",
       },
       {
         id: 3,
@@ -123,6 +126,7 @@ const dataimg = [
         linkML: "a4.html",
         imgML: a1_1,
         videoML: "/video/aa4_1.mp4",
+        for: "",
       },
       {
         id: 4,
@@ -132,6 +136,7 @@ const dataimg = [
         linkML: "a5.html",
         imgML: a1_1,
         videoML: "/video/aa5_1.mp4",
+        for: "",
       },
     ],
   },
@@ -148,6 +153,7 @@ const dataimg = [
         linkML: "b1.html",
         imgML: a1_1,
         videoML: "/video/bb1_1.mp4", //ถึงตรงนี้ ณ เวลา 00:12 -> 15/7/2567
+        for: "",
       },
       {
         id: 1,
@@ -157,6 +163,7 @@ const dataimg = [
         linkML: "b2.html",
         imgML: a1_1,
         videoML: "/video/bb2_1.mp4",
+        for: "",
       },
       {
         id: 2,
@@ -166,6 +173,7 @@ const dataimg = [
         linkML: "b3.html",
         imgML: a1_1,
         videoML: "/video/bb3_1.mp4",
+        for: "",
       },
     ],
   },
@@ -182,6 +190,7 @@ const dataimg = [
         linkML: "c1.html",
         imgML: a1_1,
         videoML: "/video/cc1_1.mp4",
+        for: "",
       },
       {
         id: 1,
@@ -191,6 +200,7 @@ const dataimg = [
         linkML: "c2.html",
         imgML: a1_1,
         videoML: "/video/cc2_1.mp4",
+        for: "",
       },
       {
         id: 2,
@@ -200,6 +210,7 @@ const dataimg = [
         linkML: "c3.html",
         imgML: a1_1,
         videoML: "/video/cc3_1.mp4",
+        for: "",
       },
     ],
   },
@@ -216,6 +227,7 @@ const dataimg = [
         linkML: "d1.html",
         imgML: a1_1,
         videoML: "/video/dd1_1.mp4",
+        for: "",
       },
       {
         id: 1,
@@ -225,6 +237,7 @@ const dataimg = [
         linkML: "d2.html",
         imgML: a1_1,
         videoML: "/video/dd2_1.mp4",
+        for: "",
       },
       {
         id: 2,
@@ -234,6 +247,7 @@ const dataimg = [
         linkML: "d3.html",
         imgML: a1_1,
         videoML: "/video/dd3_1.mp4",
+        for: "",
       },
       {
         id: 3,
@@ -243,6 +257,7 @@ const dataimg = [
         linkML: "d4.html",
         imgML: a1_1,
         videoML: "/video/dd4_1.mp4",
+        for: "",
       },
       {
         id: 4,
@@ -252,6 +267,7 @@ const dataimg = [
         linkML: "d5.html",
         imgML: a1_1,
         videoML: "/video/dd5_1.mp4",
+        for: "",
       },
     ],
   },
@@ -265,6 +281,7 @@ export interface dataimgMockProps {
   linkML: string;
   imgML: StaticImageData;
   videoML: string;
+  for: string;
 }
 export interface dataimgProps {
   content: string;
@@ -285,6 +302,7 @@ export const dataML = {
       linkML: "a1.html",
       imgML: a1_1,
       videoML: "/video/aa1_1.mp4",
+      for: "",
     },
     {
       id: 1,
@@ -294,6 +312,7 @@ export const dataML = {
       linkML: "a2.html",
       imgML: a1_1,
       videoML: "/video/aa1_1.mp4",
+      for: "",
     },
     {
       id: 2,
@@ -303,6 +322,7 @@ export const dataML = {
       linkML: "a3.html",
       imgML: a1_1,
       videoML: "/video/aa1_1.mp4",
+      for: "",
     },
     {
       id: 3,
@@ -312,6 +332,7 @@ export const dataML = {
       linkML: "a4.html",
       imgML: a1_1,
       videoML: "/video/aa1_1.mp4",
+      for: "",
     },
     {
       id: 4,
@@ -321,6 +342,7 @@ export const dataML = {
       linkML: "a5.html",
       imgML: a1_1,
       videoML: "/video/aa1_1.mp4",
+      for: "",
     },
   ],
 };
@@ -333,6 +355,7 @@ export interface dataMLinterProps {
   linkML: string;
   imgML: StaticImageData;
   videoML: string;
+  for: string;
 }
 export interface dataMLProps {
   content: string;
