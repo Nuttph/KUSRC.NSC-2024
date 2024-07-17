@@ -4,7 +4,7 @@ import Image from "next/image";
 //svg
 import human1 from "../../asset/svg/demo/human1.svg";
 import human2 from "../../asset/svg/demo/human2.svg";
-
+import head1 from "../../asset/head2.png";
 const Header = () => {
   return (
     <>
@@ -33,13 +33,12 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="relative w-full mt-[250px] overflow-hidden">
-          <div className="absolute right-[360px] w-[500px] h-[500px] z-[100] slide-in-right">
-            <Image src={human1} alt="human1" fill />
-          </div>
-          <div className="absolute right-[60px] w-[500px] h-[500px] slide-in-right z-[99]">
-            <Image src={human2} alt="human2" fill />
-          </div>
+        <div className="relative w-full overflow-hidden  z-[159]">
+          <Image
+            src={head1}
+            alt="img"
+            className="absolute right-0 w-[750px] top-[-50px] slide-in-right"
+          />
         </div>
       </div>
     </>

@@ -1,8 +1,8 @@
 "use client";
 import { usePicContent } from "@/store/datapicture";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
-
 //icon
 import { FaRegStar } from "react-icons/fa";
 
@@ -39,7 +39,8 @@ const PhysicalPose = () => {
           <span className="spin text-yellow-400 mx-[15px] text-[45px]">
             <FaRegStar />
           </span>
-          {zDataImg[useNumber].data_real[useID].name}
+          {zDataImg[useNumber].data_real[useID].name}{" "}
+          {zDataImg[useNumber].data_real[useID].linkML}
           <span className="spin text-yellow-400 mx-[15px] text-[45px]">
             <FaRegStar />
           </span>
@@ -121,7 +122,8 @@ const PhysicalPose = () => {
           {zDataImg[useNumber].data_real.length > useID + 1 && (
             <>
               <div className="">
-                <button
+                <Link
+                  href="/test-pose-link"
                   onClick={() => {
                     if (true) {
                       selectID(useID + 1);
@@ -131,14 +133,15 @@ const PhysicalPose = () => {
             hover:bg-[#e1a6ff] duration-[0.2s]"
                 >
                   ถัดไป
-                </button>
+                </Link>
               </div>
             </>
           )}
           {0 < useID && (
             <>
               <div className="">
-                <button
+                <Link
+                  href="/test-pose-link"
                   onClick={() => {
                     if (true) {
                       selectID(useID - 1);
@@ -148,7 +151,7 @@ const PhysicalPose = () => {
             hover:bg-[#e1a6ff] duration-[0.2s]"
                 >
                   ก่อนหน้า
-                </button>
+                </Link>
               </div>
             </>
           )}

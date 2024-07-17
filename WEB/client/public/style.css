@@ -8,20 +8,19 @@
     border-radius: 10px;
     font-size: 25px;
     font-weight: bold;
-    background-color: green;
     transition: 0.5s all ease-in-out;
 }
 
-.currentColor {
-    border: 10px solid green !important;
-    border-radius: 15px;
-}
 
 .canvasu {
     background-color: rgb(180, 180, 180);
     border: 10px solid red;
     border-radius: 15px;
     width: 500px;
+}
+
+.currentColor {
+    border: 10px solid rgb(87, 255, 87) !important;
 }
 
 /* width */
@@ -62,4 +61,19 @@
 
 .btnd:hover {
     background-color: rgb(255, 255, 146);
+}
+
+.bg-red {
+    background-color: rgb(255, 154, 154) !important;
+    padding: 15px 25px;
+}
+
+.bg-orange {
+    background-color: rgb(255, 208, 120) !important;
+    padding: 15px 25px;
+}
+
+.bg-green {
+    background-color: rgb(128, 231, 128) !important;
+    padding: 15px 25px;
 }

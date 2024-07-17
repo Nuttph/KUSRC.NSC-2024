@@ -10,27 +10,28 @@ import physicImg from "../../asset/lineoa.png";
 const Footer = () => {
   return (
     <>
-      <div className="h-[500px] bg-gray-800 py-[50px] px-[140px] text-white">
+      <div className="h-[500px] bg-gray-800 py-[50px] px-[140px] text-white pt-[105px]">
         <div className="flex flex-row justify-between">
           <div className="w-[20%]">
             <h1 className=" cursor-pointer text-[30px] font-semibold relative w-[150px] h-[150px]">
               <Image src={logoImg} alt="logoImg" fill />
             </h1>
           </div>
-          <div>
-            <div className="text-[30px] font-semibold">Tech Stack</div>
-            <ol className="list-disc text-[20px]">
-              <li>Next.js</li>
-              <li>TailwindCSS</li>
-              <li>MUI</li>
-              <li>Tensorflow</li>
-            </ol>
-          </div>
-          <div className="flex flex-col gap-[50px] items-end w-[20%]">
+
+          <div className="flex flex-row gap-[100px] items-end w-fit h-full">
+            <div>
+              <div className="text-[30px] font-semibold">Tech Stack</div>
+              <ol className="list-disc text-[20px]">
+                <li>Next.js</li>
+                <li>TailwindCSS</li>
+                <li>MUI</li>
+                <li>Tensorflow</li>
+              </ol>
+            </div>
             <Link
               target="_blank"
               href="https://lin.ee/KGGdaVo"
-              className="w-[150px] h-[150px] bg-green-400 shadow-xl flex items-center justify-center text-[25px] text-black font-semibold rounded-xl"
+              className="max-w-[150px] max-h-[150px] bg-green-400 shadow-xl flex items-center justify-center text-[25px] text-black font-semibold rounded-xl"
             >
               <Image src={physicImg} alt="physicImg" className="rounded-xl" />
             </Link>
