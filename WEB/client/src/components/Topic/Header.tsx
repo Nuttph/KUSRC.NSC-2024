@@ -33,7 +33,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="relative w-full overflow-hidden  z-[159]">
+        <div className="relative w-full overflow-hidden">
           <Image
             src={head1}
             alt="img"

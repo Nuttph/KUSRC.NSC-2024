@@ -15,6 +15,7 @@
         <div class="mtt">   
             <canvas id="canvas" class="canvasu"></canvas>
         </div>
+        
         <div id="label-container" class="text"></div> <!--ความแม่นยำ-->
         <div id="setTime" class="countsPose"></div> <!--ทำไปแล้วเท่าไหร่-->
         <div id="status" class="countsPose"></div> <!--ทำครบแล้ว 5วิ-->
@@ -118,11 +119,12 @@
 
 function updateTime() {
     const currentTime = new Date().getTime();
+    console.log(currentTime)
     const elapsedTime = Math.floor((currentTime - startTime) / 1000);
 
-    if (elapsedTime >= 5 && elapsedTime - lastUpdateTime >= 5) {
+    if (elapsedTime >= 3 && elapsedTime - lastUpdateTime >= 3) {
         lastUpdateTime = elapsedTime;
-        document.getElementById('status').innerHTML = `ครบ 5 วิแล้ว`;
+        document.getElementById('status').innerHTML = `ครบ 3 วิแล้ว`;
         playAlertSound();
         setTimeout(() => {
             document.getElementById('status').innerHTML = '';
