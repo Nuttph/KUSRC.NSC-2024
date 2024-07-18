@@ -22,14 +22,18 @@ const ContentBut = ({ valueC, index }: Props) => {
       <div className="flex flex-col setCenter justify-between text-[25px]">
         <div>
           <div className="text-[35px] font-bold">{valueC.name}</div>
-          <div className="text-[20px] line-clamp-4">{valueC.des}</div>
-        </div>
-        <div className="flex flex-col gap-[70px]">
-          <div className="flex flex-col">
+          <div className="flex flex-col text-[25px] line-clamp-4">
+            <h1 className="font-bold text-green-800">ลักษณะการทำท่า :</h1>
+            <p>{valueC.des}</p>
+          </div>
+          <div className="flex flex-col mt-[10px]">
+            <h1 className="font-bold text-green-800">ประโยชน์ในการทำท่า:</h1>
             <p className="px-[25px] py-[10px] bg-pink-300 rounded-xl">
               {valueC.for}
             </p>
           </div>
+        </div>
+        <div className="flex flex-col gap-[70px]">
           <Link
             href={"/test-pose"}
             onClick={() => {
