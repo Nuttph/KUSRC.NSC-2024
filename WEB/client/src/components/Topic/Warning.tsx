@@ -16,7 +16,7 @@ const Warning = () => {
       <div className="w-full bg-gray-200 px-[140px] py-[100px]">
         <div className="bg-white w-full h-fit rounded-xl p-[100px]">
           <div className="flex flex-col items-center justify-center">
-            <div className="text-[25px] font-semibold">
+            <div className="text-[25px] font-semibold text-red-600">
               ข้อควรปฏิบัติในการทำกายภาพบำบัด
             </div>
             <div className="w-full text-left mt-[50px]">
