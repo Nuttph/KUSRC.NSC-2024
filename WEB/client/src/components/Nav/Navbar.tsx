@@ -1,95 +1,149 @@
 "use client";
-import { useCTent } from "@/store/contentStore";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { MdMenuOpen } from "react-icons/md";
-import { IoIosArrowDown } from "react-icons/io";
-//img
-import logoImg from "../../asset/PHYSIO.png";
+import pp_logo from "../../asset/logo/pp_logo.png";
 import Image from "next/image";
 
 const Navbar = () => {
-  const pathname = usePathname();
-  const { Nav } = useCTent();
-  const [openNav, setOpenNav] = useState(false);
-  useEffect(() => {
-    setOpenNav(false);
-  }, [pathname]);
-  const handleColse = () => {
-    setOpenNav(false);
-  };
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 1000) {
-        setOpenNav(false);
-      }
-    };
+  const topic_nav = [
+    {
+      name: "ท่ากายภาพบำบัด",
+      link: "/",
+    },
+    {
+      name: "ข้อควรปฏิบัติ",
+      link: "/",
+    },
+    {
+      name: "ประเมินการใช้งานเว็บไซต์",
+      link: "/",
+    },
+  ];
 
-    window.addEventListener("resize", handleResize);
+  const onHover = [
+    {
+      name: "หน้าแรก",
+      details: [
+        {
+          name: "วัตถุประสงค์",
+          link: "/",
+        },
+        {
+          name: "การหาค่า BMI",
+          link: "/",
+        },
+        {
+          name: "การหาค่า BMR",
+          link: "/",
+        },
+        {
+          name: "ชุมชน “กายภาพบำบัด",
+          link: "/",
+        },
+      ],
+    },
+    {
+      name: "ท่ากายภาพบำบัด",
+      details: [
+        {
+          name: "เพิ่มการทรงตัว",
+          link: "/",
+        },
+        {
+          name: "เพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อ",
+          link: "/",
+        },
+        {
+          name: "เพิ่มกำลังกล้ามเนื้อ",
+          link: "/",
+        },
+        {
+          name: "บริหารกล้ามเนื้อ",
+          link: "/",
+        },
+      ],
+    },
+    {
+      name: "ข้อควรปฏิบัติ",
+      details: [
+        {
+          name: "ข้อควรปฏิบัติในการทำกายภาพบำบัด",
+          link: "/",
+        },
+        {
+          name: "เรียนรู้กฏหมาย PDPA",
+          link: "/",
+        },
+      ],
+    },
+    {
+      name: "ประเมินการใช้งานเว็บไซต์",
+      details: [
+        {
+          name: "ประเมินการใช้งานเว็บไซต์",
+          link: "/",
+        },
+      ],
+    },
+  ];
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+  const [isOpen, setOpen] = useState(false);
+  useEffect(() => {
+    setOpen(false);
   }, []);
+
   return (
     <>
-      <div className="flex flex-col">
+      <div className="absolute top-[15px] w-full items-center justify-center flex text-[25px] text-[#fff] flex-col">
         <div
-          className="flex flex-row justify-between h-[60px] shadow-lg items-center
-        bg-[#c6e4ff] min-[1500px]:px-[140px] duration-[0.5s]
-        min-[1000px]:px-[100px]
-        px-[50px]"
+          id="itHover"
+          className="bg-[#1F2125] w-[95%] h-[70px] rounded-[14px] flex items-center justify-center gap-[125px] transition-all duration-300"
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
         >
-          <Link
-            href="/"
-            id="Logo"
-            className="relative min-[1000px]:w-[200px] min-[1000px]:h-full h-[50px] w-[100px]"
-          >
-            <Image src={logoImg} alt="logoImg" fill />
-          </Link>
-          <div
-            id="Content"
-            className="hidden flex-row duration-[0.5s]
-          min-[1500px]:text-[24px] min-[1500px]:gap-[100px]
-          min-[1200px]:text-[20px] gap-[28px]
-          text-[17px]
-          min-[1000px]:flex"
-          >
-            {Nav.map((item, index) => (
-              <div key={index} className="text-black hover:font-semibold">
-                <Link href={item.path}>{item.content}</Link>
+          <div className="relative w-[50px] h-[50px]">
+            <Image
+              src={pp_logo}
+              alt="pp_logo"
+              fill
+              className="rounded-full cursor-pointer"
+            />
+          </div>
+          {topic_nav.map((item, index) => (
+            <div
+              key={index}
+              className="cursor-pointer hover:text-[#4A9DFF] duration-300"
+            >
+              {item.name}
+            </div>
+          ))}
+        </div>
+
+        <div
+          className={`w-[93%] bg-[#333437] absolute top-[50px] z-[-1] px-[20px] text-[25px] rounded-b-xl transition-all duration-300 ${
+            isOpen ? "h-[350px] opacity-100" : "h-0 opacity-0 overflow-hidden"
+          }`}
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+        >
+          <div className="mt-[70px] w-full flex justify-around flex-row">
+            {onHover.map((item, index) => (
+              <div className="flex flex-col" key={index}>
+                <h1 className="text-[20px] hover:text-[#4A9DFF] cursor-pointer mb-[10px]">
+                  {item.name}
+                </h1>
+                <ul className="list-disc ml-[30px]">
+                  {item.details.map((text, index) => (
+                    <li
+                      key={index}
+                      className="hover:text-[#DBFF4A] cursor-pointer duration-300"
+                    >
+                      {text.name}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
-          <div
-            className={`min-[1000px]:hidden flex flex-col cursor-pointer ${
-              openNav ? "rotate-180" : "rotate-0"
-            } duration-[0.5s] min-[1000px]:text-[50px] text-[25px]`}
-            onClick={() => {
-              setOpenNav(!openNav);
-            }}
-          >
-            <IoIosArrowDown />
-          </div>
-        </div>
-        <div className="top-[70px] fixed w-full bg-sky-100">
-          {openNav && (
-            <>
-              <div className="flex flex-col text-[15px]">
-                {Nav.map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.path}
-                    onClick={handleColse}
-                    className="px-[25px] py-[10px] hover:bg-sky-500 cursor-pointer border-b-[2px] border-gray-500"
-                  >
-                    <div className="">{item.content}</div>
-                  </Link>
-                ))}
-              </div>
-            </>
-          )}
         </div>
       </div>
     </>
