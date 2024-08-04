@@ -2,6 +2,15 @@
 import React, { useRef, useEffect, useState } from "react";
 import * as tmPose from "@teachablemachine/pose";
 
+// Define the Pose type based on the structure returned by tmPose
+type Pose = {
+  keypoints: {
+    part: string;
+    position: { x: number; y: number };
+    score: number;
+  }[];
+};
+
 const Tensor: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [labels, setLabels] = useState<string[]>([]);
@@ -67,7 +76,7 @@ const Tensor: React.FC = () => {
     drawPose(pose);
   };
 
-  const drawPose = (pose: tmPose.Pose) => {
+  const drawPose = (pose: Pose) => {
     if (!webcam || !canvasRef.current) return;
     const ctx = canvasRef.current.getContext("2d");
     if (!ctx) return;
