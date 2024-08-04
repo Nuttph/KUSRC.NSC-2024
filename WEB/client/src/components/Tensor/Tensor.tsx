@@ -2,6 +2,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import * as tmPose from "@teachablemachine/pose";
 
+// Define the Pose type based on the structure returned by tmPose
 type Pose = {
   keypoints: {
     part: string;
@@ -24,25 +25,21 @@ const Tensor: React.FC = () => {
       const metadataURL = URL + "metadata.json";
 
       try {
-        // Load model and metadata
         model = await tmPose.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
 
-        // Initialize webcam
         const size = 300;
         const flip = true;
         webcam = new tmPose.Webcam(size, size, flip);
         await webcam.setup();
         await webcam.play();
+        window.requestAnimationFrame(loop);
 
-        // Set up canvas
         const canvas = canvasRef.current;
         if (canvas) {
           canvas.width = size;
           canvas.height = size;
         }
-
-        window.requestAnimationFrame(loop);
       } catch (error) {
         console.error("Error initializing model or webcam:", error);
       }
@@ -68,22 +65,15 @@ const Tensor: React.FC = () => {
   const predict = async () => {
     if (!model || !webcam) return;
 
-    try {
-      // Check methods and structure
-      const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
+    const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
+    const prediction = await model.predict(posenetOutput);
 
-      // Predict labels
-      const prediction = await model.predict(posenetOutput);
+    const newLabels = prediction.map(
+      (p) => `${p.className}: ${p.probability.toFixed(2)}`
+    );
 
-      const newLabels = prediction.map(
-        (p) => `${p.className}: ${p.probability.toFixed(2)}`
-      );
-
-      setLabels(newLabels);
-      drawPose(pose);
-    } catch (error) {
-      console.error("Prediction error:", error);
-    }
+    setLabels(newLabels);
+    drawPose(pose);
   };
 
   const drawPose = (pose: Pose) => {
