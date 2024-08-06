@@ -138,7 +138,7 @@ const PhysicalPose = () => {
 
                     <div className="flex flex-row mt-[10px] gap-[10px]">
                       {zDataImg[useNumber].data_real[useID].img.map(
-                        (item, index) => (
+                        (item: any, index: any) => (
                           <div key={index} className="rounded-xl">
                             <Image
                               src={item}
