@@ -3,39 +3,14 @@ import { usePicContent } from "@/store/datapicture";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-//icon
 import { FaRegStar } from "react-icons/fa";
 import { IoIosWarning } from "react-icons/io";
 import { IoCloseCircle } from "react-icons/io5";
-
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-
-// ส่วนของฟังก์ชันการเล่นเสียง
-const useSound = () => {
-  const [lastSoundPlayTime, setLastSoundPlayTime] = useState(0);
-  const soundCooldown = 1000; // 5 วินาที
-
-  const playSound = () => {
-    const audio = new Audio("/success-1-6297.mp3");
-    audio.play();
-  };
-
-  const checkProbability = (predictions: any[]) => {
-    if (predictions.length > 0 && predictions[0]?.probability !== undefined) {
-      const probability = predictions[0].probability * 100;
-      const currentTime = Date.now();
-      if (probability > 70 && currentTime - lastSoundPlayTime > soundCooldown) {
-        playSound();
-        setLastSoundPlayTime(currentTime);
-      }
-    }
-  };
-
-  return { checkProbability };
-};
+import useSound from "./useSound"; // Import the useSound hook
 
 const PhysicalPose = () => {
   const [open, setOpen] = useState(true);
@@ -49,7 +24,7 @@ const PhysicalPose = () => {
   const [showV, setShowV] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [predictions, setPredictions] = useState<any[]>([]);
-  const { checkProbability } = useSound();
+  const { checkProbability, timer } = useSound();
 
   useEffect(() => {
     setIsClient(true);
@@ -74,10 +49,6 @@ const PhysicalPose = () => {
 
   useEffect(() => {
     checkProbability(predictions);
-    const interval = setInterval(() => {
-      checkProbability(predictions);
-    }, 1000); // ตรวจสอบทุก 1 วินาที
-    return () => clearInterval(interval);
   }, [predictions, checkProbability]);
 
   const sendModelURLToIframe = () => {
@@ -87,13 +58,24 @@ const PhysicalPose = () => {
     }
   };
 
-  if (!isClient) {
-    return (
-      <div className="w-full h-[100vh] flex items-center justify-center text-[25px] text-red-500 font-bold">
-        Loading...
-      </div>
-    );
-  }
+  const [besttimer, setBesttimer] = useState(0);
+  const [set, setSet] = useState(0);
+  const timerRef = useRef(timer); // Initialize with the current timer value
+
+  useEffect(() => {
+    // Update besttimer if current timer is greater
+    if (timer > besttimer) {
+      setBesttimer(timer);
+    }
+
+    // Check if timer has crossed a new multiple of 10
+    if (Math.floor(timer / 2) > Math.floor(timerRef.current / 2)) {
+      setSet((prevSet) => prevSet + 1);
+    }
+
+    // Update the timerRef with the current timer value
+    timerRef.current = timer;
+  }, [timer]);
 
   return (
     <>
@@ -232,6 +214,9 @@ const PhysicalPose = () => {
                   <div key={index} className={`${index === 0 ? "" : "hidden"}`}>
                     <div>ความถูกต้อง</div>
                     <div>{predictions[0].probability * 100}</div>
+                    <div>{timer}</div>
+                    <div>Best tiem : {besttimer}</div>
+                    <div>Set : {set}</div>
                   </div>
                 ))}
               </div>
