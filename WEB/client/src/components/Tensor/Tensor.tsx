@@ -1,40 +1,50 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Tensor = () => {
-  const [message, setMessage] = useState<string>("");
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [predictions, setPredictions] = useState<any[]>([]);
+  const modelURL = "https://teachablemachine.withgoogle.com/models/5yeddlPSq/";
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
-      // ตรวจสอบ origin ของ message ถ้าต้องการความปลอดภัย
-      // if (event.origin !== 'http://your-iframe-origin.com') return;
-
-      const data = event.data; // ข้อมูลที่ได้รับจาก iframe
-      if (data && data.message) {
-        setMessage(data.message); // อัปเดตค่า state
+      if (event.data && event.data.predictions) {
+        setPredictions(event.data.predictions);
       }
     };
 
-    // เพิ่ม event listener
     window.addEventListener("message", handleMessage);
 
-    // ลบ event listener เมื่อ component ถูกทำลาย
+    // ส่ง modelURL ไปยัง iframe หลังจาก iframe โหลดเสร็จ
+    if (iframeRef.current) {
+      iframeRef.current.onload = () => {
+        console.log("Sending model URL to iframe");
+        iframeRef.current?.contentWindow?.postMessage({ modelURL }, "*");
+      };
+    }
+
     return () => {
       window.removeEventListener("message", handleMessage);
     };
   }, []);
 
   return (
-    <div>
-      s
+    <div className="pt-[150px]">
       <iframe
-        src="testtext.html" // ระบุ URL หรือ path ของ iframe.html
-        className="w-full"
+        ref={iframeRef}
+        src="/testtext.html"
+        className="w-full h-[100vh]"
         title="Iframe"
       ></iframe>
       <div>
-        <h1>Message from iframes:</h1>
-        <p>{message}</p> {/* แสดงข้อความที่ได้รับ */}
+        <h1>Predictions from Iframe:</h1>
+        <ul>
+          {predictions.map((prediction, index) => (
+            <li key={index}>
+              {prediction.className}: {prediction.probability}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

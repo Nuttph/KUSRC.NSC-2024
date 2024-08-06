@@ -1,17 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iframe Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachable Machine Pose Model</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
 </head>
 <body>
-  <button id="sendMessageButton">Send Message to Parent</button>
-  <script>
-    document.getElementById('sendMessageButton').addEventListener('click', () => {
-      const data = { message: 'Button in Hello world!' };
-      window.parent.postMessage(data, '*'); // ส่งข้อมูลไปยัง parent
-    });
-  </script>
+    <div>Teachable Machine Pose Model</div>
+    <button type="button" onclick="startModel()">Start</button>
+    <div><canvas id="canvas"></canvas></div>
+    <div id="label-container"></div>
+
+    <script type="text/javascript">
+        let model, webcam, ctx, labelContainer, maxPredictions;
+        let modelURL, metadataURL;
+
+        // รับข้อความจาก parent window
+        window.addEventListener('message', async (event) => {
+            if (event.data && event.data.modelURL) {
+                modelURL = event.data.modelURL + "model.json";
+                metadataURL = event.data.modelURL + "metadata.json";
+                console.log("Model URL received:", modelURL);
+            }
+        });
+
+        async function startModel() {
+            if (!modelURL || !metadataURL) {
+                alert('Model URL is not provided!');
+                return;
+            }
+
+            model = await tmPose.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+
+            const size = 200;
+            const flip = true; 
+            webcam = new tmPose.Webcam(size, size, flip);
+            await webcam.setup();
+            await webcam.play();
+            window.requestAnimationFrame(loop);
+
+            const canvas = document.getElementById("canvas");
+            canvas.width = size; canvas.height = size;
+            ctx = canvas.getContext("2d");
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                labelContainer.appendChild(document.createElement("div"));
+            }
+        }
+
+        async function loop(timestamp) {
+            webcam.update();
+            await predict();
+            window.requestAnimationFrame(loop);
+        }
+
+        async function predict() {
+            const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
+            const prediction = await model.predict(posenetOutput);
+
+            const predictionsData = prediction.map(p => ({
+                className: p.className,
+                probability: p.probability.toFixed(2),
+            }));
+            window.parent.postMessage({ predictions: predictionsData }, '*');
+
+            for (let i = 0; i < maxPredictions; i++) {
+                const classPrediction =
+                    prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            }
+
+            drawPose(pose);
+        }
+
+        function drawPose(pose) {
+            if (webcam.canvas) {
+                ctx.drawImage(webcam.canvas, 0, 0);
+                if (pose) {
+                    const minPartConfidence = 0.5;
+                    tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
+                    tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
+                }
+            }
+        }
+    </script>
 </body>
 </html>

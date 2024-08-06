@@ -14,7 +14,7 @@ const Eva = () => {
   };
   return (
     <>
-      <div className="w-full flex items-center justify-center flex-col">
+      <div className="w-full flex items-center justify-center flex-col pt-[150px] bg-[#1F2125]">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSe99SKpsDePGHOOa8BglEex5eZv1BuvgcrZI4_PrZplWU81qw/viewform?embedded=true"
           width="640"

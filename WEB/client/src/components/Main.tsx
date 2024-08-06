@@ -13,6 +13,7 @@ import CateMode from "./swiper/CateMode";
 import { usePicContent } from "@/store/datapicture";
 import Goal from "./Topic/Goal";
 import GoalOptions from "./Topic/GoalOptions";
+import Bmri from "./Exer/Bmri";
 const Main = () => {
   return (
     <>
@@ -24,22 +25,21 @@ const Main = () => {
         <div className="w-full">
           <Goal />
         </div>
-        <div className="w-full">
+        <div className="w-full" id="goal">
           <GoalOptions />
         </div>
+        <div className="w-full" id="bmir">
+          <Bmri />
+        </div>
+
         <div
-          className="relative w-[100%] h-[700px] bg-gray-200 hidden items-center min-[650px]:flex"
-          id=""
+          className="relative w-[100%] h-[900px] bg-[#2b2c2d] items-center min-[650px]:flex flex-col gap-[50px] py-[50px]"
+          id="phy"
         >
           <SlideCard />
         </div>
-        <div className="flex min-[650px]:hidden w-full">
+        {/* <div className="flex min-[650px]:hidden w-full">
           <CateMode />
-        </div>
-
-        {/*ทดสอบค่า BMI BMR */}
-        {/* <div className="w-full px-[140px]">
-          <BMI />
         </div> */}
       </div>
     </>

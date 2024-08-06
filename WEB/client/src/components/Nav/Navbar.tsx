@@ -2,47 +2,46 @@
 import React, { useEffect, useState } from "react";
 import pp_logo from "../../asset/logo/pp_logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const topic_nav = [
     {
       name: "ท่ากายภาพบำบัด",
-      link: "/",
+      link: "/#phy",
     },
     {
       name: "ข้อควรปฏิบัติ",
-      link: "/",
+      link: "/warning",
     },
     {
       name: "ประเมินการใช้งานเว็บไซต์",
-      link: "/",
+      link: "/evaluate",
     },
   ];
 
   const onHover = [
     {
       name: "หน้าแรก",
+      link: "/",
       details: [
         {
           name: "วัตถุประสงค์",
-          link: "/",
+          link: "/#goal",
         },
         {
           name: "การหาค่า BMI",
-          link: "/",
+          link: "/#bmir",
         },
         {
           name: "การหาค่า BMR",
-          link: "/",
-        },
-        {
-          name: "ชุมชน “กายภาพบำบัด",
-          link: "/",
+          link: "/#bmir",
         },
       ],
     },
     {
       name: "ท่ากายภาพบำบัด",
+      link: "/#phy",
       details: [
         {
           name: "เพิ่มการทรงตัว",
@@ -64,23 +63,25 @@ const Navbar = () => {
     },
     {
       name: "ข้อควรปฏิบัติ",
+      link: "/warning",
       details: [
         {
           name: "ข้อควรปฏิบัติในการทำกายภาพบำบัด",
-          link: "/",
+          link: "/warning",
         },
         {
           name: "เรียนรู้กฏหมาย PDPA",
-          link: "/",
+          link: "/pdpa",
         },
       ],
     },
     {
       name: "ประเมินการใช้งานเว็บไซต์",
+      link: "/evaluate",
       details: [
         {
           name: "ประเมินการใช้งานเว็บไซต์",
-          link: "/",
+          link: "/evaluate",
         },
       ],
     },
@@ -109,12 +110,13 @@ const Navbar = () => {
             />
           </div>
           {topic_nav.map((item, index) => (
-            <div
+            <Link
+              href={item.link}
               key={index}
               className="cursor-pointer hover:text-[#4A9DFF] duration-300"
             >
               {item.name}
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -128,17 +130,21 @@ const Navbar = () => {
           <div className="mt-[70px] w-full flex justify-around flex-row">
             {onHover.map((item, index) => (
               <div className="flex flex-col" key={index}>
-                <h1 className="text-[20px] hover:text-[#4A9DFF] cursor-pointer mb-[10px]">
+                <Link
+                  href={item.link}
+                  className="text-[20px] hover:text-[#4A9DFF] cursor-pointer mb-[10px]"
+                >
                   {item.name}
-                </h1>
+                </Link>
                 <ul className="list-disc ml-[30px]">
                   {item.details.map((text, index) => (
-                    <li
+                    <Link
+                      href={text.link}
                       key={index}
                       className="hover:text-[#DBFF4A] cursor-pointer duration-300"
                     >
-                      {text.name}
-                    </li>
+                      <li>{text.name}</li>
+                    </Link>
                   ))}
                 </ul>
               </div>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-color: #1E1E1E;
+}
+
 .myBox:hover>.rotaArrow {
   background-color: white;
   --tw-rotate: 180deg;

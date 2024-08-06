@@ -13,7 +13,7 @@ const Header = () => {
           backgroundImage: `url(${bgKu})`,
           backgroundSize: "cover", // Ensures the image covers the entire area
           backgroundPosition: "center", // Centers the image
-          height: "85vh", // Full viewport height
+          height: "95vh", // Full viewport height
           width: "100%", // Full viewport width
         }}
       >
