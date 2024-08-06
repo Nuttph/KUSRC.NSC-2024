@@ -20,7 +20,7 @@
         window.onload = function() {
             // โหลดโมเดลเมื่อ iframe โหลดเสร็จ
             window.addEventListener('message', async (event) => {
-                console.log("ข้อความที่รับใน iframe:", event.data);
+                // console.log("ข้อความที่รับใน iframe:", event.data);
                 if (event.data && event.data.modelURL) {
                     const modelURL = event.data.modelURL + "model.json";
                     const metadataURL = event.data.modelURL + "metadata.json";

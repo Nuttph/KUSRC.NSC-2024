@@ -98,6 +98,7 @@ const dataimg = [
         videoML: "/video/aa1_1.mp4",
         for: "ท่ายืนกางขาช่วยเสริมสร้างกล้ามเนื้อขาและสะโพก พัฒนาสมดุลและเสถียรภาพ และเพิ่มความยืดหยุ่น",
         pop: false,
+        model: "https://teachablemachine.withgoogle.com/models/PwgfPJ-6p/",
       },
       {
         id: 1,
@@ -109,6 +110,7 @@ const dataimg = [
         videoML: "/video/aa2_1.mp4",
         for: "ช่วยเสริมสร้างความแข็งแรงของกล้ามเนื้อขาและลำตัว, พัฒนาสมดุลและการทรงตัว, และเพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อ",
         pop: true,
+        model: "https://teachablemachine.withgoogle.com/models/kZ1Yi9z1J/",
       },
       {
         id: 2,
@@ -120,6 +122,7 @@ const dataimg = [
         videoML: "/video/aa3_1.mp4",
         for: "ช่วยเสริมสร้างความแข็งแรงของกล้ามเนื้อขาและสะโพก, พัฒนาความยืดหยุ่นและความสมดุล, และปรับปรุงการควบคุมร่างกาย",
         pop: false,
+        model: "https://teachablemachine.withgoogle.com/models/3dbrsrqdg/",
       },
       {
         id: 3,
@@ -131,6 +134,7 @@ const dataimg = [
         videoML: "/video/aa4_1.mp4",
         for: "ช่วยเสริมสร้างกล้ามเนื้อหน้าท้องและกล้ามเนื้อด้านข้าง, พัฒนาความสมดุลและการทรงตัว, และเพิ่มความยืดหยุ่นของลำตัวและสะโพก",
         pop: true,
+        model: "https://teachablemachine.withgoogle.com/models/ZAZA1eZsw/",
       },
       {
         id: 4,
@@ -142,6 +146,7 @@ const dataimg = [
         videoML: "/video/aa5_1.mp4",
         for: "ช่วยเสริมสร้างกล้ามเนื้อขาและสะโพก, พัฒนาความแข็งแรงของระบบหัวใจและหลอดเลือด, และเพิ่มความยืดหยุ่นและสมดุลของร่างกาย",
         pop: true,
+        model: "https://teachablemachine.withgoogle.com/models/X5iBe33Xd/",
       },
     ],
   },
@@ -160,6 +165,7 @@ const dataimg = [
         videoML: "/video/bb1_1.mp4", //ถึงตรงนี้ ณ เวลา 00:12 -> 15/7/2567
         for: "ช่วยในการเพิ่มความยืดหยุ่นและความผ่อนคลายของกล้ามเนื้อในส่วนต่าง ๆ ของขา นอกจากนี้ยังช่วยในการลดความตึงเครียดที่อาจเกิดขึ้นจากการใช้งานหรือการกางขยายกล้ามเนื้อในพื้นที่นี้ได้ดี",
         pop: false,
+        model: "https://teachablemachine.withgoogle.com/models/vnT9Yv010/",
       },
       {
         id: 1,
@@ -171,6 +177,7 @@ const dataimg = [
         videoML: "/video/bb2_1.mp4",
         for: "ช่วยเพิ่มความยืดหยุ่นของกล้ามเนื้อหลังขาและเอ็นร้อยหวาย, ลดความตึงเครียดของกล้ามเนื้อ, และป้องกันการบาดเจ็บจากการออกกำลังกายหรือกิจกรรมต่าง ๆ",
         pop: true,
+        model: "https://teachablemachine.withgoogle.com/models/jW7q35Bwu/",
       },
       {
         id: 2,
@@ -182,6 +189,7 @@ const dataimg = [
         videoML: "/video/bb3_1.mp4",
         for: "ช่วยเสริมสร้างกล้ามเนื้อขาและสะโพก, พัฒนาความแข็งแรงของแกนกลางลำตัว, และเพิ่มความยืดหยุ่นของข้อเข่าและข้อเท้า",
         pop: true,
+        model: "https://teachablemachine.withgoogle.com/models/3FNniof3L/",
       },
     ],
   },
@@ -200,6 +208,7 @@ const dataimg = [
         videoML: "/video/cc1_1.mp4",
         for: "ช่วยในการเพิ่มกำลังและความแข็งแรงของกล้ามเนื้อแขน โดยเฉพาะกล้ามเนื้อหลังและไหล่ด้านบน เพิ่มความยืดหยุ่นและควบคุมทรงตัวของลำตัว",
         pop: false,
+        model: "https://teachablemachine.withgoogle.com/models/Aoue23ywj/",
       },
       {
         id: 1,
@@ -211,6 +220,7 @@ const dataimg = [
         videoML: "/video/cc2_1.mp4",
         for: "ช่วยเสริมกล้ามเนื้อแขน (biceps) และการหุบแขนช่วยเสริมกล้ามเนื้อหลังและไหล่ (triceps และ shoulder muscles)",
         pop: false,
+        model: "https://teachablemachine.withgoogle.com/models/3oVzfLR7g/",
       },
       {
         id: 2,
@@ -222,6 +232,7 @@ const dataimg = [
         videoML: "/video/cc3_1.mp4",
         for: "ช่วยในการเพิ่มกำลังและความแข็งแรงของกล้ามเนื้อแขน โดยเฉพาะกล้ามเนื้อในพื้นที่ของหลังแขนและกล้ามเนื้อซอกไหล่",
         pop: false,
+        model: "https://teachablemachine.withgoogle.com/models/xwXQcB74I/",
       },
     ],
   },
@@ -240,6 +251,7 @@ const dataimg = [
         videoML: "/video/dd1_1.mp4",
         for: "ช่วยเพิ่มกำลังและความแข็งแรงของกล้ามเนื้อขา โดยเฉพาะกล้ามเนื้อหลังขา (quadriceps) และเตรียมความพร้อมสำหรับกิจกรรมทางกายภาพต่าง ๆ",
         pop: true,
+        model: "https://teachablemachine.withgoogle.com/models/6mgc49aFV/",
       },
       {
         id: 1,
@@ -251,6 +263,7 @@ const dataimg = [
         videoML: "/video/dd2_1.mp4",
         for: "ช่วยเสริมกล้ามเนื้อหน้าท้องและกล้ามเนื้อของลำตัว ช่วยในการพัฒนาความแข็งแรงและยืดหยุ่นของกล้ามเนื้อในพื้นที่นั้นได้เป็นอย่างดี",
         pop: false,
+        model: "https://teachablemachine.withgoogle.com/models/e28Up2j9b/",
       },
       {
         id: 2,
@@ -262,6 +275,7 @@ const dataimg = [
         videoML: "/video/dd3_1.mp4",
         for: "ช่วยเสริมกล้ามเนื้อหลังและไหล่ ช่วยเพิ่มความแข็งแรงและความยืดหยุ่นของกล้ามเนื้อในพื้นที่นี้ได้ดี",
         pop: false,
+        model: "https://teachablemachine.withgoogle.com/models/1PgsirSHZ/",
       },
       {
         id: 3,
@@ -273,6 +287,7 @@ const dataimg = [
         videoML: "/video/dd4_1.mp4",
         for: "ช่วยเสริมกล้ามเนื้อแขนบริเวณต้นแขนและไหล่ โดยการยกแขนขึ้นและยืดหุบแขนเป็นลักษณะหลักของท่านี้ ช่วยเพิ่มพลังและความแข็งแรง",
         pop: false,
+        model: "https://teachablemachine.withgoogle.com/models/-W6zjFU2j/",
       },
       {
         id: 4,
@@ -284,6 +299,7 @@ const dataimg = [
         videoML: "/video/dd5_1.mp4",
         for: "ช่วยเสริมกล้ามเนื้อของหลังแขน (triceps) โดยการยกแขนขึ้นและยืดหุบศอกเป็นลักษณะหลักของท่านี้ ช่วยให้กล้ามเนื้อหลังแขนเสริมแข็งแรงขึ้น",
         pop: false,
+        model: "https://teachablemachine.withgoogle.com/models/CbRBHkjXR/",
       },
     ],
   },
@@ -299,6 +315,7 @@ export interface dataimgMockProps {
   videoML: string;
   for: string;
   pop: boolean;
+  model: string;
 }
 export interface dataimgProps {
   content: string;
@@ -321,6 +338,7 @@ export const dataML = {
       videoML: "/video/aa1_1.mp4",
       for: "",
       pop: false,
+      model: "https://teachablemachine.withgoogle.com/models/PwgfPJ-6p/",
     },
     {
       id: 1,
@@ -332,6 +350,7 @@ export const dataML = {
       videoML: "/video/aa1_1.mp4",
       for: "",
       pop: false,
+      model: "https://teachablemachine.withgoogle.com/models/kZ1Yi9z1J/",
     },
     {
       id: 2,
@@ -343,6 +362,7 @@ export const dataML = {
       videoML: "/video/aa1_1.mp4",
       for: "",
       pop: false,
+      model: "https://teachablemachine.withgoogle.com/models/3dbrsrqdg/",
     },
     {
       id: 3,
@@ -354,6 +374,7 @@ export const dataML = {
       videoML: "/video/aa1_1.mp4",
       for: "",
       pop: false,
+      model: "https://teachablemachine.withgoogle.com/models/ZAZA1eZsw/",
     },
     {
       id: 4,
@@ -365,6 +386,7 @@ export const dataML = {
       videoML: "/video/aa1_1.mp4",
       for: "",
       pop: false,
+      model: "https://teachablemachine.withgoogle.com/models/X5iBe33Xd/",
     },
   ],
 };
@@ -379,6 +401,7 @@ export interface dataMLinterProps {
   videoML: string;
   for: string;
   pop: boolean;
+  model: string;
 }
 export interface dataMLProps {
   content: string;
