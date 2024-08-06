@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,46 +8,48 @@
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
 </head>
 <body>
-    <div>Teachable Machine Pose Model</div>
-    <button type="button" onclick="startModel()">Start</button>
+    <h1>Teachable Machine Pose Model</h1>
+    <!-- <button type="button" onclick="startModel()">เริ่มต้น</button> -->
     <div><canvas id="canvas"></canvas></div>
     <div id="label-container"></div>
+    <div id="message-container"></div> <!-- เพิ่ม div สำหรับข้อความ -->
 
     <script type="text/javascript">
         let model, webcam, ctx, labelContainer, maxPredictions;
-        let modelURL, metadataURL;
 
-        // รับข้อความจาก parent window
-        window.addEventListener('message', async (event) => {
-            if (event.data && event.data.modelURL) {
-                modelURL = event.data.modelURL + "model.json";
-                metadataURL = event.data.modelURL + "metadata.json";
-                console.log("Model URL received:", modelURL);
-            }
-        });
+        window.onload = function() {
+            // โหลดโมเดลเมื่อ iframe โหลดเสร็จ
+            window.addEventListener('message', async (event) => {
+                console.log("ข้อความที่รับใน iframe:", event.data);
+                if (event.data && event.data.modelURL) {
+                    const modelURL = event.data.modelURL + "model.json";
+                    const metadataURL = event.data.modelURL + "metadata.json";
+                    await startModel(modelURL, metadataURL);
+                }
+            });
+        };
 
-        async function startModel() {
-            if (!modelURL || !metadataURL) {
-                alert('Model URL is not provided!');
-                return;
-            }
+        async function startModel(modelURL, metadataURL) {
+            try {
+                model = await tmPose.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
 
-            model = await tmPose.load(modelURL, metadataURL);
-            maxPredictions = model.getTotalClasses();
+                const size = 500;
+                const flip = true;
+                webcam = new tmPose.Webcam(size, size, flip);
+                await webcam.setup();
+                await webcam.play();
+                window.requestAnimationFrame(loop);
 
-            const size = 200;
-            const flip = true; 
-            webcam = new tmPose.Webcam(size, size, flip);
-            await webcam.setup();
-            await webcam.play();
-            window.requestAnimationFrame(loop);
-
-            const canvas = document.getElementById("canvas");
-            canvas.width = size; canvas.height = size;
-            ctx = canvas.getContext("2d");
-            labelContainer = document.getElementById("label-container");
-            for (let i = 0; i < maxPredictions; i++) {
-                labelContainer.appendChild(document.createElement("div"));
+                const canvas = document.getElementById("canvas");
+                canvas.width = size; canvas.height = size;
+                ctx = canvas.getContext("2d");
+                labelContainer = document.getElementById("label-container");
+                for (let i = 0; i < maxPredictions; i++) {
+                    labelContainer.appendChild(document.createElement("div"));
+                }
+            } catch (error) {
+                console.error('เกิดข้อผิดพลาดในการโหลดโมเดล:', error);
             }
         }
 
@@ -67,11 +69,11 @@
             }));
             window.parent.postMessage({ predictions: predictionsData }, '*');
 
-            for (let i = 0; i < maxPredictions; i++) {
-                const classPrediction =
-                    prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                labelContainer.childNodes[i].innerHTML = classPrediction;
-            }
+            // for (let i = 0; i < maxPredictions; i++) {
+            //     const classPrediction =
+            //         prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+            //     labelContainer.childNodes[i].innerHTML = classPrediction;
+            // }
 
             drawPose(pose);
         }

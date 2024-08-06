@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 const Tensor = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [predictions, setPredictions] = useState<any[]>([]);
-  const modelURL = "https://teachablemachine.withgoogle.com/models/5yeddlPSq/";
+  const [modelURL, setModelURL] = useState<string>("");
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
+      console.log("ข้อความที่รับจาก iframe:", event.data);
       if (event.data && event.data.predictions) {
         setPredictions(event.data.predictions);
       }
@@ -15,29 +16,36 @@ const Tensor = () => {
 
     window.addEventListener("message", handleMessage);
 
-    // ส่ง modelURL ไปยัง iframe หลังจาก iframe โหลดเสร็จ
-    if (iframeRef.current) {
-      iframeRef.current.onload = () => {
-        console.log("Sending model URL to iframe");
-        iframeRef.current?.contentWindow?.postMessage({ modelURL }, "*");
-      };
-    }
-
     return () => {
       window.removeEventListener("message", handleMessage);
     };
   }, []);
 
+  const sendModelURLToIframe = () => {
+    if (iframeRef.current) {
+      const url = "https://teachablemachine.withgoogle.com/models/5yeddlPSq/"; // URL โมเดล
+      iframeRef.current.contentWindow?.postMessage({ modelURL: url }, "*");
+    }
+  };
+
   return (
-    <div className="pt-[150px]">
-      <iframe
-        ref={iframeRef}
-        src="/testtext.html"
-        className="w-full h-[100vh]"
-        title="Iframe"
-      ></iframe>
+    <div className="pt-[150px] text-[#fff] flex flex-row items-center gap-[50px]">
       <div>
-        <h1>Predictions from Iframe:</h1>
+        <iframe
+          ref={iframeRef}
+          src="/testtext.html"
+          className="w-[700px] h-[1000px]"
+          title="Iframe"
+        ></iframe>
+      </div>
+      <div className="text-[35px]">
+        <button
+          onClick={sendModelURLToIframe}
+          className="mt-4 p-2 bg-blue-500 text-white"
+        >
+          ส่ง URL โมเดล
+        </button>
+        <h1>การคาดการณ์จาก Iframe:</h1>
         <ul>
           {predictions.map((prediction, index) => (
             <li key={index}>
