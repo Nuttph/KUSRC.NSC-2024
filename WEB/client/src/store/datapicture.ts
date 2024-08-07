@@ -99,6 +99,9 @@ const dataimg = [
         for: "ท่ายืนกางขาช่วยเสริมสร้างกล้ามเนื้อขาและสะโพก พัฒนาสมดุลและเสถียรภาพ และเพิ่มความยืดหยุ่น",
         pop: false,
         model: "https://teachablemachine.withgoogle.com/models/PwgfPJ-6p/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 1,
@@ -111,6 +114,9 @@ const dataimg = [
         for: "ช่วยเสริมสร้างความแข็งแรงของกล้ามเนื้อขาและลำตัว, พัฒนาสมดุลและการทรงตัว, และเพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อ",
         pop: true,
         model: "https://teachablemachine.withgoogle.com/models/kZ1Yi9z1J/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 2,
@@ -123,6 +129,9 @@ const dataimg = [
         for: "ช่วยเสริมสร้างความแข็งแรงของกล้ามเนื้อขาและสะโพก, พัฒนาความยืดหยุ่นและความสมดุล, และปรับปรุงการควบคุมร่างกาย",
         pop: false,
         model: "https://teachablemachine.withgoogle.com/models/3dbrsrqdg/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 3,
@@ -135,6 +144,9 @@ const dataimg = [
         for: "ช่วยเสริมสร้างกล้ามเนื้อหน้าท้องและกล้ามเนื้อด้านข้าง, พัฒนาความสมดุลและการทรงตัว, และเพิ่มความยืดหยุ่นของลำตัวและสะโพก",
         pop: true,
         model: "https://teachablemachine.withgoogle.com/models/ZAZA1eZsw/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 4,
@@ -147,6 +159,9 @@ const dataimg = [
         for: "ช่วยเสริมสร้างกล้ามเนื้อขาและสะโพก, พัฒนาความแข็งแรงของระบบหัวใจและหลอดเลือด, และเพิ่มความยืดหยุ่นและสมดุลของร่างกาย",
         pop: true,
         model: "https://teachablemachine.withgoogle.com/models/X5iBe33Xd/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
     ],
   },
@@ -166,6 +181,9 @@ const dataimg = [
         for: "ช่วยในการเพิ่มความยืดหยุ่นและความผ่อนคลายของกล้ามเนื้อในส่วนต่าง ๆ ของขา นอกจากนี้ยังช่วยในการลดความตึงเครียดที่อาจเกิดขึ้นจากการใช้งานหรือการกางขยายกล้ามเนื้อในพื้นที่นี้ได้ดี",
         pop: false,
         model: "https://teachablemachine.withgoogle.com/models/vnT9Yv010/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 1,
@@ -178,6 +196,9 @@ const dataimg = [
         for: "ช่วยเพิ่มความยืดหยุ่นของกล้ามเนื้อหลังขาและเอ็นร้อยหวาย, ลดความตึงเครียดของกล้ามเนื้อ, และป้องกันการบาดเจ็บจากการออกกำลังกายหรือกิจกรรมต่าง ๆ",
         pop: true,
         model: "https://teachablemachine.withgoogle.com/models/jW7q35Bwu/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 2,
@@ -190,6 +211,9 @@ const dataimg = [
         for: "ช่วยเสริมสร้างกล้ามเนื้อขาและสะโพก, พัฒนาความแข็งแรงของแกนกลางลำตัว, และเพิ่มความยืดหยุ่นของข้อเข่าและข้อเท้า",
         pop: true,
         model: "https://teachablemachine.withgoogle.com/models/3FNniof3L/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
     ],
   },
@@ -209,6 +233,9 @@ const dataimg = [
         for: "ช่วยในการเพิ่มกำลังและความแข็งแรงของกล้ามเนื้อแขน โดยเฉพาะกล้ามเนื้อหลังและไหล่ด้านบน เพิ่มความยืดหยุ่นและควบคุมทรงตัวของลำตัว",
         pop: false,
         model: "https://teachablemachine.withgoogle.com/models/Aoue23ywj/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 1,
@@ -221,6 +248,9 @@ const dataimg = [
         for: "ช่วยเสริมกล้ามเนื้อแขน (biceps) และการหุบแขนช่วยเสริมกล้ามเนื้อหลังและไหล่ (triceps และ shoulder muscles)",
         pop: false,
         model: "https://teachablemachine.withgoogle.com/models/3oVzfLR7g/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 2,
@@ -233,6 +263,9 @@ const dataimg = [
         for: "ช่วยในการเพิ่มกำลังและความแข็งแรงของกล้ามเนื้อแขน โดยเฉพาะกล้ามเนื้อในพื้นที่ของหลังแขนและกล้ามเนื้อซอกไหล่",
         pop: false,
         model: "https://teachablemachine.withgoogle.com/models/xwXQcB74I/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
     ],
   },
@@ -252,6 +285,9 @@ const dataimg = [
         for: "ช่วยเพิ่มกำลังและความแข็งแรงของกล้ามเนื้อขา โดยเฉพาะกล้ามเนื้อหลังขา (quadriceps) และเตรียมความพร้อมสำหรับกิจกรรมทางกายภาพต่าง ๆ",
         pop: true,
         model: "https://teachablemachine.withgoogle.com/models/6mgc49aFV/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 1,
@@ -264,6 +300,9 @@ const dataimg = [
         for: "ช่วยเสริมกล้ามเนื้อหน้าท้องและกล้ามเนื้อของลำตัว ช่วยในการพัฒนาความแข็งแรงและยืดหยุ่นของกล้ามเนื้อในพื้นที่นั้นได้เป็นอย่างดี",
         pop: false,
         model: "https://teachablemachine.withgoogle.com/models/e28Up2j9b/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 2,
@@ -276,6 +315,9 @@ const dataimg = [
         for: "ช่วยเสริมกล้ามเนื้อหลังและไหล่ ช่วยเพิ่มความแข็งแรงและความยืดหยุ่นของกล้ามเนื้อในพื้นที่นี้ได้ดี",
         pop: false,
         model: "https://teachablemachine.withgoogle.com/models/1PgsirSHZ/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 3,
@@ -288,6 +330,9 @@ const dataimg = [
         for: "ช่วยเสริมกล้ามเนื้อแขนบริเวณต้นแขนและไหล่ โดยการยกแขนขึ้นและยืดหุบแขนเป็นลักษณะหลักของท่านี้ ช่วยเพิ่มพลังและความแข็งแรง",
         pop: false,
         model: "https://teachablemachine.withgoogle.com/models/-W6zjFU2j/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
       {
         id: 4,
@@ -300,6 +345,9 @@ const dataimg = [
         for: "ช่วยเสริมกล้ามเนื้อของหลังแขน (triceps) โดยการยกแขนขึ้นและยืดหุบศอกเป็นลักษณะหลักของท่านี้ ช่วยให้กล้ามเนื้อหลังแขนเสริมแข็งแรงขึ้น",
         pop: false,
         model: "https://teachablemachine.withgoogle.com/models/CbRBHkjXR/",
+        besttime: 0,
+        getset: 0,
+        dodate: "",
       },
     ],
   },
@@ -316,6 +364,9 @@ export interface dataimgMockProps {
   for: string;
   pop: boolean;
   model: string;
+  besttime: number;
+  getset: number;
+  dodate: string;
 }
 export interface dataimgProps {
   content: string;
@@ -339,6 +390,9 @@ export const dataML = {
       for: "",
       pop: false,
       model: "https://teachablemachine.withgoogle.com/models/PwgfPJ-6p/",
+      besttime: 0,
+      getset: 0,
+      dodate: "",
     },
     {
       id: 1,
@@ -351,6 +405,9 @@ export const dataML = {
       for: "",
       pop: false,
       model: "https://teachablemachine.withgoogle.com/models/kZ1Yi9z1J/",
+      besttime: 0,
+      getset: 0,
+      dodate: "",
     },
     {
       id: 2,
@@ -363,6 +420,9 @@ export const dataML = {
       for: "",
       pop: false,
       model: "https://teachablemachine.withgoogle.com/models/3dbrsrqdg/",
+      besttime: 0,
+      getset: 0,
+      dodate: "",
     },
     {
       id: 3,
@@ -375,6 +435,9 @@ export const dataML = {
       for: "",
       pop: false,
       model: "https://teachablemachine.withgoogle.com/models/ZAZA1eZsw/",
+      besttime: 0,
+      getset: 0,
+      dodate: "",
     },
     {
       id: 4,
@@ -387,6 +450,9 @@ export const dataML = {
       for: "",
       pop: false,
       model: "https://teachablemachine.withgoogle.com/models/X5iBe33Xd/",
+      besttime: 0,
+      getset: 0,
+      dodate: "",
     },
   ],
 };
@@ -402,6 +468,9 @@ export interface dataMLinterProps {
   for: string;
   pop: boolean;
   model: string;
+  besttime: number;
+  getset: number;
+  dodate: string;
 }
 export interface dataMLProps {
   content: string;
@@ -425,6 +494,15 @@ interface zusProps {
 
   useID: number;
   selectID: (value: number) => void;
+
+  //dashboard data
+  updateData: (
+    un: number,
+    ui: number,
+    besttime: number,
+    getset: number,
+    dodate: string
+  ) => void;
 }
 
 export const usePicContent = create<zusProps>()(
@@ -438,6 +516,26 @@ export const usePicContent = create<zusProps>()(
       zSelectDataML: (value) => set({ zDataML: value }),
       selectNumber: (value) => set({ useNumber: value }),
       selectID: (value) => set({ useID: value }),
+      updateData: (un, ui, besttime, getset, dodate) =>
+        set((state) => ({
+          zDataImg: state.zDataImg.map((item, index) =>
+            index === un
+              ? {
+                  ...item,
+                  data_real: item.data_real.map((dataItem) =>
+                    dataItem.id === ui
+                      ? {
+                          ...dataItem,
+                          besttime,
+                          getset,
+                          dodate,
+                        }
+                      : dataItem
+                  ),
+                }
+              : item
+          ),
+        })),
     }),
     {
       name: "Data Physio-Power", // name of the item in storage

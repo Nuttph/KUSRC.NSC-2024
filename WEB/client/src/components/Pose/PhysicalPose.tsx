@@ -17,7 +17,7 @@ const PhysicalPose = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const { zDataImg, useNumber, useID, selectID, selectNumber } =
+  const { zDataImg, useNumber, useID, selectID, selectNumber, updateData } =
     usePicContent();
   const [isClient, setIsClient] = useState(false);
   const [uui, setUui] = useState<number>(0);
@@ -62,7 +62,18 @@ const PhysicalPose = () => {
   const [set, setSet] = useState(0);
   const timerRef = useRef(timer); // Initialize with the current timer value
 
+  function ReDate() {
+    const time = new Date();
+    const day = time.getDate();
+    const month = time.getMonth();
+    const year = time.getFullYear();
+    const result = `${day}/${month}/${year}`;
+    return result;
+  }
+
   useEffect(() => {
+    const result = ReDate();
+    updateData(useNumber, useID, besttimer, set, result);
     // Update besttimer if current timer is greater
     if (timer > besttimer) {
       setBesttimer(timer);
@@ -212,11 +223,18 @@ const PhysicalPose = () => {
               <div>
                 {predictions.map((prediction, index) => (
                   <div key={index} className={`${index === 0 ? "" : "hidden"}`}>
-                    <div>ความถูกต้อง</div>
-                    <div>{predictions[0].probability * 100}</div>
-                    <div>{timer}</div>
-                    <div>Best tiem : {besttimer}</div>
-                    <div>Set : {set}</div>
+                    <div
+                      className={`${
+                        predictions[0].probability * 100 > 70
+                          ? "text-green-500"
+                          : ""
+                      }`}
+                    >
+                      ความถูกต้อง : {predictions[0].probability * 100}%
+                    </div>
+                    <div>เริ่มทำไปแล้ว : {timer} วินาที</div>
+                    <div>ทำเวลาได้สูงสุด : {besttimer} วินาที</div>
+                    <div>เซ็ต : {set} รอบ</div>
                   </div>
                 ))}
               </div>

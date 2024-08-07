@@ -18,6 +18,10 @@ const Navbar = () => {
       name: "ประเมินการใช้งานเว็บไซต์",
       link: "/evaluate",
     },
+    {
+      name: "ประวัติ",
+      link: "/dashboard",
+    },
   ];
 
   const onHover = [
@@ -36,6 +40,10 @@ const Navbar = () => {
         {
           name: "การหาค่า BMR",
           link: "/#bmir",
+        },
+        {
+          name: "ประวัติ",
+          link: "/dashboard",
         },
       ],
     },
@@ -91,7 +99,6 @@ const Navbar = () => {
   useEffect(() => {
     setOpen(false);
   }, []);
-
   return (
     <>
       <div className="absolute top-[15px] w-full items-center justify-center flex text-[25px] text-[#fff] flex-col">
