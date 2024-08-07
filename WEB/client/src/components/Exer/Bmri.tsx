@@ -153,7 +153,7 @@ const Bmri = () => {
                           <button
                             type="button"
                             onClick={handleMan}
-                            className="w-full h-full py-[40px]"
+                            className="w-full h-full py-[40px] font-bold"
                           >
                             ชาย
                           </button>
@@ -167,7 +167,7 @@ const Bmri = () => {
                           <button
                             type="button"
                             onClick={handleWoman}
-                            className="w-full h-full py-[40px]"
+                            className="w-full h-full py-[40px] font-bold"
                           >
                             หญิง
                           </button>
@@ -283,7 +283,7 @@ const Bmri = () => {
                         <button
                           type="button"
                           onClick={handleMan}
-                          className="w-full h-full py-[40px]"
+                          className="w-full h-full py-[40px] font-bold"
                         >
                           ชาย
                         </button>
@@ -297,7 +297,7 @@ const Bmri = () => {
                         <button
                           type="button"
                           onClick={handleWoman}
-                          className="w-full h-full py-[40px]"
+                          className="w-full h-full py-[40px] font-bold"
                         >
                           หญิง
                         </button>
