@@ -19,16 +19,16 @@ const ContentBut = ({ valueC, index }: Props) => {
   };
   return (
     <>
-      <div className="flex flex-col setCenter justify-between text-[25px]">
+      <div className="flex flex-col setCenter justify-between text-[25px] text-[#fff]">
         <div>
-          <div className="text-[35px] font-bold">{valueC.name}</div>
+          <div className="text-[35px] font-medium">{valueC.name}</div>
           <div className="flex flex-col text-[25px] line-clamp-4">
-            <h1 className="font-bold text-green-800">ลักษณะการทำท่า :</h1>
+            <h1 className="font-medium text-yellow-300">ลักษณะการทำท่า :</h1>
             <p>{valueC.des}</p>
           </div>
           <div className="flex flex-col mt-[10px]">
-            <h1 className="font-bold text-green-800">ประโยชน์ในการทำท่า:</h1>
-            <p className="px-[25px] py-[10px] bg-pink-300 rounded-xl">
+            <h1 className="font-medium text-yellow-300">ประโยชน์ในการทำท่า:</h1>
+            <p className="px-[25px] py-[10px] bg-[#1F2125] my-[15px] rounded-xl">
               {valueC.for}
             </p>
           </div>
@@ -40,7 +40,7 @@ const ContentBut = ({ valueC, index }: Props) => {
               handleTest();
               selectID(index);
             }}
-            className="bg-[#58ff9b] px-[40px] py-[10px] w-fit rounded-xl text-[20px]"
+            className="bg-[#58ff9b] hover:bg-green-600 duration-300 px-[40px] py-[10px] w-fit rounded-xl text-[30px] text-[#000] font-bold"
           >
             เริ่มการทดสอบ
           </Link>

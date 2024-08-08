@@ -53,19 +53,19 @@ const Navbar = () => {
       details: [
         {
           name: "เพิ่มการทรงตัว",
-          link: "/",
+          link: "/content/pose1",
         },
         {
           name: "เพิ่มความยืดหยุ่นของกล้ามเนื้อและข้อต่อ",
-          link: "/",
+          link: "/content/pose2",
         },
         {
           name: "เพิ่มกำลังกล้ามเนื้อ",
-          link: "/",
+          link: "/content/pose3",
         },
         {
           name: "บริหารกล้ามเนื้อ",
-          link: "/",
+          link: "/content/pose4",
         },
       ],
     },

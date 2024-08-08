@@ -23,7 +23,7 @@ const Maincontent = () => {
       setData(4 - 1);
       selectNumber(3);
     }
-  }, []);
+  }, [pathname]);
 
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
@@ -43,23 +43,14 @@ const Maincontent = () => {
 
   return (
     <>
-      <div className="w-full p-[40px]">
+      <div className="w-full p-[40px] pt-[150px] text-[#fff]">
         <h1 className="flex items-center justify-center w-full font-semibold text-[35px]">
           {zDataImg[data].content}
         </h1>
-        <div className="flex flex-col justify-start text-[30px]">
-          <ol className="list-disc text-[20px] ml-[30px]">
-            {zDataImg[data].data_real.map((item, index) => (
-              <li key={index}>
-                <Link href={`#goto${index}`}>{item.name}</Link>
-              </li>
-            ))}
-          </ol>
-        </div>
 
-        <div className="mt-[50px] flex flex-col gap-[100px]">
+        <div className="flex flex-col gap-[100px] text-[#fff]  py-[150px]">
           {zDataImg[data].data_real.map((item, index) => (
-            <div key={index}>
+            <div key={index} className="">
               <PhyPre value={item} index={index} />
             </div>
           ))}

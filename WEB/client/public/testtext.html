@@ -8,11 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
 </head>
 <body>
-    <h1>Teachable Machine Pose Model</h1>
+    <h1 style="color: white;">Camera:</h1>
     <!-- <button type="button" onclick="startModel()">เริ่มต้น</button> -->
-    <div><canvas id="canvas"></canvas></div>
-    <div id="label-container"></div>
-    <div id="message-container"></div> <!-- เพิ่ม div สำหรับข้อความ -->
+    <div><canvas id="canvas"></canvas></div><!-- เพิ่ม div สำหรับข้อความ -->
 
     <script type="text/javascript">
         let model, webcam, ctx, labelContainer, maxPredictions;
@@ -34,7 +32,7 @@
                 model = await tmPose.load(modelURL, metadataURL);
                 maxPredictions = model.getTotalClasses();
 
-                const size = 500;
+                const size = 600;
                 const flip = true;
                 webcam = new tmPose.Webcam(size, size, flip);
                 await webcam.setup();

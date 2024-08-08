@@ -503,8 +503,9 @@ interface zusProps {
     getset: number,
     dodate: string
   ) => void;
-}
 
+  set: number;
+}
 export const usePicContent = create<zusProps>()(
   persist(
     (set, get) => ({
@@ -513,9 +514,12 @@ export const usePicContent = create<zusProps>()(
       zDataML: dataML,
       useNumber: usingNumber,
       useID: 0,
+      set: 0, // Initialize set value
+
       zSelectDataML: (value) => set({ zDataML: value }),
       selectNumber: (value) => set({ useNumber: value }),
       selectID: (value) => set({ useID: value }),
+
       updateData: (un, ui, besttime, getset, dodate) =>
         set((state) => ({
           zDataImg: state.zDataImg.map((item, index) =>
@@ -526,19 +530,20 @@ export const usePicContent = create<zusProps>()(
                     dataItem.id === ui
                       ? {
                           ...dataItem,
-                          besttime,
-                          getset,
-                          dodate,
+                          besttime: Math.max(dataItem.besttime, besttime), // Update besttime if new value is greater
+                          getset: getset, // Increment getset
+                          dodate, // Update dodate
                         }
                       : dataItem
                   ),
                 }
               : item
           ),
+          set: state.set + 1, // Increment set value
         })),
     }),
     {
-      name: "Data Physio-Power", // name of the item in storage
+      name: "Data Physio-Power", // Name of the item in storage
       getStorage: () => localStorage, // (optional) by default, 'localStorage' is used
     }
   )
