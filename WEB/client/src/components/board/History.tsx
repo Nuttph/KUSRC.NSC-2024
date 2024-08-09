@@ -13,7 +13,7 @@ const History = () => {
   return (
     <>
       {isClient && (
-        <div className="w-full pt-[150px] h-[100vh] text-[#fff]">
+        <div className="w-full pt-[150px] h-fit pb-[150px] text-[#fff]">
           <div className="flex flex-col w-full px-[100px]">
             <div className="text-[50px]">ประวัติการทำกายภาพบำบัด</div>
             <div className="w-full flex flex-col mt-[50px]">
