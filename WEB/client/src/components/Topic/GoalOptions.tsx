@@ -22,16 +22,6 @@ const GoalOptions = () => {
           >
             วัตถุประสงค์
           </div>
-          <div
-            className={`${
-              focus == 0 ? "" : "text-[#FFE436]"
-            } z-10 cursor-pointer duration-300`}
-            onClick={() => {
-              setFocus(1);
-            }}
-          >
-            คู่มือการใช้งาน
-          </div>
         </div>
         <Slide
           direction="right"

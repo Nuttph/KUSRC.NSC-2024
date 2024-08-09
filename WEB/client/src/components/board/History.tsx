@@ -21,7 +21,7 @@ const History = () => {
                 <div className="w-[45%]">ท่ายกายภาพบำบัด</div>
                 <div className="w-[10%]">เวลาสูงสุด</div>
                 <div className="w-[15%]">จำนวนเซ็ตที่ทำ</div>
-                <div className="w-[13%]">วันที่ทำล่าสุด</div>
+                <div className="w-[13%]">วันที่ทดสอบ</div>
                 <div className="w-[15%]">เริ่มทำกายภาพบำบัด</div>
               </div>
               <div className="flex flex-col w-full border-[2px] border-[#6D6D6D] border-b-[2px] bg-[#1F2125]">

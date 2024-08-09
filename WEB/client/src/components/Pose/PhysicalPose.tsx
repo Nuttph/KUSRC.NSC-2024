@@ -67,7 +67,7 @@ const PhysicalPose = () => {
     const day = time.getDate();
     const month = time.getMonth();
     const year = time.getFullYear();
-    const result = `${day}/${month}/${year}`;
+    const result = `${day}/${month + 1}/${year}`;
     return result;
   }
 
