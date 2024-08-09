@@ -108,14 +108,14 @@ const Navbar = () => {
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
         >
-          <div className="relative w-[50px] h-[50px]">
+          <Link href="/" className="relative w-[50px] h-[50px]">
             <Image
               src={pp_logo}
               alt="pp_logo"
               fill
               className="rounded-full cursor-pointer"
             />
-          </div>
+          </Link>
           {topic_nav.map((item, index) => (
             <Link
               href={item.link}
