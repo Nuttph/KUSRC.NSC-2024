@@ -4,7 +4,7 @@ import React from "react";
 // image
 import logo from "../../asset/logo/pp_logo.png";
 import Link from "next/link";
-
+import lineoa from "../../asset/lineoa.png";
 const Footer = () => {
   const footlink1 = [
     {
@@ -74,8 +74,8 @@ const Footer = () => {
 
   return (
     <>
-      <div className="w-full h-[500px] bg-[#1F2125] text-[#fff] px-[50px] py-[70px]">
-        <div className="flex flex-row w-full justify-center gap-[200px]">
+      <div className="w-full h-[500px] bg-[#1F2125] text-[#fff] px-[100px] py-[70px]">
+        <div className="flex flex-row w-full justify-center gap-[50px]">
           <div className="flex flex-col gap-[20px]">
             <h1 className="text-[50px] cursor-pointer hover:text-[#4A9DFF]">
               Physio Power
@@ -88,7 +88,7 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="flex flex-row gap-[200px]">
+          <div className="flex flex-row gap-[100px]">
             {footlink1.map((item, index) => (
               <div key={index} className="flex flex-col ml-[50px]">
                 <h1 className="text-[30px] font-bold translate-x-[-30px] hover:text-[#4A9DFF] duration-300 cursor-pointer">
@@ -129,6 +129,9 @@ const Footer = () => {
                 </ul>
               </div>
             ))}
+          </div>
+          <div className="">
+            <Image src={lineoa} alt="lineoa" className="w-[200px] rounded-xl" />
           </div>
         </div>
       </div>
