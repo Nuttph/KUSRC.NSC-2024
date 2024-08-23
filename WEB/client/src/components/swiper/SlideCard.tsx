@@ -37,7 +37,7 @@ export default function SlideCard() {
         {zDataImg.map((item, index) => (
           <div key={index}>
             <SwiperSlide>
-              <div className="flex flex-col py-[25px] px-[40px] gap-2 justify-between h-full">
+              <div className="flex flex-col py-[25px] px-[40px] gap-2 justify-between h-full bg-blue-200 rounded-xl">
                 <div className="flex items-center justify-center gap-[20px] flex-col">
                   <div className="w-full flex items-center justify-center">
                     <Link

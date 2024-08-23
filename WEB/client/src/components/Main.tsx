@@ -33,7 +33,7 @@ const Main = () => {
         </div>
 
         <div
-          className="relative w-[100%] h-[900px] bg-[#2b2c2d] items-center min-[650px]:flex flex-col gap-[50px] py-[50px]"
+          className="relative w-[100%] h-[900px] bg-[#fff] items-center min-[650px]:flex flex-col gap-[50px] py-[50px]"
           id="phy"
         >
           <SlideCard />
