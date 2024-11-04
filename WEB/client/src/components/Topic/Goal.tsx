@@ -6,7 +6,7 @@ import star from "../../asset/svg/rating.svg";
 import Image from "next/image";
 const Goal = () => {
   return (
-    <div className="bg-[#fff] text-[#000] flex flex-col">
+    <div className="bg-[#17191C] text-[#000] flex flex-col">
       <div className="w-full flex flex-row items-center justify-center pt-[50px]">
         <div className="bg-[#FCE340] w-full h-[5px] rounded-full"></div>
         <Image src={star} alt="star" />

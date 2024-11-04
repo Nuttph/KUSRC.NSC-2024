@@ -4,7 +4,7 @@ import { Slide, Reveal } from "react-awesome-reveal";
 const GoalOptions = () => {
   const [focus, setFocus] = useState(0);
   return (
-    <div className="w-full bg-[#ffff] text-[#000] h-fit py-[300px]">
+    <div className="w-full bg-[#17191C] text-[#000] h-fit py-[300px]">
       <div className="flex flex-row justify-between pr-[50px]">
         <div className="flex flex-col text-[60px] ml-[50px] relative mt-[35px]">
           <div

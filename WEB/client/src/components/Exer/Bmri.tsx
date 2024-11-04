@@ -101,37 +101,39 @@ const Bmri = () => {
 
   return (
     <>
-      <div className="bg-[#fff] flex items-center justify-center flex-col pb-[50px]">
-        <div className="flex items-center flex-row justify-center text-[60px] relative">
-          <div
-            className={`bg-[#2C2C2C] h-[100px] duration-300 transition-all ${
-              focus == 0
-                ? "w-[48%] translate-x-[-55%]"
-                : "w-[52%] translate-x-[50%]"
-            } absolute`}
-          ></div>
-          <div
-            className={`border-r-[7px] border-[#4A9DFF] pr-[25px] z-10 ${
-              focus == 0 && "text-[#FFE436]"
-            } cursor-pointer hover:text-[#4A9DFF] duration-300`}
-            onClick={() => {
-              setFocus(0);
-            }}
-          >
-            BMI
-          </div>
-          <div
-            className={`pl-[18px] z-10 ${
-              focus == 1 && "text-[#FFE436]"
-            } cursor-pointer hover:text-[#4A9DFF] duration-300`}
-            onClick={() => {
-              setFocus(1);
-            }}
-          >
-            BMR
+      <div className="bg-[#17191C] flex items-center justify-center flex-col pb-[50px] text-[#fff]">
+        <div className="w-full flex items-center justify-center bg-[#1F2125] py-[10px]">
+          <div className="flex items-center flex-row justify-center text-[60px] relative">
+            <div
+              className={`bg-[#2C2C2C] h-[100px] duration-300 transition-all ${
+                focus == 0
+                  ? "w-[48%] translate-x-[-55%]"
+                  : "w-[52%] translate-x-[50%]"
+              } absolute`}
+            ></div>
+            <div
+              className={`border-r-[7px] border-[#4A9DFF] pr-[25px] z-10 ${
+                focus == 0 && "text-[#FFE436]"
+              } cursor-pointer hover:text-[#4A9DFF] duration-300`}
+              onClick={() => {
+                setFocus(0);
+              }}
+            >
+              BMI
+            </div>
+            <div
+              className={`pl-[18px] z-10 ${
+                focus == 1 && "text-[#FFE436]"
+              } cursor-pointer hover:text-[#4A9DFF] duration-300`}
+              onClick={() => {
+                setFocus(1);
+              }}
+            >
+              BMR
+            </div>
           </div>
         </div>
-        <div>
+        <div className="">
           {focus == 0 ? (
             <>
               <div className="flex flex-col items-center justify-center">
@@ -179,7 +181,7 @@ const Bmri = () => {
                         <Slide>
                           <div className="relative flex flex-row items-center bg-[#fff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                             <input
-                              className="outline-none text-center bg-[#fff] w-full"
+                              className="outline-none text-center bg-[#fff] w-full text-[#000]"
                               type="text"
                               value={age}
                               onChange={(e) => {
@@ -202,7 +204,7 @@ const Bmri = () => {
                             <div>น้ำหนัก(กก.)</div>
                             <div className="relative flex flex-row items-center bg-[#ffff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                               <input
-                                className="outline-none text-center bg-[#ffff] w-full"
+                                className="outline-none text-center bg-[#ffff] w-full text-[#000]"
                                 type="text"
                                 value={w}
                                 onChange={(e) => {
@@ -223,7 +225,7 @@ const Bmri = () => {
                             <div>ส่วนสูง(ซม.)</div>
                             <div className="relative flex flex-row items-center bg-[#ffff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                               <input
-                                className="outline-none text-center bg-[#ffff] w-full"
+                                className="outline-none text-center bg-[#ffff] w-full text-[#000]"
                                 type="text"
                                 value={h}
                                 onChange={(e) => {
@@ -254,7 +256,7 @@ const Bmri = () => {
                       <Slide direction="right">
                         <div className="flex flex-col items-center justify-center gap-[15px] text-[30px]">
                           <div className="">BMI: {bmi.toFixed(2)}</div>
-                          <div className="bg-[#ffff] border-[1px] border-[#6D6D6D] w-[680px] h-[300px] rounded-[18px] flex items-center justify-center text-[50px]">
+                          <div className="bg-[#ffff] text-[#000] border-[1px] border-[#6D6D6D] w-[680px] h-[300px] rounded-[18px] flex items-center justify-center text-[50px]">
                             ประเภท: {bmiCategory}
                           </div>
                         </div>
@@ -309,7 +311,7 @@ const Bmri = () => {
                       <Slide>
                         <div className="relative flex flex-row items-center bg-[#ffff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                           <input
-                            className="outline-none text-center bg-[#ffff] w-full"
+                            className="outline-none text-center bg-[#ffff] w-full text-[#000]"
                             type="text"
                             value={age}
                             onChange={(e) => {
@@ -332,7 +334,7 @@ const Bmri = () => {
                           <div>น้ำหนัก(กก.)</div>
                           <div className="relative flex flex-row items-center bg-[#ffff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                             <input
-                              className="outline-none text-center bg-[#ffff] w-full"
+                              className="outline-none text-center bg-[#ffff] w-full text-[#000]"
                               type="text"
                               value={w}
                               onChange={(e) => {
@@ -353,7 +355,7 @@ const Bmri = () => {
                           <div>ส่วนสูง(ซม.)</div>
                           <div className="relative flex flex-row items-center bg-[#ffff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                             <input
-                              className="outline-none text-center bg-[#ffff] w-full"
+                              className="outline-none text-center bg-[#ffff] w-full text-[#000]"
                               type="text"
                               value={h}
                               onChange={(e) => {
@@ -382,12 +384,14 @@ const Bmri = () => {
                       </button>
                     </Slide>
                     <Slide direction="right">
-                      <div className="flex flex-col items-center justify-center gap-[15px] text-[30px]">
-                        <div>จำนวนแคลอรี่ที่ควรจะได้รับในแต่ละวัน</div>
+                      <div className="text-[#000] flex flex-col items-center justify-center gap-[15px] text-[30px]">
+                        <div className="text-[#fff]">
+                          จำนวนแคลอรี่ที่ควรจะได้รับในแต่ละวัน
+                        </div>
                         <div className="bg-[#ffff] border-[1px] border-[#6D6D6D] w-[680px] h-[300px] rounded-[18px] flex items-center justify-center text-[50px]">
                           {animatedBmr.toFixed(2)}
                         </div>
-                        <div>กิโลแคลอรี่/วัน</div>
+                        <div className="text-[#fff]">กิโลแคลอรี่/วัน</div>
                       </div>
                     </Slide>
                   </div>
