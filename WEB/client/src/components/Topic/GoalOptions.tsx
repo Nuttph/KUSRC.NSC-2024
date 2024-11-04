@@ -25,9 +25,9 @@ const GoalOptions = () => {
         </div>
         <Slide
           direction="right"
-          className="w-[70%] h-[700px] bg-[#e7e7e7] rounded-[45px] border-[3px] border-[#6D6D6D] z-10 p-[50px]"
+          className="w-[70%] h-[700px] bg-[#1F2125] rounded-[45px] border-[3px] border-[#6D6D6D] z-10 p-[50px]"
         >
-          <div className="bg-[#fff] w-full h-full rounded-[22.5px] p-[20px] flex flex-col text-[25px] overflow-y-auto">
+          <div className="bg-[#343434] text-[#fff] w-full h-full rounded-[22.5px] p-[20px] flex flex-col text-[25px] overflow-y-auto">
             {focus == 0 ? (
               <>
                 <div>

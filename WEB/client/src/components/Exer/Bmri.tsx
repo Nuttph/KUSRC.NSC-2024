@@ -179,9 +179,9 @@ const Bmri = () => {
                       <div className="flex flex-col items-center justify-center gap-[20px]">
                         <div className="text-[25px]">อายุ</div>
                         <Slide>
-                          <div className="relative flex flex-row items-center bg-[#fff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
+                          <div className="relative flex flex-row items-center bg-[#1F2125] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                             <input
-                              className="outline-none text-center bg-[#fff] w-full text-[#000]"
+                              className="outline-none text-center bg-[#1F2125] w-full"
                               type="text"
                               value={age}
                               onChange={(e) => {
@@ -202,9 +202,9 @@ const Bmri = () => {
                         <div className="flex flex-col">
                           <Slide>
                             <div>น้ำหนัก(กก.)</div>
-                            <div className="relative flex flex-row items-center bg-[#ffff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
+                            <div className="relative flex flex-row items-center bg-[#1F2125] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                               <input
-                                className="outline-none text-center bg-[#ffff] w-full text-[#000]"
+                                className="outline-none text-center bg-[#1F2125] w-full text-[#fff]"
                                 type="text"
                                 value={w}
                                 onChange={(e) => {
@@ -223,9 +223,9 @@ const Bmri = () => {
                         <div className="flex flex-col">
                           <Slide>
                             <div>ส่วนสูง(ซม.)</div>
-                            <div className="relative flex flex-row items-center bg-[#ffff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
+                            <div className="relative flex flex-row items-center bg-[#1F2125] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                               <input
-                                className="outline-none text-center bg-[#ffff] w-full text-[#000]"
+                                className="outline-none text-center bg-[#1F2125] w-full text-[#fff]"
                                 type="text"
                                 value={h}
                                 onChange={(e) => {
@@ -309,9 +309,9 @@ const Bmri = () => {
                     <div className="flex flex-col items-center justify-center gap-[20px]">
                       <div className="text-[25px]">อายุ</div>
                       <Slide>
-                        <div className="relative flex flex-row items-center bg-[#ffff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
+                        <div className="relative flex flex-row items-center bg-[#1F2125] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                           <input
-                            className="outline-none text-center bg-[#ffff] w-full text-[#000]"
+                            className="outline-none text-center bg-[#1F2125] w-full text-[#fff]"
                             type="text"
                             value={age}
                             onChange={(e) => {
@@ -332,9 +332,9 @@ const Bmri = () => {
                       <div className="flex flex-col">
                         <Slide>
                           <div>น้ำหนัก(กก.)</div>
-                          <div className="relative flex flex-row items-center bg-[#ffff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
+                          <div className="relative flex flex-row items-center bg-[#1F2125] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                             <input
-                              className="outline-none text-center bg-[#ffff] w-full text-[#000]"
+                              className="outline-none text-center bg-[#1F2125] w-full text-[#fff]"
                               type="text"
                               value={w}
                               onChange={(e) => {
@@ -353,9 +353,9 @@ const Bmri = () => {
                       <div className="flex flex-col">
                         <Slide>
                           <div>ส่วนสูง(ซม.)</div>
-                          <div className="relative flex flex-row items-center bg-[#ffff] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
+                          <div className="relative flex flex-row items-center bg-[#1F2125] border-[1px] border-[#6D6D6D] rounded-[15px] w-[750px] text-[35px] px-[55px] py-[10px]">
                             <input
-                              className="outline-none text-center bg-[#ffff] w-full text-[#000]"
+                              className="outline-none text-center bg-[#1F2125] w-full text-[#fff]"
                               type="text"
                               value={h}
                               onChange={(e) => {
